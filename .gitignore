@@ -8,6 +8,5 @@ __pycache__/
 .ipynb_checkpoints/
 
 # Large/generated files
-*.pdbqt
 docking/results/
 data/ligands/pdbqt/
