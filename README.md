@@ -27,8 +27,8 @@ This project is structured in two phases:
 ### Phase 1 — Virtual Screening of Known Inhibitors
 A dataset of **45 co-crystallised Mps1 inhibitors** (retrieved from the RCSB PDB) is subjected to:
 1. Molecular docking against the Mps1 kinase domain (AutoDock Vina)
-2. ADME filtering using RDKit (Lipinski's Rule of Five + drug-likeness descriptors)
-3. Binding interaction analysis (H-bond contacts with Gly605/Glu603)
+2. Binding interaction analysis (H-bond contacts with Gly605/Glu603)
+3. ADME filtering using RDKit (Lipinski's Rule of Five + drug-likeness descriptors)
 4. Machine learning model training to predict binding affinity from structural features
 
 ### Phase 2 — Novel Candidate Discovery
@@ -58,11 +58,11 @@ Molecular Docking (AutoDock Vina 1.2)
     exhaustiveness=16
          │
          ▼
-ADME Filtering (RDKit)
-    Lipinski Ro5 + solubility + PAINS
+Interaction Analysis (Gly605 / Glu603 H-bonds)
          │
          ▼
-Interaction Analysis (Gly605 / Glu603 H-bonds)
+ADME Filtering (RDKit)
+    Lipinski Ro5 + solubility + PAINS
          │
          ▼
 ML Model (scikit-learn)
