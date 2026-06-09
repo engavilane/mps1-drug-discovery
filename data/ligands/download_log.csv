@@ -1,0 +1,51 @@
+pdb_id,ligand_id,ligand_name,cid,status
+2X9E,SVE,"N-(2,6-DIETHYLPHENYL)-1-METHYL-8-({4-[(1-METHYLPIPERIDIN-4-YL)CARBAMOYL]-2-(TRIFLUOROMETHOXY)PHENYL}AMINO)-4,5-DIHYDRO-1H-PYRAZOLO[4,3-H]QUINAZOLINE-3-CARBOXAMIDE",44556162.0,success
+2ZMD,537,"2,6-DIHYDROANTHRA/1,9-CD/PYRAZOL-6-ONE",,success (RCSB)
+3GFW,S22,"1-(4-(4-(2-(isopropylsulfonyl)phenylamino)-1H-pyrrolo[2,3-b]pyridin-6-ylamino)-3-methoxyphenyl)piperidin-4-ol",25195352.0,success
+3HMP,CX4,7-chloro-N-(cyclopropylmethyl)quinazolin-4-amine,1491124.0,success
+3W1F,1O5,5-[5-ethoxy-6-(1-methyl-1H-pyrazol-4-yl)-1H-indazol-3-yl]-2-methylbenzenesulfonamide,71576779.0,success
+3WYY,O17,"(2E)-3-[4-({4-amino-5-cyano-6-[(3s,5s,7s)-tricyclo[3.3.1.1~3,7~]dec-1-ylamino]pyridin-2-yl}amino)-2-(cyanomethoxy)phenyl]-N-(2-methoxyethyl)prop-2-enamide",89105560.0,success
+3WZJ,O43,"4-{6-(cyclohexylamino)-8-[(tetrahydro-2H-pyran-4-ylmethyl)amino]imidazo[1,2-b]pyridazin-3-yl}-N-cyclopropylbenzamide",87057562.0,success
+3WZK,CL,CHLORIDE ION,24526.0,success
+4C4E,4T9,"N-(3,4-dimethoxyphenyl)-2-(1H-pyrazol-4-yl)-1H-pyrrolo[3,2-c]pyridin-6-amine",68291131.0,success
+4C4G,7RO,"tert-butyl 6-((2-chloro-4-(dimethylcarbamoyl)phenyl)amino)-2-(1-methyl-1H-pyrazol-4-yl)-1H-pyrrolo[3,2-c]pyridine-1-carboxylate",68310278.0,success
+4C4H,7RO,"tert-butyl 6-((2-chloro-4-(dimethylcarbamoyl)phenyl)amino)-2-(1-methyl-1H-pyrazol-4-yl)-1H-pyrrolo[3,2-c]pyridine-1-carboxylate",68310278.0,success
+4C4I,X20,"tert-butyl 6-{[2-chloro-4-(dimethylcarbamoyl)phenyl]amino}-2-(1,3-oxazol-5-yl)-1H-pyrrolo[3,2-c]pyridine-1-carboxylate",66548104.0,success
+4C4J,X21,"tert-butyl 6-{[2-chloro-4-(1-methyl-1H-imidazol-5-yl)phenyl]amino}-2-(1-methyl-1H-pyrazol-4-yl)-1H-pyrrolo[3,2-c]pyridine-1-carboxylate",66547425.0,success
+4CV8,3D7,3-amino-5-(1-methyl-1H-pyrazol-4-yl)pyridin-2(1H)-one,91667406.0,success
+4CV9,W2K,"4-(4-Methylpiperazin-1-yl)-N-(2-oxo-5-(pyridin-4-yl)-1,2-dihydropyridin-3-yl)benzamide",11646783.0,success
+4CVA,WBI,"N-(6-oxo-1,6-dihydro-3,4'-bipyridin-5-yl)-4-(piperidin-1-yl)benzamide",52936434.0,success
+4D2S,DYK,"N-{2-methoxy-4-[(1-methylpiperidin-4-yl)oxy]phenyl}-4-(1H-pyrrolo[2,3-c]pyridin-3-yl)pyrimidin-2-amine",91668530.0,success
+4JS8,1PF,4-(cyclohexylmethoxy)-3-{4-[(1-methylpiperidin-4-yl)oxy]phenyl}-2H-indazole,137347974.0,success
+4JT3,PO4,PHOSPHATE ION,1061.0,success
+4O6L,2QK,N-[(1R)-1-(2-chlorophenyl)propyl]-3-{4-[(1-methylpiperidin-4-yl)oxy]phenyl}-1H-indazole-5-carboxamide,86711023.0,success
+5EH0,5NW,"N2-(2-Methoxy-4-(1-methyl-1H-pyrazol-4-yl)phenyl)-N8-neopentylpyrido[3,4-d]pyrimidine-2,8-diamine",73387064.0,success
+5EHL,0SQ,1-[3-tert-butyl-1-(4-methylphenyl)-1H-pyrazol-5-yl]urea,22618347.0,success
+5EHO,5O1,"~{N}8-cyclohexyl-~{N}2-[2-methoxy-4-(1-methylpyrazol-4-yl)phenyl]pyrido[3,4-d]pyrimidine-2,8-diamine",73386878.0,success
+5EI2,5O7,"N-(2,4-dimethoxyphenyl)-8-(1-methylpyrazol-4-yl)pyrido[3,4-d]pyrimidin-2-amine",119025603.0,success
+5EI6,5OQ,"N-(2,4-dimethoxyphenyl)-5-(1-methylpyrazol-4-yl)isoquinolin-3-amine",73386764.0,success
+5EI8,5OE,"N-[2-methoxy-4-(1-methylpyrazol-4-yl)phenyl]-8-(1-methylpyrazol-4-yl)pyrido[3,4-d]pyrimidin-2-amine",73386768.0,success
+5LJJ,AD5,"N~6~-cyclohexyl-N~2~-(4-morpholin-4-ylphenyl)-9H-purine-2,6-diamine",210332.0,success
+5MRB,C5N,"N-(2,6-diethylphenyl)-8-[[2-methoxy-4-(4-methylpiperazin-1-yl)phenyl]amino]-1-methyl-4,5-dihydropyrazolo[4,3-h]quinazoline-3-carboxamide",129012073.0,success
+5N7V,8PT,"~{N}6-cyclohexyl-~{N}2-(2-methyl-4-morpholin-4-yl-phenyl)-7~{H}-purine-2,6-diamine",127021010.0,success
+5N84,8Q5,"N-cyclopropyl-4-[8-(2-methylpropylamino)imidazo[1,2-a]pyrazin-3-yl]benzamide",67974488.0,success
+5N87,N66,"N-(2,6-diethylphenyl)-2-[[2-methoxy-4-(4-methylpiperazin-1-yl)phenyl]amino]-5,6-dihydropyrimido[4,5-e]indolizine-7-carboxamide",122632882.0,success
+5N93,8QE,4-[[4-azanyl-6-(~{tert}-butylamino)-5-cyano-pyridin-2-yl]amino]benzamide,70682875.0,success
+5N9S,8QW,"(2~{R})-2-(4-fluorophenyl)-N-[4-[2-[(2-methoxy-4-methylsulfonyl-phenyl)amino]-[1,2,4]triazolo[1,5-a]pyridin-6-yl]phenyl]propanamide",127021011.0,success
+5NA0,8QZ,"N-[3,5-diethyl-1-[2-[2-(2-methoxyethoxy)ethoxy]ethyl]pyrazol-4-yl]-2-[[2-methoxy-4-[4-(2-methoxyethanoyl)piperazin-1-yl]phenyl]amino]-5,6-dihydropyrimido[4,5-e]indolizine-7-carboxamide",,success (RCSB)
+5NAD,8RH,BAY 1217389,78320750.0,success
+5NTT,SVE,"N-(2,6-DIETHYLPHENYL)-1-METHYL-8-({4-[(1-METHYLPIPERIDIN-4-YL)CARBAMOYL]-2-(TRIFLUOROMETHOXY)PHENYL}AMINO)-4,5-DIHYDRO-1H-PYRAZOLO[4,3-H]QUINAZOLINE-3-CARBOXAMIDE",44556162.0,success
+6B4W,CQ7,"4-{[4-(cyclopentyloxy)-5-(2-methyl-1,3-benzoxazol-6-yl)-7H-pyrrolo[2,3-d]pyrimidin-2-yl]amino}-3-methoxy-N-methylbenzamide",117881270.0,success
+6H3K,FMW,"~{N}8-(2,2-dimethylpropyl)-~{N}2-[2-ethoxy-4-(4-methyl-1,2,4-triazol-3-yl)phenyl]-6-methyl-pyrido[3,4-d]pyrimidine-2,8-diamine",73386890.0,success
+6N6O,KE7,"4-({5-chloro-4-[(cis-4-hydroxy-4-methylcyclohexyl)oxy]-7H-pyrrolo[2,3-d]pyrimidin-2-yl}amino)-N,N-dimethyl-3-{[(2R)-1,1,1-trifluoropropan-2-yl]oxy}benzamide",138320062.0,success
+6TN9,NN5,"[4-[[6-(3,5-dimethyl-4-oxidanyl-phenyl)-[1,2,4]triazolo[1,5-a]pyridin-2-yl]amino]phenyl]-morpholin-4-yl-methanone",146035560.0,success
+6TNB,8QW,"(2~{R})-2-(4-fluorophenyl)-N-[4-[2-[(2-methoxy-4-methylsulfonyl-phenyl)amino]-[1,2,4]triazolo[1,5-a]pyridin-6-yl]phenyl]propanamide",127021011.0,success
+6TNC,O23,"N-cyclopropyl-4-{8-[(thiophen-2-ylmethyl)amino]imidazo[1,2-a]pyrazin-3-yl}benzamide",57382314.0,success
+6TND,8RH,BAY 1217389,78320750.0,success
+7CHM,FZF,"4-(cyclohexylamino)-2-[(2-methoxy-4-morpholin-4-ylcarbonyl-phenyl)amino]-7H-pyrrolo[2,3-d]pyrimidine-5-carbonitrile",155907519.0,success
+7CHN,FZL,"4-(cyclohexylamino)-2-[[2-methoxy-4-(2-oxidanylidenepyrrolidin-1-yl)phenyl]amino]-7H-pyrrolo[2,3-d]pyrimidine-5-carbonitrile",155118903.0,success
+7CHT,FZO,"2-[[2-methoxy-4-(2-oxidanylidenepyrrolidin-1-yl)phenyl]amino]-4-(oxan-4-ylamino)-7H-pyrrolo[2,3-d]pyrimidine-5-carbonitrile",155118974.0,success
+7CIL,FZR,"4-(cyclohexylamino)-2-[(1-methylpyrazol-4-yl)amino]-7H-pyrrolo[2,3-d]pyrimidine-5-carbonitrile",155907520.0,success
+7CJA,G0U,"4-(cyclopentylmethylamino)-2-[[2-methoxy-4-(2-oxidanylidenepyrrolidin-1-yl)phenyl]amino]-7H-pyrrolo[2,3-d]pyrimidine-5-carbonitrile",155118973.0,success
+7CLH,G5C,"2-[[2-methoxy-4-(2-oxidanylidenepyrrolidin-1-yl)phenyl]amino]-4-(methylamino)-7H-pyrrolo[2,3-d]pyrimidine-5-carbonitrile",155109148.0,success
+7LQD,YB4,"N-(2,6-diethylphenyl)-2-[[4-(4-methylpiperazin-1-yl)-2-(propanoylamino)phenyl]amino]-5,6-dihydropyrimido[4,5-e]indolizine-7-carboxamide",162624742.0,success
