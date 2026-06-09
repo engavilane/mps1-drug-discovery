@@ -1,0 +1,13 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+
+# Large/generated files
+*.pdbqt
+docking/results/
+data/ligands/pdbqt/
