@@ -2,7 +2,7 @@
 
 ## Project Overview
 This project is part of a 1st year Master's internship in Bioinformatics.
-It involves structure-based virtual screening of 80 inhibitors against 
+It involves structure-based virtual screening of 61 inhibitors against 
 protein 5LJJ using AutoDock Vina, followed by ADME filtering and the 
 development of a machine learning model to predict binding affinity from 
 structural features.
