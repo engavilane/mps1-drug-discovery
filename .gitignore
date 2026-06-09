@@ -7,6 +7,7 @@ __pycache__/
 *.pyo
 .ipynb_checkpoints/
 
-# Large/generated files
-docking/results/
-data/ligands/pdbqt/
+# Docking results — ignore raw PDBQT outputs but keep the scores CSV
+docking/results/*.pdbqt
+docking/results/*.log
+
