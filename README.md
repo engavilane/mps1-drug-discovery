@@ -51,5 +51,9 @@ python scripts/parse_results.py
 ## Results
 *(to be filled in as the project progresses)*
 
+## Notebooks
+- [Docking Analysis](notebooks/01_docking_analysis.ipynb)
+- [ADME Filter](notebooks/02_adme_filter.ipynb)
+
 ## Author
-Enya Gavilan Esquitino — Master's in Bioinformatics, Université Clermont Auvergne (France), Oxford Brookes University (UK), 2026
+Enya Gavilan Esquitino — Master's in Bioinformatics, [Université Clermont Auvergne (France)], [Oxford Brookes University (UK)], 2026
