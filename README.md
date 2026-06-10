@@ -39,7 +39,6 @@ The best inhibitors identified in Phase 1 are used as seeds for:
 4. Ranking and characterisation of novel predicted Mps1 inhibitors
 
 ---
-
 ## Pipeline Architecture
 
 ```
@@ -62,34 +61,83 @@ Interaction Analysis (Gly605 / Glu603 H-bonds)
          │
          ▼
 ADME Filtering (RDKit)
-    Lipinski Ro5 + solubility + PAINS
+    Lipinski Ro5 + TPSA + PAINS
          │
-         ▼
-ML Model (scikit-learn)
-    Features: structural descriptors, fingerprints
-    Target: predicted binding affinity (kcal/mol)
-         │
-         ▼
-Phase 2: Similarity Search → Novel Candidates → Prediction
+         ├─────────────────────────────────────┐
+         ▼                                     ▼
+Model 1 — Vina scores (n=45)       Model 2 — Experimental (n=2352)
+Ridge Regression                   SVR (PhysChem + Fingerprints)
+PhysChem descriptors               ChEMBL Mps1 IC50 data
+R²=0.706 (LOOCV)                   R²=0.729 (80/20 split)
+         │                                     │
+         └─────────────────┬───────────────────┘
+                           ▼
+              Phase 2: Similarity Search
+              Novel candidate prediction
 ```
 
 ---
 
-## Key Results (Phase 1 — Docking)
+## Key Results
+
+### Phase 1 — Docking & Interaction Analysis
 
 Top 5 predicted binders by AutoDock Vina score:
 
-| Ligand | PDB ID | Affinity (kcal/mol) |
-|--------|--------|---------------------|
-| 6B4W_LIG | 6B4W | -10.844 |
-| 7CHN_LIG | 7CHN | -10.324 |
-| 4JS8_LIG | 4JS8 | -10.316 |
-| 7CHM_LIG | 7CHM | -10.288 |
-| 7CJA_LIG | 7CJA | -10.281 |
+| Ligand | PDB ID | Affinity (kcal/mol) | Gly605 | Glu603 | ADME |
+|--------|--------|---------------------|--------|--------|------|
+| 7CHN_LIG | 7CHN | -10.324 | 4 | 2 | ✓ |
+| 7CHM_LIG | 7CHM | -10.288 | 4 | 2 | ✓ |
+| 7CJA_LIG | 7CJA | -10.281 | 3 | 2 | ✓ |
+| 7CHT_LIG | 7CHT | -9.970  | 4 | 2 | ✓ |
+| 7CIL_LIG | 7CIL | -9.482  | 5 | 2 | ✓ |
 
-Reversine (5LJJ_AD5) scored **-9.645 kcal/mol**, consistent with published Glide XP scores (-10.97 kcal/mol, Pugh et al. 2022), validating the docking setup. Clinically advanced compounds BAY-1217389 and BAY-1161909 scored -9.91 and -9.644 kcal/mol respectively, in line with their known potency.
+Reversine (5LJJ_AD5) scored **-9.645 kcal/mol**, consistent with 
+published Glide XP scores (-10.97 kcal/mol, Pugh et al. 2022), 
+validating the docking setup. Clinically advanced compounds 
+BAY-1217389 and BAY-1161909 scored -9.91 and -9.644 kcal/mol 
+respectively, in line with their known potency. 42/45 inhibitors 
+confirmed correct hinge binding (Gly605/Glu603 contacts). 
+26/45 passed both ADME filtering and hinge binding criteria.
 
-> Note: AutoDock Vina scores systematically overestimate binding affinities relative to experimental values. Results are interpreted in terms of relative ranking rather than absolute affinity prediction, consistent with established practice in the field (Pugh et al., 2022; Bolanos-Garcia, 2025).
+> Note: AutoDock Vina scores systematically overestimate binding 
+> affinities relative to experimental values. Results are interpreted 
+> in terms of relative ranking rather than absolute affinity prediction, 
+> consistent with established practice in the field 
+> (Pugh et al., 2022; Bolanos-Garcia, 2025).
+
+---
+
+### Phase 2 — Machine Learning Models
+
+**Model 1 — Vina score prediction (n=45, LOOCV)**
+
+| Model | Features | R² | RMSE | MAE |
+|---|---|---|---|---|
+| **Ridge Regression** | PhysChem only | **0.706** | 0.467 | 0.370 |
+| Random Forest | PhysChem only | 0.471 | 0.626 | 0.462 |
+| SVR | PhysChem only | 0.409 | 0.662 | 0.467 |
+
+Key drivers of affinity: aromatic rings, LogP, TPSA, 
+Gly605/Glu603 contacts (Ridge coefficients).
+
+**Model 2 — Experimental pIC50 prediction (n=2,352, ChEMBL, 80/20 split)**
+
+| Model | Features | R² | RMSE | MAE |
+|---|---|---|---|---|
+| **SVR** | PhysChem + Fingerprints | **0.729** | 0.623 | 0.445 |
+| Random Forest | PhysChem + Fingerprints | 0.701 | 0.653 | 0.492 |
+| Ridge Regression | PhysChem + Fingerprints | 0.601 | 0.755 | 0.596 |
+
+Trained on 2,352 Mps1/TTK inhibitors from ChEMBL with experimental 
+IC50 values. Hyperparameter tuning (GridSearchCV, 120 fits) confirmed 
+near-optimal default parameters.
+
+> The transition from Ridge Regression (n=45) to SVR (n=2,352) 
+> directly illustrates the bias-variance tradeoff: complex models 
+> require sufficient data to outperform simple linear baselines. 
+> Morgan fingerprints were detrimental with n=45 but essential 
+> with n=2,352, further illustrating this principle.
 
 ---
 
@@ -97,38 +145,71 @@ Reversine (5LJJ_AD5) scored **-9.645 kcal/mol**, consistent with published Glide
 
 ```
 docking-5LJJ/
-├── README.md
-├── environment.yml                  # Conda environment
+├── README.md                            # Project description and results
+├── environment.yml                      # Conda reproducible environment
+│
 ├── data/
 │   ├── raw/
-│   │   └── 5LJJ.pdb                # Original PDB structure
+│   │   └── 5LJJ.pdb                    # Original unmodified PDB from RCSB
 │   ├── receptor/
-│   │   ├── receptor_clean.pdb      # Waters/ligands removed
-│   │   └── receptor.pdbqt          # Vina-ready receptor
+│   │   ├── receptor_clean.pdb          # Waters/ligands/artefacts removed
+│   │   └── receptor.pdbqt              # Vina-ready receptor (Meeko)
 │   └── ligands/
-│       ├── compounds.csv           # PDB ID list
-│       ├── download_log.csv        # Download status log
-│       ├── preparation_log.txt     # Meeko preparation log
-│       ├── native_ligand.pdb       # Reversine (AD5) reference
-│       ├── raw/                    # 45 SDF files
-│       └── pdbqt/                  # 45 prepared PDBQT files
+│       ├── compounds.csv               # PDB ID input list
+│       ├── download_log.csv            # Download status per ligand
+│       ├── preparation_log.txt         # Meeko preparation log
+│       ├── native_ligand.pdb           # Reversine (AD5) — reference ligand
+│       ├── raw/                        # 45 SDF files (PubChem/RCSB)
+│       └── pdbqt/                      # 45 prepared PDBQT files (Meeko)
+│
 ├── docking/
-│   └── results/                    # Vina output + docking_scores.csv
+│   └── results/
+│       ├── docking_scores.csv          # Vina scores for all 45 ligands
+│       └── *_out.pdbqt                 # Docked poses (one per ligand)
+│
 ├── analysis/
-│   ├── adme/                       # ADME filtering results
-│   └── ml_model/                   # Model outputs and evaluation
+│   ├── interactions/
+│   │   ├── interaction_analysis.csv    # Gly605/Glu603 contact counts
+│   │   └── figures/
+│   │       ├── 5LJJ-AD5.png            # Reversine in binding site (reference)
+│   │       ├── 5LJJ-7CHN.png           # Best binder (7CHN) — dual hinge contact
+│   │       └── 5LJJ-5N9S.png           # Non-binder (5N9S/5EHL) — no hinge contact
+│   ├── adme/
+│   │   ├── adme_full.csv               # All 45 ligands + descriptors + flags
+│   │   └── adme_candidates.csv         # 26 candidates passing ADME + hinge
+│   ├── ic50/
+│   │   ├── chembl_mps1_ic50.csv        # 2,352 Mps1 IC50 values from ChEMBL
+│   │   └── ic50_matches.csv            # Matches between our 45 and ChEMBL
+│   └── ml_model/
+│       ├── best_model.pkl              # Model 1 — Ridge Regression (Vina)
+│       ├── scaler.pkl                  # Scaler for Model 1
+│       ├── variance_selector.pkl       # Variance filter for Model 1
+│       ├── predictions.csv             # Model 1 predicted vs actual
+│       ├── ridge_coefficients.csv      # Ridge feature coefficients
+│       └── chembl/
+│           ├── chembl_best_model.pkl   # Model 2 — SVR (ChEMBL pIC50)
+│           ├── chembl_scaler.pkl       # Scaler for Model 2
+│           ├── chembl_variance_selector.pkl
+│           ├── chembl_predictions.csv  # Model 2 predicted vs actual
+│           ├── chembl_model_comparison.csv
+│           └── chembl_svr_tuned.pkl    # Hyperparameter-tuned SVR
+│
 ├── notebooks/
-│   ├── 01_docking_analysis.ipynb
-│   ├── 02_adme_filter.ipynb
-│   └── 03_ml_model.ipynb
+│   ├── 01_docking_analysis.ipynb       # Docking results exploration
+│   ├── 02_adme_filter.ipynb            # ADME filtering visualisation
+│   └── 03_ml_model.ipynb               # ML model analysis and plots
+│
 └── scripts/
-    ├── download_ligands.py         # PubChem/RCSB automated download
-    ├── cleanup_ligands.py          # File renaming and deduplication
-    ├── prepare_ligands.py          # Meeko PDBQT preparation
-    ├── run_docking.py              # AutoDock Vina batch docking
-    ├── parse_results.py            # Score extraction and ranking
-    ├── adme_filter.py              # RDKit ADME descriptors
-    └── ml_model.py                 # Affinity prediction model
+    ├── download_ligands.py             # PubChem/RCSB automated download
+    ├── cleanup_ligands.py              # File renaming and deduplication
+    ├── prepare_ligands.py              # Meeko PDBQT preparation
+    ├── run_docking.py                  # AutoDock Vina batch docking
+    ├── parse_results.py                # Score extraction and ranking
+    ├── interaction_analysis.py         # Gly605/Glu603 contact analysis
+    ├── adme_filter.py                  # RDKit ADME descriptors + PAINS
+    ├── ml_model.py                     # Model 1 — Vina score prediction
+    ├── get_ic50.py                     # ChEMBL IC50 retrieval
+    └── ml_chembl.py                    # Model 2 — pIC50 prediction (ChEMBL)
 ```
 
 ---
