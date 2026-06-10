@@ -164,7 +164,31 @@ dependencies:
   - zlib-ng=2.3.3=hed4e4f5_1
   - zstd=1.5.7=hbf9d68e_6
   - pip:
+      - attrs==26.1.0
+      - cattrs==26.1.0
+      - certifi==2026.5.20
+      - chembl-webresource-client==0.10.9
+      - easydict==1.13
+      - filelock==3.29.1
+      - griddataformats==1.2.0
+      - idna==3.18
+      - joblib==1.5.3
+      - mda-xdrlib==0.2.0
+      - mdanalysis==2.10.0
       - meeko==0.7.1
+      - mmtf-python==1.1.3
+      - mrcfile==1.5.4
+      - msgpack==1.1.2
+      - narwhals==2.22.1
+      - platformdirs==4.10.0
       - prody==2.6.1
+      - pubchempy==1.0.5
       - pyparsing==3.1.1
+      - requests==2.34.2
+      - requests-cache==1.3.2
+      - scikit-learn==1.9.0
+      - threadpoolctl==3.6.0
+      - tqdm==4.68.2
+      - url-normalize==3.0.0
+      - urllib3==2.7.0
 prefix: /Users/enyagavilanesquitino/miniconda3/envs/docking
