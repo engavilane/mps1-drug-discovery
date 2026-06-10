@@ -1,0 +1,7 @@
+model,R2,RMSE,MAE
+PhysChem only | Ridge Regression,0.7055,0.4672,0.3699
+PhysChem only | Random Forest,0.4715,0.6259,0.4615
+PhysChem + Fingerprints | Random Forest,0.411,0.6608,0.4685
+PhysChem only | SVR,0.4093,0.6617,0.4672
+PhysChem + Fingerprints | SVR,0.289,0.726,0.4961
+PhysChem + Fingerprints | Ridge Regression,0.2486,0.7463,0.4784
