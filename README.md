@@ -226,8 +226,9 @@ Create and activate the conda environment:
 conda env create -f environment.yml
 conda activate docking
 ```
-
-Key dependencies: `vina`, `meeko`, `rdkit`, `pubchempy`, `pandas`, `scikit-learn`, `requests`
+Key dependencies: `vina`, `meeko`, `rdkit`, `pubchempy`, `pandas`, 
+`scikit-learn`, `requests`, `numpy`, `scipy`, `joblib`, 
+`chembl-webresource-client`, `mdanalysis`
 
 ---
 
