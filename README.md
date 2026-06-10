@@ -358,4 +358,4 @@ python scripts/phase2_similarity_search.py  # coming soon
 
 ## Author
 
-**Enya Gavilan Esquitino** — Master's in Bioinformatics Internship, 2025/26
+**Enya Gavilan Esquitino** — Master's in Bioinformatics Internship, 2026
