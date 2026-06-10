@@ -25,18 +25,22 @@ This project uses the crystal structure of Mps1 in complex with reversine (PDB: 
 This project is structured in two phases:
 
 ### Phase 1 — Virtual Screening of Known Inhibitors
-A dataset of **45 co-crystallised Mps1 inhibitors** (retrieved from the RCSB PDB) is subjected to:
+A dataset of **45 co-crystallised Mps1 inhibitors** (retrieved from 
+the RCSB PDB) is subjected to:
 1. Molecular docking against the Mps1 kinase domain (AutoDock Vina)
 2. Binding interaction analysis (H-bond contacts with Gly605/Glu603)
-3. ADME filtering using RDKit (Lipinski's Rule of Five + drug-likeness descriptors)
-4. Machine learning model training to predict binding affinity from structural features
+3. ADME filtering using RDKit (Lipinski's Rule of Five, TPSA, PAINS)
+4. Two complementary ML models:
+   - **Model 1** — Ridge Regression on Vina scores (n=45, R²=0.706)
+   - **Model 2** — SVR on experimental pIC50 from ChEMBL (n=2,352, R²=0.729)
 
-### Phase 2 — Novel Candidate Discovery
+### Phase 2 — Novel Candidate Discovery *(in progress)*
 The best inhibitors identified in Phase 1 are used as seeds for:
 1. PubChem structural similarity search (Tanimoto index ≥ 0.9)
 2. Docking and ADME filtering of retrieved candidates
-3. Affinity prediction using the Phase 1 trained ML model
-4. Ranking and characterisation of novel predicted Mps1 inhibitors
+3. Hinge interaction analysis (Gly605/Glu603)
+4. Affinity prediction using the ChEMBL-trained SVR model (Model 2)
+5. Ranking and characterisation of novel predicted Mps1 inhibitors
 
 ---
 ## Pipeline Architecture
@@ -229,49 +233,126 @@ Key dependencies: `vina`, `meeko`, `rdkit`, `pubchempy`, `pandas`, `scikit-learn
 
 ## Reproducing the Pipeline
 
-### 1. Download ligands
+### Setup
+```bash
+conda env create -f environment.yml
+conda activate docking
+```
+
+### Phase 1
+
+#### 1. Download ligands
 ```bash
 python scripts/download_ligands.py
 ```
 
-### 2. Clean and rename ligand files
+#### 2. Clean and rename ligand files
 ```bash
 python scripts/cleanup_ligands.py
 ```
 
-### 3. Prepare receptor
+#### 3. Prepare receptor
 ```bash
-mk_prepare_receptor.py -i data/receptor/receptor_clean.pdb -o data/receptor/receptor -p
+mk_prepare_receptor.py -i data/receptor/receptor_clean.pdb \
+                       -o data/receptor/receptor -p
 ```
 
-### 4. Prepare ligands
+#### 4. Prepare ligands
 ```bash
 python scripts/prepare_ligands.py
 ```
 
-### 5. Run docking
+#### 5. Run docking
 ```bash
 python scripts/run_docking.py
 ```
 
-### 6. ADME filtering
+#### 6. Interaction analysis (Gly605/Glu603)
+```bash
+python scripts/interaction_analysis.py
+```
+
+#### 7. ADME filtering
 ```bash
 python scripts/adme_filter.py
 ```
 
-### 7. Train ML model
+#### 8. ML Model 1 — Vina score prediction (n=45)
 ```bash
 python scripts/ml_model.py
 ```
 
+#### 9. Retrieve ChEMBL IC50 data
+```bash
+python scripts/get_ic50.py
+```
+
+#### 10. ML Model 2 — Experimental pIC50 prediction (n=2,352)
+```bash
+python scripts/ml_chembl.py
+```
+
+### Phase 2 *(in progress)*
+
+#### 11. Similarity search and novel candidate docking
+```bash
+python scripts/phase2_similarity_search.py  # coming soon
+```
 ---
 
 ## References
 
-- Bolanos-Garcia, V.M. (2025). Mps1 kinase functions in mitotic spindle assembly and error correction. *Trends in Biochemical Sciences*, 50(5), 438–453.
-- Pugh, L. et al. (2022). Computational Biology Dynamics of Mps1 Kinase Molecular Interactions with Isoflavones Reveals a Chemical Scaffold with Potential to Develop New Therapeutics for the Treatment of Cancer. *Int. J. Mol. Sci.*, 23, 14228.
-- Trott, O. & Olson, A.J. (2010). AutoDock Vina: improving the speed and accuracy of docking. *J. Comput. Chem.*, 31, 455–461.
-- Daina, A. et al. (2017). SwissADME: A free web tool to evaluate pharmacokinetics, drug-likeness and medicinal chemistry friendliness of small molecules. *Sci. Rep.*, 7, 42717.
+### Biological Context
+- Bolanos-Garcia, V.M. (2025). Mps1 kinase functions in mitotic 
+  spindle assembly and error correction. *Trends in Biochemical 
+  Sciences*, 50(5), 438–453.
+- Pugh, L. et al. (2022). Computational Biology Dynamics of Mps1 
+  Kinase Molecular Interactions with Isoflavones Reveals a Chemical 
+  Scaffold with Potential to Develop New Therapeutics for the 
+  Treatment of Cancer. *Int. J. Mol. Sci.*, 23, 14228.
+- Hiruma, Y. et al. (2016). Structural basis of reversine selectivity 
+  in inhibiting Mps1 more potently than Aurora B kinase. *Proteins*, 
+  84, 1761–1766. *(PDB: 5LJJ)*
+
+### Molecular Docking
+- Eberhardt, J. et al. (2021). AutoDock Vina 1.2.0: New Docking 
+  Methods, Expanded Force Field, and Python Bindings. *J. Chem. Inf. 
+  Model.*, 61, 3891–3898.
+- Trott, O. & Olson, A.J. (2010). AutoDock Vina: improving the speed 
+  and accuracy of docking. *J. Comput. Chem.*, 31, 455–461.
+
+### Ligand & Receptor Preparation
+- Forli, S. et al. (2016). Computational protein-ligand docking and 
+  virtual drug screening with the AutoDock suite. *Nature Protocols*, 
+  11, 905–919. *(Meeko/AutoDockTools)*
+
+### Cheminformatics & ADME
+- RDKit: Open-source cheminformatics software. 
+  https://www.rdkit.org
+- Daina, A. et al. (2017). SwissADME: A free web tool to evaluate 
+  pharmacokinetics, drug-likeness and medicinal chemistry friendliness 
+  of small molecules. *Sci. Rep.*, 7, 42717.
+- Baell, J.B. & Holloway, G.A. (2010). New substructure filters for 
+  removal of pan assay interference compounds (PAINS) from screening 
+  libraries. *J. Med. Chem.*, 53, 2719–2740.
+- Lipinski, C.A. et al. (2001). Experimental and computational 
+  approaches to estimate solubility and permeability in drug discovery 
+  and development settings. *Adv. Drug Deliv. Rev.*, 46, 3–26.
+
+### Machine Learning
+- Pedregosa, F. et al. (2011). Scikit-learn: Machine Learning in 
+  Python. *JMLR*, 12, 2825–2830.
+- Morgan, H.L. (1965). The generation of a unique machine description 
+  for chemical structures. *J. Chem. Doc.*, 5, 107–113. 
+  *(Morgan fingerprints)*
+
+### Databases
+- Berman, H.M. et al. (2000). The Protein Data Bank. 
+  *Nucleic Acids Res.*, 28, 235–242.
+- Mendez, D. et al. (2019). ChEMBL: towards direct deposition of 
+  bioassay data. *Nucleic Acids Res.*, 47, D930–D940.
+- Kim, S. et al. (2016). PubChem substance and compound databases. 
+  *Nucleic Acids Res.*, 44, D1202–D1213.
 
 ---
 
