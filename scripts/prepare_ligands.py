@@ -3,8 +3,13 @@
 #    Phase 2 : python scripts/prepare_ligands.py \
 #              --raw   data/phase2/raw \
 #              --pdbqt data/phase2/pdbqt \
+<<<<<<< HEAD
 #              --log   data/phase2/preparation_log.txt 
 
+=======
+#              --log   data/phase2/preparation_log.txt             
+    
+>>>>>>> da91986e9de021f5f3da0fbc4dc7e690c05f6e1d
 import os
 import subprocess
 import argparse
