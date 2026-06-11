@@ -379,7 +379,7 @@ python scripts/phase2_predict.py
 > differences < 0.08 kcal/mol confirming convergence).
 
 ```
-
+```
 > Note: Steps 12–16 reuse the same scripts as Phase 1 via
 > command-line arguments, ensuring methodological consistency
 > across both phases. Phase 2 docking uses exhaustiveness=8
