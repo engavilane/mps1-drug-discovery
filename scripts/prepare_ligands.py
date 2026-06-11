@@ -1,10 +1,3 @@
-# Usage:
-#    Phase 1 : python scripts/prepare_ligands.py
-#    Phase 2 : python scripts/prepare_ligands.py \
-#              --raw   data/phase2/raw \
-#              --pdbqt data/phase2/pdbqt \
-#              --log   data/phase2/preparation_log.txt             
-    
 import os
 import subprocess
 
