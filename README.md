@@ -385,7 +385,6 @@ python scripts/phase2_predict.py
 > screening; top candidates can be re-docked at
 > exhaustiveness=16 for validation.
 
-```
 ---
 
 ## References
