@@ -185,71 +185,91 @@ all filters** (86% hinge binding rate, 83% ADME pass rate).
 
 ```
 docking-5LJJ/
-├── README.md                            # Project description and results
-├── environment.yml                      # Conda reproducible environment
+├── README.md                                # Project description and results
+├── environment.yml                          # Conda reproducible environment
 │
 ├── data/
 │   ├── raw/
-│   │   └── 5LJJ.pdb                    # Original unmodified PDB from RCSB
+│   │   └── 5LJJ.pdb                        # Original unmodified PDB from RCSB
 │   ├── receptor/
-│   │   ├── receptor_clean.pdb          # Waters/ligands/artefacts removed
-│   │   └── receptor.pdbqt              # Vina-ready receptor (Meeko)
-│   └── ligands/
-│       ├── compounds.csv               # PDB ID input list
-│       ├── download_log.csv            # Download status per ligand
-│       ├── preparation_log.txt         # Meeko preparation log
-│       ├── native_ligand.pdb           # Reversine (AD5) — reference ligand
-│       ├── raw/                        # 45 SDF files (PubChem/RCSB)
-│       └── pdbqt/                      # 45 prepared PDBQT files (Meeko)
+│   │   ├── receptor_clean.pdb              # Waters/ligands/artefacts removed
+│   │   └── receptor.pdbqt                  # Vina-ready receptor (Meeko)
+│   ├── ligands/
+│   │   ├── compounds.csv                   # PDB ID input list
+│   │   ├── download_log.csv                # Download status per ligand
+│   │   ├── preparation_log.txt             # Meeko preparation log
+│   │   ├── native_ligand.pdb               # Reversine (AD5) — reference ligand
+│   │   ├── raw/                            # 45 SDF files (PubChem/RCSB)
+│   │   └── pdbqt/                          # 45 prepared PDBQT files (Meeko)
+│   └── phase2/
+│       ├── raw/                            # 235 novel candidate SDF files
+│       ├── pdbqt/                          # 232 prepared PDBQT files
+│       └── preparation_log.txt             # Meeko preparation log (Phase 2)
 │
 ├── docking/
-│   └── results/
-│       ├── docking_scores.csv          # Vina scores for all 45 ligands
-│       └── *_out.pdbqt                 # Docked poses (one per ligand)
+│   ├── results/
+│   │   ├── docking_scores.csv              # Vina scores for all 45 ligands
+│   │   └── *_out.pdbqt                     # Docked poses (one per ligand)
+│   └── phase2_results/
+│       ├── docking_scores.csv              # Vina scores for 232 candidates
+│       ├── *_out.pdbqt                     # Docked poses (one per candidate)
+│       └── *_refined_out.pdbqt             # Top 5 re-docked at exhaustiveness=16
 │
 ├── analysis/
 │   ├── interactions/
-│   │   ├── interaction_analysis.csv    # Gly605/Glu603 contact counts
+│   │   ├── interaction_analysis.csv        # Gly605/Glu603 contact counts
 │   │   └── figures/
-│   │       ├── 5LJJ-AD5.png            # Reversine in binding site (reference)
-│   │       ├── 5LJJ-7CHN.png           # Best binder (7CHN) — dual hinge contact
-│   │       └── 5LJJ-5N9S.png           # Non-binder (5N9S/5EHL) — no hinge contact
+│   │       ├── 5LJJ_AD5.png               # Reversine in binding site (reference)
+│   │       ├── 5LJJ_7CHN.png              # Best Phase 1 binder — dual hinge contact
+│   │       ├── 5LJJ_5N9S.png              # Non-binder — no hinge contact
+│   │       └── phase2_top_candidate.png   # CID 142416385 in binding site
 │   ├── adme/
-│   │   ├── adme_full.csv               # All 45 ligands + descriptors + flags
-│   │   └── adme_candidates.csv         # 26 candidates passing ADME + hinge
+│   │   ├── adme_full.csv                   # All 45 ligands + descriptors + flags
+│   │   └── adme_candidates.csv             # 26 candidates passing ADME + hinge
 │   ├── ic50/
-│   │   ├── chembl_mps1_ic50.csv        # 2,352 Mps1 IC50 values from ChEMBL
-│   │   └── ic50_matches.csv            # Matches between our 45 and ChEMBL
-│   └── ml_model/
-│       ├── best_model.pkl              # Model 1 — Ridge Regression (Vina)
-│       ├── scaler.pkl                  # Scaler for Model 1
-│       ├── variance_selector.pkl       # Variance filter for Model 1
-│       ├── predictions.csv             # Model 1 predicted vs actual
-│       ├── ridge_coefficients.csv      # Ridge feature coefficients
-│       └── chembl/
-│           ├── chembl_best_model.pkl   # Model 2 — SVR (ChEMBL pIC50)
-│           ├── chembl_scaler.pkl       # Scaler for Model 2
-│           ├── chembl_variance_selector.pkl
-│           ├── chembl_predictions.csv  # Model 2 predicted vs actual
-│           ├── chembl_model_comparison.csv
-│           └── chembl_svr_tuned.pkl    # Hyperparameter-tuned SVR
+│   │   ├── chembl_mps1_ic50.csv            # 2,352 Mps1 IC50 values from ChEMBL
+│   │   └── ic50_matches.csv                # Matches between our 45 and ChEMBL
+│   ├── ml_model/
+│   │   ├── best_model.pkl                  # Model 1 — Ridge Regression (Vina)
+│   │   ├── scaler.pkl                      # Scaler for Model 1
+│   │   ├── variance_selector.pkl           # Variance filter for Model 1
+│   │   ├── predictions.csv                 # Model 1 predicted vs actual
+│   │   ├── ridge_coefficients.csv          # Ridge feature coefficients
+│   │   └── chembl/
+│   │       ├── chembl_best_model.pkl       # Model 2 — SVR (ChEMBL pIC50)
+│   │       ├── chembl_scaler.pkl           # Scaler for Model 2
+│   │       ├── chembl_variance_selector.pkl
+│   │       ├── chembl_predictions.csv      # Model 2 predicted vs actual
+│   │       ├── chembl_model_comparison.csv
+│   │       └── chembl_svr_tuned.pkl        # Hyperparameter-tuned SVR
+│   └── phase2/
+│       ├── phase2_candidates.csv           # 235 candidates from similarity search
+│       ├── phase2_final_candidates.csv     # 193 ranked by combined score
+│       ├── top5_refined_scores.csv         # Refined docking at exhaustiveness=16
+│       ├── interactions/
+│       │   └── interaction_analysis.csv    # Phase 2 Gly605/Glu603 contacts
+│       └── adme/
+│           ├── adme_full.csv               # All 232 candidates + descriptors
+│           └── adme_candidates.csv         # 193 passing ADME + hinge
 │
 ├── notebooks/
-│   ├── 01_docking_analysis.ipynb       # Docking results exploration
-│   ├── 02_adme_filter.ipynb            # ADME filtering visualisation
-│   └── 03_ml_model.ipynb               # ML model analysis and plots
+│   ├── 01_docking_analysis.ipynb           # Docking results exploration
+│   ├── 02_adme_filter.ipynb                # ADME filtering visualisation
+│   └── 03_ml_model.ipynb                   # ML model analysis and plots
 │
 └── scripts/
-    ├── download_ligands.py             # PubChem/RCSB automated download
-    ├── cleanup_ligands.py              # File renaming and deduplication
-    ├── prepare_ligands.py              # Meeko PDBQT preparation
-    ├── run_docking.py                  # AutoDock Vina batch docking
-    ├── parse_results.py                # Score extraction and ranking
-    ├── interaction_analysis.py         # Gly605/Glu603 contact analysis
-    ├── adme_filter.py                  # RDKit ADME descriptors + PAINS
-    ├── ml_model.py                     # Model 1 — Vina score prediction
-    ├── get_ic50.py                     # ChEMBL IC50 retrieval
-    └── ml_chembl.py                    # Model 2 — pIC50 prediction (ChEMBL)
+    ├── download_ligands.py                 # PubChem/RCSB automated download
+    ├── cleanup_ligands.py                  # File renaming and deduplication
+    ├── prepare_ligands.py                  # Meeko PDBQT preparation (Phase 1+2)
+    ├── run_docking.py                      # AutoDock Vina batch docking (Phase 1+2)
+    ├── parse_results.py                    # Score extraction and ranking
+    ├── interaction_analysis.py             # Gly605/Glu603 contact analysis (Phase 1+2)
+    ├── adme_filter.py                      # RDKit ADME descriptors + PAINS (Phase 1+2)
+    ├── ml_model.py                         # Model 1 — Vina score prediction
+    ├── get_ic50.py                         # ChEMBL IC50 retrieval
+    ├── ml_chembl.py                        # Model 2 — pIC50 prediction (ChEMBL)
+    ├── phase2_similarity_search.py         # PubChem similarity search (5 seeds)
+    └── phase2_predict.py                   # pIC50 prediction + combined ranking
 ```
 
 ---
