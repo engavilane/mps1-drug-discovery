@@ -1,3 +1,10 @@
+# Usage:
+#    Phase 1 : python scripts/prepare_ligands.py
+#    Phase 2 : python scripts/prepare_ligands \
+#              --ligands data/phase2/pdbqt \
+#              --results docking/phase2_results \
+#              --exhaustiveness 8
+    
 import os
 import subprocess
 
