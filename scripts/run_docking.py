@@ -1,10 +1,3 @@
-# Usage:
-#    Phase 1 : python scripts/run_docking.py
-#    Phase 2 : python scripts/run_docking \
-#              --ligands data/phase2/pdbqt \
-#              --results docking/phase2_results \
-#              --exhaustiveness 8
-
 from pathlib import Path
 from vina import Vina
 import pandas as pd
