@@ -34,13 +34,16 @@ the RCSB PDB) is subjected to:
    - **Model 1** — Ridge Regression on Vina scores (n=45, R²=0.706)
    - **Model 2** — SVR on experimental pIC50 from ChEMBL (n=2,352, R²=0.729)
 
-### Phase 2 — Novel Candidate Discovery *(in progress)*
+### Phase 2 — Novel Candidate Discovery *(complete)*
 The best inhibitors identified in Phase 1 are used as seeds for:
-1. PubChem structural similarity search (Tanimoto index ≥ 0.9)
-2. Docking and ADME filtering of retrieved candidates
+1. PubChem structural similarity search (Tanimoto index ≥ 0.9,
+   Pugh et al. 2022 physicochemical filters)
+2. Ligand preparation and molecular docking (AutoDock Vina,
+   exhaustiveness=8, validated at exhaustiveness=16)
 3. Hinge interaction analysis (Gly605/Glu603)
-4. Affinity prediction using the ChEMBL-trained SVR model (Model 2)
-5. Ranking and characterisation of novel predicted Mps1 inhibitors
+4. ADME filtering (RDKit, Lipinski Ro5 + TPSA + PAINS)
+5. Affinity prediction using the ChEMBL-trained SVR model
+6. Combined ranking (Vina score + predicted pIC50)
 
 ---
 ## Pipeline Architecture
@@ -143,6 +146,39 @@ near-optimal default parameters.
 > Morgan fingerprints were detrimental with n=45 but essential 
 > with n=2,352, further illustrating this principle.
 
+### Phase 2 — Novel Candidate Discovery
+
+235 novel candidates retrieved from PubChem (Tanimoto ≥ 0.9,
+5 seed compounds). After preparation, docking, interaction
+analysis and ADME filtering: **193/232 candidates passed
+all filters** (86% hinge binding rate, 83% ADME pass rate).
+
+**Top 10 novel candidates by combined score (Vina + pIC50):**
+
+| Rank | PubChem CID | Seed | Vina (kcal/mol) | pIC50 | IC50 (nM) | Gly605 | Glu603 | Combined |
+|------|-------------|------|-----------------|-------|-----------|--------|--------|----------|
+| 1 | 142416385 | 7CIL | -8.724 | 7.831 | 14.74 | 4 | 2 | 0.727 |
+| 2 | 146393630 | 7CHM | -7.168 | 6.860 | 138.19 | 4 | 2 | 0.711 |
+| 3 | 129266632 | 7CIL | -8.634 | 7.461 | 34.59 | 5 | 2 | 0.670 |
+| 4 | 129266648 | 7CIL | -8.672 | 7.461 | 34.59 | 5 | 2 | 0.658 |
+| 5 | 145336712 | 7CIL | -8.628 | 7.403 | 39.55 | 4 | 2 | 0.652 |
+| 6 | 155022217 | 7CIL | -7.976 | 7.039 | 91.34 | 1 | 0 | 0.650 |
+| 7 | 129244943 | 7CIL | -8.806 | 7.391 | 40.62 | 5 | 2 | 0.628 |
+| 8 | 129244941 | 7CIL | -8.822 | 7.391 | 40.62 | 5 | 2 | 0.626 |
+| 9 | 142416375 | 7CIL | -7.961 | 6.877 | 132.83 | 5 | 2 | 0.618 |
+| 10 | 129275413 | 7CIL | -8.922 | 7.391 | 40.62 | 5 | 2 | 0.615 |
+
+**Top candidate: CID 142416385**
+- IUPAC: 4-[(1-methylcyclopropyl)amino]-2-[(5-methyl-1-propan-2-ylpyrazol-4-yl)amino]-7H-pyrrolo[2,3-d]pyrimidine-5-carbonitrile
+- Scaffold: 7H-pyrrolo[2,3-d]pyrimidine (ATP-competitive kinase inhibitor core)
+- MW: 350.4 Da | LogP: — | Formula: C₁₈H₂₂N₈
+- Refined docking score confirmed at exhaustiveness=16: -8.724 kcal/mol
+- Predicted IC50: **14.74 nM** — competitive with known clinical candidates
+
+> Re-docking of top 5 candidates at exhaustiveness=16 yielded
+> scores within 0.08 kcal/mol of screening values, confirming
+> pose convergence and validating the exhaustiveness=8 screening
+> protocol.
 ---
 
 ## Repository Structure
@@ -295,7 +331,7 @@ python scripts/ml_chembl.py
 
 ### Phase 2 — Novel Candidate Discovery
 
-#### 11. Similarity search (PubChem, Tanimoto ≥ 0.9)
+#### 11. Similarity search
 ```bash
 python scripts/phase2_similarity_search.py
 ```
@@ -333,9 +369,15 @@ python scripts/adme_filter.py \
   --output       analysis/phase2/adme
 ```
 
-#### 16. Predict pIC50 with ChEMBL SVR model
+#### 16. Predict pIC50 and rank candidates
 ```bash
 python scripts/phase2_predict.py
+```
+
+> Phase 2 docking uses exhaustiveness=8 for screening efficiency.
+> Top candidates were validated at exhaustiveness=16 (score
+> differences < 0.08 kcal/mol confirming convergence).
+
 ```
 
 > Note: Steps 12–16 reuse the same scripts as Phase 1 via
