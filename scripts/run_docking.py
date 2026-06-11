@@ -29,6 +29,7 @@ args = parser.parse_args()
 
 
 # PATHS
+RECEPTOR_PATH = "data/receptor/receptor.pdbqt"
 LIGANDS_DIR = Path(args.ligands)
 RESULTS_DIR = Path(args.results)
 RESULTS_DIR.mkdir(parents=True, exist_ok=True)
@@ -41,7 +42,7 @@ results = []
 
 # Initialise Vina with receptor
 v = Vina (sf_name='vina')
-v.set_receptor(receptor_path)
+v.set_receptor(RECEPTOR_PATH)
 
 # Coordinates obtained through PyMOL using centerofmass and visual verification for grid boxing
 v.compute_vina_maps(
@@ -50,12 +51,12 @@ v.compute_vina_maps(
 )
 
 # Loop over all 45 ligands
-pdbqt_files = sorted(ligands_dir.glob("*.pdbqt"))
+pdbqt_files = sorted(LIGANDS_DIR.glob("*.pdbqt"))
 print(f"Found {len(pdbqt_files)} ligands to dock\n")
 
 for ligand_path in pdbqt_files:
     ligand_name = ligand_path.stem
-    output_path = results_dir / f"{ligand_name}_out.pdbqt"
+    output_path = RESULTS_DIR / f"{ligand_name}_out.pdbqt"
 
     print(f"Docking: {ligand_name}")
     try:
@@ -85,7 +86,7 @@ for ligand_path in pdbqt_files:
 # Save results to CSV 
 results_df = pd.DataFrame(results)
 results_df = results_df.sort_values("affinity_kcal")  # best (most negative) first
-results_df.to_csv("docking/results/docking_scores.csv", index=False)
+results_df.to_csv(SCORES_CSV, index=False)
 
 print(f"\n{'='*50}")
 print(f" Docking complete — {len(results_df)} ligands processed")

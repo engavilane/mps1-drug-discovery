@@ -24,7 +24,8 @@ parser.add_argument("--output",
 args = parser.parse_args()
 
 
-# Paths 
+# Paths
+RECEPTOR_PATH= "data/receptor/receptor.pdbqt"
 SCORES_CSV   = args.scores
 RESULTS_DIR  = Path(args.results)
 OUTPUT_DIR   = Path(args.output)
