@@ -293,12 +293,57 @@ python scripts/get_ic50.py
 python scripts/ml_chembl.py
 ```
 
-### Phase 2 *(in progress)*
+### Phase 2 — Novel Candidate Discovery
 
-#### 11. Similarity search and novel candidate docking
+#### 11. Similarity search (PubChem, Tanimoto ≥ 0.9)
 ```bash
-python scripts/phase2_similarity_search.py  # coming soon
+python scripts/phase2_similarity_search.py
 ```
+
+#### 12. Prepare Phase 2 ligands
+```bash
+python scripts/prepare_ligands.py \
+  --raw   data/phase2/raw \
+  --pdbqt data/phase2/pdbqt \
+  --log   data/phase2/preparation_log.txt
+```
+
+#### 13. Dock Phase 2 candidates
+```bash
+python scripts/run_docking.py \
+  --ligands        data/phase2/pdbqt \
+  --results        docking/phase2_results \
+  --exhaustiveness 8
+```
+
+#### 14. Interaction analysis
+```bash
+python scripts/interaction_analysis.py \
+  --scores  docking/phase2_results/docking_scores.csv \
+  --results docking/phase2_results \
+  --output  analysis/phase2/interactions
+```
+
+#### 15. ADME filtering
+```bash
+python scripts/adme_filter.py \
+  --ligands      data/phase2/raw \
+  --interactions analysis/phase2/interactions/interaction_analysis.csv \
+  --scores       docking/phase2_results/docking_scores.csv \
+  --output       analysis/phase2/adme
+```
+
+#### 16. Predict pIC50 with ChEMBL SVR model
+```bash
+python scripts/phase2_predict.py
+```
+
+> Note: Steps 12–16 reuse the same scripts as Phase 1 via
+> command-line arguments, ensuring methodological consistency
+> across both phases. Phase 2 docking uses exhaustiveness=8
+> (vs 16 in Phase 1) for computational efficiency during
+> screening; top candidates can be re-docked at
+> exhaustiveness=16 for validation.
 ---
 
 ## References
