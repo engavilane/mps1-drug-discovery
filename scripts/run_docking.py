@@ -1,10 +1,18 @@
+# Usage :
+#   Phase 1 :
+#   Phase 2 : python scripts/run_docking.py \
+#               --ligands        data/phase2/pdbqt \
+#               --results        docking/phase2_results \
+#               --exhaustiveness 8
+
+
 from pathlib import Path
 from vina import Vina
 import pandas as pd
 import argparse
 
 
-# Arguement parser
+# Argument parser
 parser = argparse.ArgumentParser(
     description="Run AutoDock Vina docking"
 )

@@ -8,7 +8,8 @@ from pathlib import Path
 from rdkit import Chem
 from rdkit.Chem import AllChem, Descriptors, rdMolDescriptors, DataStructs
 
-# ── Paths ─────────────────────────────────────────────────
+
+# Paths
 LIGANDS_DIR    = Path("data/ligands/raw")
 PHASE2_DIR     = Path("data/phase2")
 PHASE2_SDF     = PHASE2_DIR / "raw"
@@ -18,7 +19,8 @@ OUTPUT_DIR     = Path("analysis/phase2")
 for d in [PHASE2_SDF, PHASE2_PDBQT, OUTPUT_DIR]:
     d.mkdir(parents=True, exist_ok=True)
 
-# ── Pugh et al. 2022 filters (Section 4.1) ────────────────
+
+# Pugh et al. 2022 filters (Section 4.1) 
 FILTERS = {
     "MW":        (270, 500),
     "HBD":       (1,   7),
@@ -29,7 +31,8 @@ FILTERS = {
 }
 TANIMOTO_THRESHOLD = 0.9
 
-# ── Seed compounds (top ADME + dual hinge binders) ────────
+
+# Seed compounds (top ADME + dual hinge binders)
 SEEDS = [
     "7CHN_LIG",
     "7CHM_LIG",
@@ -38,7 +41,8 @@ SEEDS = [
     "7CIL_LIG",
 ]
 
-# ── Load existing ligand fingerprints to avoid duplicates ──
+
+# Load existing ligand fingerprints to avoid duplicates 
 print("Loading existing ligand fingerprints...")
 existing_fps  = []
 existing_smiles = set()
@@ -54,6 +58,7 @@ for sdf_file in LIGANDS_DIR.glob("*.sdf"):
         existing_smiles.add(smi)
 
 print(f"  {len(existing_fps)} existing compounds loaded\n")
+
 
 # Helper: check filters 
 def passes_filters(mol):
@@ -153,7 +158,7 @@ for seed_name in SEEDS:
             continue
 
         # Get SMILES
-        smiles = compound.isomeric_smiles
+        smiles = compound.canonical_smiles
         if not smiles:
             continue
 
