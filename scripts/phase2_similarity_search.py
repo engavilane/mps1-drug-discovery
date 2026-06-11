@@ -158,7 +158,7 @@ for seed_name in SEEDS:
             continue
 
         # Get SMILES
-        smiles = compound.canonical_smiles
+        smiles = compound.connectivity_smiles
         if not smiles:
             continue
 
