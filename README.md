@@ -386,6 +386,8 @@ python scripts/phase2_predict.py
 > (vs 16 in Phase 1) for computational efficiency during
 > screening; top candidates can be re-docked at
 > exhaustiveness=16 for validation.
+
+```
 ---
 
 ## References
