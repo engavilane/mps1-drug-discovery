@@ -115,7 +115,7 @@ confirmed correct hinge binding (Gly605/Glu603 contacts).
 
 ---
 
-### Phase 2 — Machine Learning Models
+### Machine Learning Models
 
 **Model 1 — Vina score prediction (n=45, LOOCV)**
 
