@@ -1,16 +1,42 @@
+# Usage :
+#   Phase 1 : python scripts/adme_filter.py
+#   Phase 2 : python scripts/adme_filter.py \
+#               --ligands      data/phase2/raw \
+#               --interactions analysis/phase2/interactions/interaction_analysis.csv
+#               --scores       docking/phase2_results/docking_scores.csv \
+#               --output       analysis/phase2/adme
+
 from rdkit import Chem
 from rdkit.Chem import Descriptors, rdMolDescriptors, FilterCatalog
 from rdkit.Chem.FilterCatalog import FilterCatalogParams
 import pandas as pd
 from pathlib import Path
 import os
+import argparse
 
-# Paths 
-LIGANDS_DIR     = Path("data/ligands/raw")
-INTERACTIONS_CSV = "analysis/interactions/interaction_analysis.csv"
-SCORES_CSV      = "docking/results/docking_scores.csv"
-OUTPUT_DIR      = Path("analysis/adme")
+
+# Argument parser
+parser = argparse.ArgumentParser(
+    description="ADME filtering with RDKit"
+)
+parser.add_argument("--ligands",      
+                    default="data/ligands/raw")
+parser.add_argument("--interactions", 
+                    default="analysis/interactions/interaction_analysis.csv")
+parser.add_argument("--scores",       
+                    default="docking/results/docking_scores.csv")
+parser.add_argument("--output",       
+                    default="analysis/adme")
+args = parser.parse_args()
+
+
+# Paths
+LIGANDS_DIR      = Path(args.ligands)
+INTERACTIONS_CSV = args.interactions
+SCORES_CSV       = args.scores
+OUTPUT_DIR       = Path(args.output)
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+ 
 
 # Lipinski Ro5 + drug-likeness thresholds 
 # Based on Pugh et al. 2022 and standard drug discovery practice

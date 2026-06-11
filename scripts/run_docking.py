@@ -1,13 +1,39 @@
+# Usage:
+#    Phase 1 : python scripts/run_docking.py
+#    Phase 2 : python scripts/run_docking \
+#              --ligands data/phase2/pdbqt \
+#              --results docking/phase2_results \
+#              --exhaustiveness 8
+
 from pathlib import Path
 from vina import Vina
 import pandas as pd
+import argparse
+
+
+# Arguement parser
+parser = argparse.ArgumentParser(
+    description="Run AutoDock Vina docking"
+)
+parser.add_argument("--ligands",      
+                    default="data/ligands/pdbqt")
+parser.add_argument("--results",      
+                    default="docking/results")
+parser.add_argument("--exhaustiveness",
+                    type=int, default=16)
+parser.add_argument("--scores_csv",   
+                    default=None,
+                    help="Output CSV (auto if not set)")
+args = parser.parse_args()
 
 
 # PATHS
-receptor_path = 'data/receptor/receptor.pdbqt'
-ligands_dir = Path('data/ligands/pdbqt')
-results_dir = Path ('docking/results')
-results_dir.mkdir(parents=True, exist_ok=True)
+LIGANDS_DIR = Path(args.ligands)
+RESULTS_DIR = Path(args.results)
+RESULTS_DIR.mkdir(parents=True, exist_ok=True)
+
+SCORES_CSV  = (args.scores_csv if args.scores_csv
+               else str(RESULTS_DIR / "docking_scores.csv"))
 
 # Results collector
 results = []
@@ -33,7 +59,7 @@ for ligand_path in pdbqt_files:
     print(f"Docking: {ligand_name}")
     try:
         v.set_ligand_from_file(str(ligand_path))
-        v.dock(exhaustiveness=16, n_poses=5)
+        v.dock(exhaustiveness=args.exhaustiveness, n_poses=5)
         v.write_poses(str(output_path), n_poses=5, overwrite=True)
 
         # Extract best score (pose 1)

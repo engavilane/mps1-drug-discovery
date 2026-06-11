@@ -1,13 +1,35 @@
+# Usage :
+#   Phase 1 : python scripts/interaction_analysis.py
+#   Phase 2 : python scripts/interaction_analysis.py \
+#               --scores  docking/phase2_results/docking_scores.csv \
+#               --results docking/phase2_results \
+#               --output  analysis/phase2/interactions
+
 import numpy as np
 import pandas as pd
 from pathlib import Path
+import argparse
 
-# ── Paths ─────────────────────────────────────────────────
-RECEPTOR_PATH = "data/receptor/receptor.pdbqt"
-RESULTS_DIR   = Path("docking/results")
-SCORES_CSV    = "docking/results/docking_scores.csv"
-OUTPUT_DIR    = Path("analysis/interactions")
+
+# Argument parser
+parser = argparse.ArgumentParser(
+    description="Analyse Gly605/Glu603 interactions"
+)
+parser.add_argument("--scores",  
+                    default="docking/results/docking_scores.csv")
+parser.add_argument("--results", 
+                    default="docking/results")
+parser.add_argument("--output",  
+                    default="analysis/interactions")
+args = parser.parse_args()
+
+
+# Paths 
+SCORES_CSV   = args.scores
+RESULTS_DIR  = Path(args.results)
+OUTPUT_DIR   = Path(args.output)
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+
 
 # H-bond distance cutoff (donor-acceptor)
 DISTANCE_CUTOFF = 3.5  # Angstroms

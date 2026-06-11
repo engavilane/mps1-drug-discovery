@@ -1,9 +1,35 @@
+# Usage:
+#    Phase 1 : python scripts/prepare_ligands.py
+#    Phase 2 : python scripts/prepare_ligands.py \
+#              --raw   data/phase2/raw \
+#              --pdbqt data/phase2/pdbqt \
+#              --log   data/phase2/preparation_log.txt 
+
 import os
 import subprocess
+import argparse
 
-RAW_DIR    = "data/ligands/raw"
-PDBQT_DIR  = "data/ligands/pdbqt"
-LOG_FILE   = "data/ligands/preparation_log.txt"
+
+# Argument parsing
+parser = argparse.ArgumentParser(
+    description="Prepare ligands with Meeko"
+)
+parser.add_argument("--raw",   
+                    default="data/ligands/raw",
+                    help="Input SDF directory")
+parser.add_argument("--pdbqt", 
+                    default="data/ligands/pdbqt",
+                    help="Output PDBQT directory")
+parser.add_argument("--log",   
+                    default="data/ligands/preparation_log.txt",
+                    help="Log file path")
+args = parser.parse_args()
+
+
+# Paths
+RAW_DIR   = args.raw
+PDBQT_DIR = args.pdbqt
+LOG_FILE  = args.log
 
 os.makedirs(PDBQT_DIR, exist_ok=True)
 

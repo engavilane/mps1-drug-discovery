@@ -1,6 +1,23 @@
-import os
+# Usage :
+#   Phase 1 : python scripts/cleanup_ligands.py
+#   Phase 2 : python scripts/cleanup_ligands.py \
+#           -- dir data/phase2/raw
 
-RAW_DIR = "data/ligands/raw"
+import os
+import argparse
+
+
+# Argument parser
+parser = argparse.ArgumentParser(
+    description="Clean and rename ligand files"
+)
+parser.add_argument("--dir", 
+                    default="data/ligands/raw",
+                    help="Directory to clean")
+args = parser.parse_args()
+
+RAW_DIR = args.dir
+
 
 # 1. Files to DELETE (artefacts + duplicates to remove)
 to_delete = [
