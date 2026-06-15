@@ -42,7 +42,8 @@ The best inhibitors identified in Phase 1 are used as seeds for:
    Pugh et al. 2022 physicochemical filters)
 2. Ligand preparation and molecular docking (AutoDock Vina,
    exhaustiveness=8, validated at exhaustiveness=16)
-3. Hinge interaction analysis (Gly605/Glu603)
+3. PLIP hinge interaction analysis (Gly605/Glu603 H-bond
+   detection with distance + angle criteria)
 4. ADME filtering (RDKit, Lipinski Ro5 + TPSA + PAINS)
 5. Affinity prediction using the ChEMBL-trained SVR model
 6. Combined ranking (Vina score + predicted pIC50)
