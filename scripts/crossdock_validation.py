@@ -22,7 +22,8 @@ from pathlib import Path
 import warnings
 warnings.filterwarnings('ignore')
 
-# ── Configuration ─────────────────────────────────────────
+
+# Configuration 
 STANDARD_AA = [
     'ALA','ARG','ASN','ASP','CYS','GLN','GLU',
     'GLY','HIS','ILE','LEU','LYS','MET','PHE',
@@ -35,7 +36,8 @@ RIGID_SS = {'H', 'G', 'I', 'E'}
 OUTPUT_DIR = Path("analysis/validation")
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
-# ── Target structures ─────────────────────────────────────
+
+# Target structures 
 TARGETS = [
     {
         "pdb_id":  "5N7V",
@@ -64,7 +66,8 @@ TARGETS = [
     },
 ]
 
-# ── Helper functions ──────────────────────────────────────
+
+# Helper functions 
 parser = PDBParser(QUIET=True)
 
 def get_rigid_ca(structure, pdb_file):
@@ -146,7 +149,8 @@ def calc_best_rmsd(poses, crystal_coords):
         results.append(round(rmsd, 3))
     return min(results), results
 
-# ── Load reference ────────────────────────────────────────
+
+# Load reference 
 print("Loading reference structure (5LJJ)...")
 ref_structure  = parser.get_structure(
     '5LJJ', 'data/raw/5LJJ.pdb'
@@ -157,7 +161,8 @@ crystal_coords = np.load(
 )
 print(f"  Reference rigid Cα: {len(ref_rigid)}")
 
-# ── Run cross-docking for each target ────────────────────
+
+# Run cross-docking for each target 
 all_results = []
 
 # Add already-done 5N7V result
@@ -275,7 +280,8 @@ for target in TARGETS:
         "pass":            passed,
     })
 
-# ── Summary ───────────────────────────────────────────────
+
+# Summary
 print("\n" + "=" * 60)
 print("CROSS-DOCKING VALIDATION SUMMARY")
 print("=" * 60)
@@ -303,21 +309,11 @@ print(f"Cross-docking mean RMSD:   "
       f"{np.std(all_rmsds_val):.3f} Å")
 print(f"Cross-docking passed:      {n_pass}/{len(all_results)}")
 
-# ── Save results ──────────────────────────────────────────
+
+# Save results 
 df = pd.DataFrame(all_results)
 df.to_csv(
     OUTPUT_DIR / "crossdocking_validation.csv", index=False
 )
 print(f"\nResults saved → "
       f"{OUTPUT_DIR}/crossdocking_validation.csv")
-
-# ── Report text ───────────────────────────────────────────
-print(f"\nMethods text:")
-print(f"  'Cross-docking validation of reversine across")
-print(f"   {len(all_results)} structurally diverse Mps1 crystal")
-print(f"   structures (representing {len(all_results)} different")
-print(f"   inhibitor scaffolds) yielded a mean RMSD of")
-print(f"   {np.mean(all_rmsds_val):.3f} ± "
-      f"{np.std(all_rmsds_val):.3f} Å,")
-print(f"   with {n_pass}/{len(all_results)} structures passing")
-print(f"   the 2.0 Å threshold.'")
