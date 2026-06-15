@@ -9,9 +9,9 @@ from scipy.optimize import linear_sum_assignment
 
 
 # Paths 
-CRYSTAL_SDF  = "data/ligands/raw/5LJJ_AD5.sdf"
-REDOCK_PDBQT = "docking/results/5LJJ_AD5_redock_out.pdbqt"
-OUTPUT_DIR   = Path("analysis/validation")
+CRYSTAL_SDF  = "kinase_domain/data/ligands/raw/5LJJ_AD5.sdf"
+REDOCK_PDBQT = "kinase_domain/docking/results/5LJJ_AD5_redock_out.pdbqt"
+OUTPUT_DIR   = Path("kinase_domain/analysis/validation")
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 
@@ -20,7 +20,7 @@ import numpy as np
 # Load crystal coordinates directly from PDB
 print("Loading crystal coordinates from 5LJJ.pdb...")
 crystal_coords = np.load(
-    "data/receptor/reversine_crystal_coords.npy"
+    "kinase_domain/data/receptor/reversine_crystal_coords.npy"
 )
 print(f"  Crystal pose: {len(crystal_coords)} heavy atoms")
 

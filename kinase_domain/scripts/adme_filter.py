@@ -20,13 +20,13 @@ parser = argparse.ArgumentParser(
     description="ADME filtering with RDKit"
 )
 parser.add_argument("--ligands",      
-                    default="data/ligands/raw")
+                    default="kinase_domain/data/ligands/raw")
 parser.add_argument("--interactions", 
-                    default="analysis/interactions/interaction_analysis.csv")
+                    default="kinase_domain/analysis/interactions/interaction_analysis.csv")
 parser.add_argument("--scores",       
-                    default="docking/results/docking_scores.csv")
+                    default="kinase_domain/docking/results/docking_scores.csv")
 parser.add_argument("--output",       
-                    default="analysis/adme")
+                    default="kinase_domain/analysis/adme")
 args = parser.parse_args()
 
 

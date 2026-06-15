@@ -20,16 +20,16 @@ parser = argparse.ArgumentParser(
     description="Analyse Gly605/Glu603 interactions"
 )
 parser.add_argument("--scores",  
-                    default="docking/results/docking_scores.csv")
+                    default="kinase_domain/docking/results/docking_scores.csv")
 parser.add_argument("--results", 
-                    default="docking/results")
+                    default="kinase_domain/docking/results")
 parser.add_argument("--output",  
-                    default="analysis/interactions")
+                    default="kinase_domain/analysis/interactions")
 args = parser.parse_args()
 
 
 # Paths
-RECEPTOR_PATH= "data/receptor/receptor.pdbqt"
+RECEPTOR_PATH= "kinase_domain/data/receptor/receptor.pdbqt"
 SCORES_CSV   = args.scores
 RESULTS_DIR  = Path(args.results)
 OUTPUT_DIR   = Path(args.output)

@@ -28,13 +28,13 @@ warnings.filterwarnings('ignore')
 # Argparse 
 ap = argparse.ArgumentParser()
 ap.add_argument("--scores",
-    default="docking/results/phase1_docking_scores.csv")
+    default="kinase_domain/docking/results/phase1_docking_scores.csv")
 ap.add_argument("--results",
-    default="docking/results")
+    default="kinase_domain/docking/results")
 ap.add_argument("--output",
-    default="analysis/interactions_plip/phase1")
+    default="kinase_domain/analysis/interactions_plip/phase1")
 ap.add_argument("--receptor",
-    default="data/receptor/receptor_clean.pdb")
+    default="kinase_domain/data/receptor/receptor_clean.pdb")
 ap.add_argument("--old_interactions",
     default=None)
 args = ap.parse_args()

@@ -10,11 +10,11 @@ from rdkit.Chem import AllChem, Descriptors, rdMolDescriptors, DataStructs
 
 
 # Paths
-LIGANDS_DIR    = Path("data/ligands/raw")
-PHASE2_DIR     = Path("data/phase2")
+LIGANDS_DIR    = Path("kinase_domain/data/ligands/raw")
+PHASE2_DIR     = Path("kinase_domain/data/phase2")
 PHASE2_SDF     = PHASE2_DIR / "raw"
 PHASE2_PDBQT   = PHASE2_DIR / "pdbqt"
-OUTPUT_DIR     = Path("analysis/phase2")
+OUTPUT_DIR     = Path("kinase_domain/analysis/phase2")
 
 for d in [PHASE2_SDF, PHASE2_PDBQT, OUTPUT_DIR]:
     d.mkdir(parents=True, exist_ok=True)

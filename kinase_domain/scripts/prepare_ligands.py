@@ -17,13 +17,13 @@ parser = argparse.ArgumentParser(
     description="Prepare ligands with Meeko"
 )
 parser.add_argument("--raw",   
-                    default="data/ligands/raw",
+                    default="kinase_domain/data/ligands/raw",
                     help="Input SDF directory")
 parser.add_argument("--pdbqt", 
-                    default="data/ligands/pdbqt",
+                    default="kinase_domain/data/ligands/pdbqt",
                     help="Output PDBQT directory")
 parser.add_argument("--log",   
-                    default="data/ligands/preparation_log.txt",
+                    default="kinase_domain/data/ligands/preparation_log.txt",
                     help="Log file path")
 args = parser.parse_args()
 

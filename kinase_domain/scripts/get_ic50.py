@@ -6,9 +6,9 @@ from rdkit.Chem import AllChem, DataStructs
 import numpy as np
 
 # Paths
-ADME_CSV   = "analysis/adme/adme_full.csv"
-LIGANDS_DIR = Path("data/ligands/raw")
-OUTPUT_DIR  = Path("analysis/ic50")
+ADME_CSV   = "kinase_domain/analysis/adme/adme_full.csv"
+LIGANDS_DIR = Path("kinase_domain/data/ligands/raw")
+OUTPUT_DIR  = Path("kinase_domain/analysis/ic50")
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 

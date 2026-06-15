@@ -31,7 +31,7 @@ STANDARD_AA = [
 EXCLUDE_RESIDUES = set(range(672, 691))
 EXCLUDE_RESIDUES.update(range(603, 606))
 RIGID_SS  = {'H', 'G', 'I', 'E'}
-OUTPUT_DIR = Path("analysis/validation")
+OUTPUT_DIR = Path("kinase_domain/analysis/validation")
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 
@@ -91,10 +91,10 @@ class ProteinSelect(Select):
 # Load reference (5LJJ) 
 print("Loading reference structure (5LJJ)...")
 ref_structure = parser.get_structure(
-    '5LJJ', 'data/raw/5LJJ.pdb'
+    '5LJJ', 'kinase_domain/data/raw/5LJJ.pdb'
 )
 ref_rigid = get_rigid_ca(
-    ref_structure, 'data/raw/5LJJ.pdb'
+    ref_structure, 'kinase_domain/data/raw/5LJJ.pdb'
 )
 print(f"  Reference rigid Cα: {len(ref_rigid)}\n")
 
@@ -110,9 +110,9 @@ results = []
 for ligand_name, info in TOP_10.items():
     pdb_id     = info["pdb"]
     vina_5ljj  = info["vina_score"]
-    pdb_file   = f'data/raw/{pdb_id}.pdb'
-    ligand_sdf = f'data/ligands/raw/{ligand_name}.sdf'
-    ligand_pdbqt = f'data/ligands/pdbqt/{ligand_name}.pdbqt'
+    pdb_file   = f'kinase_domain/data/raw/{pdb_id}.pdb'
+    ligand_sdf = f'kinase_domain/data/ligands/raw/{ligand_name}.sdf'
+    ligand_pdbqt = f'kinase_domain/data/ligands/pdbqt/{ligand_name}.pdbqt'
 
     print(f"\n── {ligand_name} → {pdb_id} ──")
     print(f"   5LJJ score: {vina_5ljj} kcal/mol")
@@ -148,8 +148,8 @@ for ligand_name, info in TOP_10.items():
 
 
     # Save aligned receptor 
-    aligned_pdb  = f'data/receptor/{pdb_id}_homo_aligned.pdb'
-    aligned_pdbqt = f'data/receptor/{pdb_id}_homo_receptor'
+    aligned_pdb  = f'kinase_domain/data/receptor/{pdb_id}_homo_aligned.pdb'
+    aligned_pdbqt = f'kinase_domain/data/receptor/{pdb_id}_homo_receptor'
 
     io = PDBIO()
     io.set_structure(mob_structure)
@@ -174,7 +174,7 @@ for ligand_name, info in TOP_10.items():
 
 
     # Dock into native conformation 
-    out_pdbqt = (f'docking/results/'
+    out_pdbqt = (f'kinase_domain/docking/results/'
                  f'{ligand_name}_homo_{pdb_id}_out.pdbqt')
 
     v = Vina(sf_name='vina')

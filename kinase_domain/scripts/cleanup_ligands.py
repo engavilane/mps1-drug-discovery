@@ -12,7 +12,7 @@ parser = argparse.ArgumentParser(
     description="Clean and rename ligand files"
 )
 parser.add_argument("--dir", 
-                    default="data/ligands/raw",
+                    default="kinase_domain/data/ligands/raw",
                     help="Directory to clean")
 args = parser.parse_args()
 

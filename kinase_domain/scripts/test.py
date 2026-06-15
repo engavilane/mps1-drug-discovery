@@ -5,9 +5,9 @@ import os
 import time
 
 # Paths
-INPUT_CSV  = "data/ligands/compounds.csv"
-OUTPUT_DIR = "data/ligands/raw"
-LOG_FILE   = "data/ligands/download_log.csv"
+INPUT_CSV  = "kinase_domain/data/ligands/compounds.csv"
+OUTPUT_DIR = "kinase_domain/data/ligands/raw"
+LOG_FILE   = "kinase_domain/data/ligands/download_log.csv"
 
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 

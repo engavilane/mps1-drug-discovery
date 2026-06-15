@@ -16,8 +16,8 @@ warnings.filterwarnings("ignore")
 
 
 # Paths 
-CHEMBL_CSV  = "analysis/ic50/chembl_mps1_ic50.csv"
-OUTPUT_DIR  = Path("analysis/ml_model/chembl")
+CHEMBL_CSV  = "kinase_domain/analysis/ic50/chembl_mps1_ic50.csv"
+OUTPUT_DIR  = Path("kinase_domain/analysis/ml_model/chembl")
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 

@@ -17,9 +17,9 @@ parser = argparse.ArgumentParser(
     description="Run AutoDock Vina docking"
 )
 parser.add_argument("--ligands",      
-                    default="data/ligands/pdbqt")
+                    default="kinase_domain/data/ligands/pdbqt")
 parser.add_argument("--results",      
-                    default="docking/results")
+                    default="kinase_domain/docking/results")
 parser.add_argument("--exhaustiveness",
                     type=int, default=16)
 parser.add_argument("--scores_csv",   
@@ -29,7 +29,7 @@ args = parser.parse_args()
 
 
 # PATHS
-RECEPTOR_PATH = "data/receptor/receptor.pdbqt"
+RECEPTOR_PATH = "kinase_domain/data/receptor/receptor.pdbqt"
 LIGANDS_DIR = Path(args.ligands)
 RESULTS_DIR = Path(args.results)
 RESULTS_DIR.mkdir(parents=True, exist_ok=True)

@@ -25,10 +25,10 @@ RIGID_SS = {'H', 'G', 'I', 'E'}
 print("Loading structures...")
 parser = PDBParser(QUIET=True)
 ref_structure = parser.get_structure(
-    '5LJJ', 'data/raw/5LJJ.pdb'
+    '5LJJ', 'kinase_domain/data/raw/5LJJ.pdb'
 )
 mob_structure = parser.get_structure(
-    '5N7V', 'data/raw/5N7V.pdb'
+    '5N7V', 'kinase_domain/data/raw/5N7V.pdb'
 )
 print("  ✓ 5LJJ and 5N7V loaded")
 
@@ -47,8 +47,8 @@ def run_dssp(structure, pdb_file):
         print(f"  DSSP error: {e}")
         return {}
 
-ref_dssp = run_dssp(ref_structure, 'data/raw/5LJJ.pdb')
-mob_dssp = run_dssp(mob_structure, 'data/raw/5N7V.pdb')
+ref_dssp = run_dssp(ref_structure, 'kinase_domain/data/raw/5LJJ.pdb')
+mob_dssp = run_dssp(mob_structure, 'kinase_domain/data/raw/5N7V.pdb')
 
 print(f"  5LJJ: {len(ref_dssp)} residues assigned")
 print(f"  5N7V: {len(mob_dssp)} residues assigned")
@@ -146,14 +146,14 @@ class ProteinSelect(Select):
 
 io = PDBIO()
 io.set_structure(mob_structure)
-io.save('data/receptor/5N7V_aligned_dssp.pdb', ProteinSelect())
+io.save('kinase_domain/data/receptor/5N7V_aligned_dssp.pdb', ProteinSelect())
 print("\n  ✓ Aligned 5N7V saved (DSSP rigid core)")
 
 # ── Prepare PDBQT ─────────────────────────────────────────
 result = subprocess.run([
     'mk_prepare_receptor.py',
-    '-i', 'data/receptor/5N7V_aligned_dssp.pdb',
-    '-o', 'data/receptor/5N7V_aligned_dssp_receptor',
+    '-i', 'kinase_domain/data/receptor/5N7V_aligned_dssp.pdb',
+    '-o', 'kinase_domain/data/receptor/5N7V_aligned_dssp_receptor',
     '-p'
 ], capture_output=True, text=True)
 
@@ -169,18 +169,18 @@ from vina import Vina
 
 v = Vina(sf_name='vina')
 v.set_receptor(
-    'data/receptor/5N7V_aligned_dssp_receptor.pdbqt'
+    'kinase_domain/data/receptor/5N7V_aligned_dssp_receptor.pdbqt'
 )
 v.compute_vina_maps(
     center=[-34.48, -15.66, -10.38],
     box_size=[20, 33, 21]
 )
 v.set_ligand_from_file(
-    'data/ligands/pdbqt/5LJJ_AD5_redock.pdbqt'
+    'kinase_domain/data/ligands/pdbqt/5LJJ_AD5_redock.pdbqt'
 )
 v.dock(exhaustiveness=32, n_poses=10)
 v.write_poses(
-    'docking/results/5LJJ_AD5_crossdock_5N7V_dssp_out.pdbqt',
+    'kinase_domain/docking/results/5LJJ_AD5_crossdock_5N7V_dssp_out.pdbqt',
     n_poses=10, overwrite=True
 )
 score = v.energies(n_poses=1)[0][0]
@@ -191,7 +191,7 @@ from scipy.spatial.distance import cdist
 from scipy.optimize import linear_sum_assignment
 
 crystal_coords = np.load(
-    'data/receptor/reversine_crystal_coords.npy'
+    'kinase_domain/data/receptor/reversine_crystal_coords.npy'
 )
 
 def pdbqt_to_coords(lines):
@@ -212,7 +212,7 @@ def pdbqt_to_coords(lines):
 
 poses   = []
 current = []
-pdbqt   = ('docking/results/'
+pdbqt   = ('kinase_domain/docking/results/'
             '5LJJ_AD5_crossdock_5N7V_dssp_out.pdbqt')
 
 with open(pdbqt) as f:

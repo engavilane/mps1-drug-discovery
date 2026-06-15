@@ -33,7 +33,7 @@ EXCLUDE_RESIDUES = set(range(672, 691))
 EXCLUDE_RESIDUES.update(range(603, 606))
 RIGID_SS = {'H', 'G', 'I', 'E'}
 
-OUTPUT_DIR = Path("analysis/validation")
+OUTPUT_DIR = Path("kinase_domain/analysis/validation")
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 
@@ -153,11 +153,11 @@ def calc_best_rmsd(poses, crystal_coords):
 # Load reference 
 print("Loading reference structure (5LJJ)...")
 ref_structure  = parser.get_structure(
-    '5LJJ', 'data/raw/5LJJ.pdb'
+    '5LJJ', 'kinase_domain/data/raw/5LJJ.pdb'
 )
-ref_rigid      = get_rigid_ca(ref_structure, 'data/raw/5LJJ.pdb')
+ref_rigid      = get_rigid_ca(ref_structure, 'kinase_domain/data/raw/5LJJ.pdb')
 crystal_coords = np.load(
-    'data/receptor/reversine_crystal_coords.npy'
+    'kinase_domain/data/receptor/reversine_crystal_coords.npy'
 )
 print(f"  Reference rigid Cα: {len(ref_rigid)}")
 
@@ -184,7 +184,7 @@ for target in TARGETS:
         continue
 
     pdb_id   = target["pdb_id"]
-    pdb_file = f'data/raw/{pdb_id}.pdb'
+    pdb_file = f'kinase_domain/data/raw/{pdb_id}.pdb'
 
     print(f"\n── {pdb_id} ({target['ligand']}, "
           f"{target['scaffold']} scaffold) ──")
@@ -220,8 +220,8 @@ for target in TARGETS:
         def accept_residue(self, residue):
             return residue.get_resname() in STANDARD_AA
 
-    aligned_pdb  = f'data/receptor/{pdb_id}_aligned.pdb'
-    aligned_pdbqt = f'data/receptor/{pdb_id}_aligned_receptor'
+    aligned_pdb  = f'kinase_domain/data/receptor/{pdb_id}_aligned.pdb'
+    aligned_pdbqt = f'kinase_domain/data/receptor/{pdb_id}_aligned_receptor'
 
     io = PDBIO()
     io.set_structure(mob_structure)
@@ -248,11 +248,11 @@ for target in TARGETS:
         box_size=[20, 33, 21]
     )
     v.set_ligand_from_file(
-        'data/ligands/pdbqt/5LJJ_AD5_redock.pdbqt'
+        'kinase_domain/data/ligands/pdbqt/5LJJ_AD5_redock.pdbqt'
     )
     v.dock(exhaustiveness=32, n_poses=10)
 
-    out_pdbqt = (f'docking/results/'
+    out_pdbqt = (f'kinase_domain/docking/results/'
                  f'reversine_crossdock_{pdb_id}_out.pdbqt')
     v.write_poses(out_pdbqt, n_poses=10, overwrite=True)
 

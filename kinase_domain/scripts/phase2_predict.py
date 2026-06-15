@@ -9,12 +9,12 @@ warnings.filterwarnings("ignore")
 
 
 # Paths 
-ADME_CSV    = "analysis/adme_plip/phase2/adme_candidates.csv"
-LIGANDS_DIR = Path("data/phase2/raw")
-MODEL_PATH  = "analysis/ml_model/chembl/chembl_best_model.pkl"
-SCALER_PATH = "analysis/ml_model/chembl/chembl_scaler.pkl"
-SELECTOR_PATH = "analysis/ml_model/chembl/chembl_variance_selector.pkl"
-OUTPUT_DIR  = Path("analysis/phase2")
+ADME_CSV    = "kinase_domain/analysis/adme_plip/phase2/adme_candidates.csv"
+LIGANDS_DIR = Path("kinase_domain/data/phase2/raw")
+MODEL_PATH  = "kinase_domain/analysis/ml_model/chembl/chembl_best_model.pkl"
+SCALER_PATH = "kinase_domain/analysis/ml_model/chembl/chembl_scaler.pkl"
+SELECTOR_PATH = "kinase_domain/analysis/ml_model/chembl/chembl_variance_selector.pkl"
+OUTPUT_DIR  = Path("kinase_domain/analysis/phase2")
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 

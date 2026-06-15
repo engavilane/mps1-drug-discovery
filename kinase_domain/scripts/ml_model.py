@@ -16,9 +16,9 @@ warnings.filterwarnings("ignore")
 
 
 # Paths 
-LIGANDS_DIR  = Path("data/ligands/raw")
-ADME_CSV     = "analysis/adme/adme_full.csv"
-OUTPUT_DIR   = Path("analysis/ml_model")
+LIGANDS_DIR  = Path("kinase_domain/data/ligands/raw")
+ADME_CSV     = "kinase_domain/analysis/adme/adme_full.csv"
+OUTPUT_DIR   = Path("kinase_domain/analysis/ml_model")
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 
