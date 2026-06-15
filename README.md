@@ -1,4 +1,5 @@
-# In Silico Drug Discovery Pipeline Targeting Mps1/TTK Kinase (PDB: 5LJJ)
+# In Silico Drug Discovery Targeting Mps1/TTK Kinase 
+## ATP-Competitive and NTD-Targeting Inhibitor Discovery Pipeline
 
 > Structure-based virtual screening, ADME filtering, and machine learning-based affinity prediction for Mps1 kinase inhibitors — 1st year Master's internship project in Bioinformatics.
 
