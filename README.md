@@ -208,6 +208,10 @@ near-optimal default parameters.
   detection
 
 **Priority candidate for experimental validation: CID 142416385**
+- Rank 1 by predicted pIC50 and strongest overall profile
+- Recommended over combined-score rank 1 (7CHM_LIG_146393701)
+  due to substantially stronger docking score (−8.724 vs
+  −7.025 kcal/mol) and predicted IC50 (14.74 vs 80.22 nM)
 - IUPAC: 4-[(1-methylcyclopropyl)amino]-2-[(5-methyl-1-
   propan-2-ylpyrazol-4-yl)amino]-7H-pyrrolo[2,3-d]
   pyrimidine-5-carbonitrile
