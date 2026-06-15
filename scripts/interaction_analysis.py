@@ -1,3 +1,7 @@
+# DEPRECATED — replaced by plip_analysis.py
+# Kept for reference only. Use plip_analysis.py
+# for proper H-bond detection with angle criteria.
+# --------------------
 # Usage :
 #   Phase 1 : python scripts/interaction_analysis.py
 #   Phase 2 : python scripts/interaction_analysis.py \

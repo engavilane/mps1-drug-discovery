@@ -59,11 +59,39 @@ pains_catalog = FilterCatalog.FilterCatalog(params)
 interactions_df = pd.read_csv(INTERACTIONS_CSV)
 scores_df       = pd.read_csv(SCORES_CSV)
 
+# Normalise interaction format
+# Handle both PLIP and distance-based column formats
+if 'is_hinge_binder' in interactions_df.columns:
+    # PLIP format — convert to standard column names
+    print("  Detected PLIP interaction format")
+
+    def count_res(row, resid):
+        try:
+            details = str(row.get('hbond_details', ''))
+            resname = f'GLY{resid}' if resid == 605 \
+                      else f'GLU{resid}'
+            return details.count(str(resid))
+        except:
+            return 0
+
+    interactions_df['gly605_contacts'] = interactions_df.apply(
+        lambda r: count_res(r, 605), axis=1
+    )
+    interactions_df['glu603_contacts'] = interactions_df.apply(
+        lambda r: count_res(r, 603), axis=1
+    )
+    interactions_df['total_contacts'] = \
+        interactions_df['hbond_total']
+    interactions_df['binds_hinge'] = \
+        interactions_df['is_hinge_binder']
+else:
+    print("  Detected distance-based interaction format")
+
 # Merge scores + interactions
 merged_df = scores_df.merge(interactions_df[
     ["ligand", "gly605_contacts", "glu603_contacts",
      "total_contacts", "binds_hinge"]
-], on="ligand", how="left")
+    ])
 
 print(f"Computing ADME descriptors for {len(merged_df)} ligands\n")
 print("=" * 60)

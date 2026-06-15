@@ -1,0 +1,233 @@
+ligand,affinity_kcal,hbond_total,hbond_pdon,hbond_ldon,hydrophobic,pi_stack,salt_bridge,water_bridge,hinge_residues,hbond_details,is_hinge_binder
+phase2_7CHN_LIG_155119000,-10.86,6,1,5,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.25a=155.4 | GLU603(ldon)d=3.06a=114.9 | GLY605(ldon)d=3.09a=107.8 | GLY605(ldon)d=3.44a=125.8 | GLY605(ldon)d=2.88a=126.4 | GLY605(ldon)d=3.36a=137.0,True
+phase2_7CHN_LIG_155118997,-10.735,2,1,1,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.82a=152.3 | GLU603(ldon)d=3.18a=106.4,True
+phase2_7CHN_LIG_155118910,-10.439,3,1,2,0,0,0,0,[605],GLY605(pdon)d=3.44a=154.3 | GLY605(ldon)d=3.19a=138.7 | GLY605(ldon)d=3.30a=113.3,True
+phase2_7CHN_LIG_155109147,-10.341,4,1,3,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.85a=156.4 | GLU603(ldon)d=3.21a=166.8 | GLY605(ldon)d=3.29a=148.6 | GLY605(ldon)d=3.26a=139.2,True
+phase2_7CHT_LIG_155119004,-10.334,5,1,4,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.48a=169.0 | GLU603(ldon)d=3.10a=104.3 | GLU603(ldon)d=3.45a=124.1 | GLY605(ldon)d=3.45a=147.0 | GLY605(ldon)d=3.01a=145.9,True
+phase2_7CHN_LIG_155109167,-10.333,5,1,4,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.38a=166.2 | GLU603(ldon)d=3.17a=122.3 | GLY605(ldon)d=3.25a=121.1 | GLY605(ldon)d=3.02a=103.2 | GLY605(ldon)d=2.80a=107.7,True
+phase2_7CHM_LIG_77846657,-10.314,2,1,1,0,0,0,0,[605],GLY605(pdon)d=3.63a=143.2 | GLY605(ldon)d=2.94a=126.9,True
+phase2_7CHN_LIG_155109123,-10.311,5,1,4,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.46a=156.6 | GLU603(ldon)d=3.09a=102.5 | GLY605(ldon)d=3.30a=143.8 | GLY605(ldon)d=2.84a=162.9 | GLY605(ldon)d=3.42a=110.6,True
+phase2_7CHN_LIG_155118894,-10.293,7,1,6,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.80a=157.7 | GLU603(ldon)d=3.07a=111.4 | GLU603(ldon)d=3.45a=127.7 | GLU603(ldon)d=3.35a=139.3 | GLY605(ldon)d=3.10a=111.7 | GLY605(ldon)d=3.47a=125.4 | GLY605(ldon)d=3.35a=120.0,True
+phase2_7CHN_LIG_155109177,-10.224,3,1,2,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.25a=154.3 | GLU603(ldon)d=3.08a=138.7 | GLY605(ldon)d=3.22a=134.9,True
+phase2_7CHM_LIG_142416377,-10.186,0,0,0,0,0,0,0,[],,False
+phase2_7CHN_LIG_155118926,-10.182,3,1,2,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.58a=163.8 | GLU603(ldon)d=3.28a=118.1 | GLY605(ldon)d=3.30a=156.2,True
+phase2_7CHM_LIG_77846573,-10.158,2,1,1,0,0,0,0,[605],GLY605(pdon)d=3.96a=149.4 | GLY605(ldon)d=3.42a=154.2,True
+phase2_7CHM_LIG_142436034,-10.153,1,1,0,0,0,0,0,[605],GLY605(pdon)d=3.36a=164.2,True
+phase2_7CHM_LIG_146329893,-10.15,2,1,1,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.40a=168.2 | GLU603(ldon)d=3.16a=121.2,True
+phase2_7CHN_LIG_155109171,-10.138,3,1,2,0,0,0,0,[605],GLY605(pdon)d=3.29a=148.1 | GLY605(ldon)d=3.14a=153.1 | GLY605(ldon)d=3.01a=127.2,True
+phase2_7CHM_LIG_142416417,-10.081,2,1,1,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.33a=166.2 | GLU603(ldon)d=3.17a=112.1,True
+phase2_7CHN_LIG_166866535,-10.03,4,1,3,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.28a=155.6 | GLU603(ldon)d=3.21a=153.3 | GLY605(ldon)d=3.09a=111.5 | GLY605(ldon)d=3.40a=120.3,True
+phase2_7CHM_LIG_155558488,-9.99,4,1,3,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.02a=149.6 | GLU603(ldon)d=2.86a=163.7 | GLY605(ldon)d=2.82a=106.9 | GLY605(ldon)d=3.15a=106.0,True
+phase2_7CHM_LIG_117884097,-9.946,3,1,2,0,0,0,0,[605],GLY605(pdon)d=3.66a=143.4 | GLY605(ldon)d=3.32a=127.6 | GLY605(ldon)d=2.92a=170.6,True
+phase2_7CHM_LIG_142436041,-9.903,3,1,2,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.41a=166.0 | GLU603(ldon)d=3.15a=128.3 | GLY605(ldon)d=2.97a=116.3,True
+phase2_7CHN_LIG_155109139,-9.868,2,1,1,0,0,0,0,[605],GLY605(pdon)d=3.96a=149.3 | GLY605(ldon)d=3.55a=112.8,True
+phase2_7CHM_LIG_146289656,-9.861,0,0,0,0,0,0,0,[],,False
+phase2_7CHN_LIG_155109132,-9.86,4,1,3,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.26a=154.4 | GLU603(ldon)d=3.08a=117.0 | GLY605(ldon)d=3.42a=106.2 | GLY605(ldon)d=3.10a=100.1,True
+phase2_7CHM_LIG_146329895,-9.852,5,1,4,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.42a=165.9 | GLU603(ldon)d=3.16a=139.4 | GLY605(ldon)d=3.51a=115.1 | GLY605(ldon)d=2.94a=102.3 | GLY605(ldon)d=3.77a=114.7,True
+phase2_7CHM_LIG_142416298,-9.85,3,1,2,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.25a=146.8 | GLU603(ldon)d=3.23a=143.0 | GLY605(ldon)d=3.46a=117.5,True
+phase2_7CHM_LIG_155012442,-9.83,1,1,0,0,0,0,0,[605],GLY605(pdon)d=3.22a=148.0,True
+phase2_7CHM_LIG_151620004,-9.829,3,1,2,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.23a=148.0 | GLU603(ldon)d=3.21a=129.1 | GLY605(ldon)d=3.48a=118.4,True
+phase2_7CHN_LIG_155118890,-9.813,2,1,1,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.27a=147.7 | GLU603(ldon)d=3.16a=167.8,True
+phase2_7CHT_LIG_169729259,-9.805,3,1,2,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.68a=151.2 | GLU603(ldon)d=3.24a=135.4 | GLY605(ldon)d=3.28a=110.0,True
+phase2_7CHN_LIG_166866548,-9.799,4,1,3,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.30a=153.1 | GLU603(ldon)d=3.15a=141.6 | GLY605(ldon)d=3.13a=134.3 | GLY605(ldon)d=3.43a=124.2,True
+phase2_7CHM_LIG_155554448,-9.75,2,1,1,0,0,0,0,[605],GLY605(pdon)d=3.15a=148.9 | GLY605(ldon)d=3.35a=118.2,True
+phase2_7CHM_LIG_146329789,-9.747,3,1,2,0,0,0,0,[605],GLY605(pdon)d=3.25a=153.0 | GLY605(ldon)d=3.40a=149.8 | GLY605(ldon)d=3.40a=131.8,True
+phase2_7CHM_LIG_146393700,-9.732,0,0,0,0,0,0,0,[],,False
+phase2_7CHM_LIG_117881533,-9.725,4,1,3,0,0,0,0,[605],GLY605(pdon)d=3.78a=142.9 | GLY605(ldon)d=3.18a=121.3 | GLY605(ldon)d=3.67a=109.2 | GLY605(ldon)d=3.06a=119.4,True
+phase2_7CHN_LIG_155109126,-9.721,1,1,0,0,0,0,0,[605],GLY605(pdon)d=3.45a=151.9,True
+phase2_7CHM_LIG_142416332,-9.708,3,1,2,0,0,0,0,[605],GLY605(pdon)d=3.23a=148.2 | GLY605(ldon)d=3.43a=155.3 | GLY605(ldon)d=2.99a=145.9,True
+phase2_7CHM_LIG_155545935,-9.696,3,1,2,0,0,0,0,[605],GLY605(pdon)d=3.28a=151.0 | GLY605(ldon)d=3.15a=106.3 | GLY605(ldon)d=3.39a=118.8,True
+phase2_7CHM_LIG_142416320,-9.689,1,1,0,0,0,0,0,[605],GLY605(pdon)d=3.24a=148.2,True
+phase2_7CHM_LIG_142416410,-9.689,3,1,2,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.21a=148.8 | GLU603(ldon)d=3.13a=131.5 | GLY605(ldon)d=3.46a=150.9,True
+phase2_7CHM_LIG_148694189,-9.686,2,1,1,0,0,0,0,[605],GLY605(pdon)d=3.16a=149.1 | GLY605(ldon)d=2.91a=135.2,True
+phase2_7CJA_LIG_169728188,-9.664,2,1,1,0,0,0,0,[605],GLY605(pdon)d=3.33a=146.6 | GLY605(ldon)d=2.91a=122.8,True
+phase2_7CIL_LIG_129275440,-9.659,2,1,1,0,0,0,0,[605],GLY605(pdon)d=3.01a=158.0 | GLY605(ldon)d=2.81a=130.0,True
+phase2_7CHM_LIG_155564829,-9.642,4,1,3,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.25a=155.1 | GLU603(ldon)d=2.98a=107.8 | GLY605(ldon)d=3.37a=116.7 | GLY605(ldon)d=3.09a=116.7,True
+phase2_7CHM_LIG_162614379,-9.641,4,1,3,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.18a=153.6 | GLU603(ldon)d=3.16a=141.6 | GLY605(ldon)d=2.96a=123.3 | GLY605(ldon)d=3.38a=133.4,True
+phase2_7CHM_LIG_117881522,-9.632,4,1,3,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.20a=149.7 | GLU603(ldon)d=3.20a=146.8 | GLY605(ldon)d=2.90a=136.2 | GLY605(ldon)d=3.28a=101.3,True
+phase2_7CHM_LIG_117881546,-9.63,3,1,2,0,0,0,0,[605],GLY605(pdon)d=3.61a=146.3 | GLY605(ldon)d=3.16a=127.3 | GLY605(ldon)d=3.43a=104.5,True
+phase2_7CHM_LIG_147772165,-9.628,1,1,0,0,0,0,0,[605],GLY605(pdon)d=3.93a=159.4,True
+phase2_7CHM_LIG_155548752,-9.616,3,1,2,0,0,0,0,[605],GLY605(pdon)d=3.30a=153.7 | GLY605(ldon)d=3.19a=105.6 | GLY605(ldon)d=3.51a=105.3,True
+phase2_7CHN_LIG_155109134,-9.608,3,1,2,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.12a=152.6 | GLU603(ldon)d=3.01a=129.3 | GLY605(ldon)d=2.83a=177.1,True
+phase2_7CHM_LIG_117881541,-9.579,2,1,1,0,0,0,0,[605],GLY605(pdon)d=3.57a=151.3 | GLY605(ldon)d=3.27a=127.3,True
+phase2_7CHM_LIG_142416311,-9.557,5,1,4,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.24a=149.0 | GLU603(ldon)d=3.18a=154.7 | GLU603(ldon)d=3.15a=128.4 | GLY605(ldon)d=3.51a=111.4 | GLY605(ldon)d=3.49a=152.3,True
+phase2_7CHM_LIG_142416384,-9.545,3,1,2,0,0,0,0,[605],GLY605(pdon)d=3.81a=161.4 | GLY605(ldon)d=3.49a=118.5 | GLY605(ldon)d=3.39a=119.0,True
+phase2_7CHM_LIG_142436063,-9.536,3,1,2,0,0,0,0,[605],GLY605(pdon)d=3.63a=142.5 | GLY605(ldon)d=3.09a=109.9 | GLY605(ldon)d=3.69a=163.2,True
+phase2_7CHN_LIG_155691552,-9.529,5,1,4,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.27a=154.1 | GLU603(ldon)d=3.10a=119.3 | GLU603(ldon)d=3.19a=132.5 | GLY605(ldon)d=3.43a=149.0 | GLY605(ldon)d=3.44a=120.3,True
+phase2_7CHM_LIG_142416365,-9.527,2,1,1,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.23a=149.1 | GLU603(ldon)d=3.16a=113.2,True
+phase2_7CHM_LIG_118286394,-9.52,3,1,2,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.19a=149.0 | GLU603(ldon)d=3.12a=103.6 | GLY605(ldon)d=2.91a=137.5,True
+phase2_7CHM_LIG_142416338,-9.482,4,1,3,0,0,0,0,"[603, 605]",GLY605(pdon)d=4.02a=158.0 | GLU603(ldon)d=3.10a=170.3 | GLY605(ldon)d=3.42a=153.5 | GLY605(ldon)d=3.51a=156.9,True
+phase2_7CHM_LIG_142416333,-9.468,1,1,0,0,0,0,0,[605],GLY605(pdon)d=3.19a=149.2,True
+phase2_7CHM_LIG_142416334,-9.46,6,1,5,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.16a=150.1 | GLU603(ldon)d=3.13a=111.4 | GLU603(ldon)d=3.07a=164.9 | GLY605(ldon)d=2.99a=140.5 | GLY605(ldon)d=3.48a=118.0 | GLY605(ldon)d=3.48a=119.6,True
+phase2_7CHM_LIG_117881492,-9.448,2,1,1,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.49a=151.2 | GLU603(ldon)d=3.90a=110.1,True
+phase2_7CHT_LIG_151121021,-9.439,2,1,1,0,0,0,0,[605],GLY605(pdon)d=3.53a=151.4 | GLY605(ldon)d=4.08a=138.1,True
+phase2_7CHN_LIG_155119022,-9.431,3,1,2,0,0,0,0,[605],GLY605(pdon)d=2.91a=158.6 | GLY605(ldon)d=4.00a=160.0 | GLY605(ldon)d=3.79a=124.4,True
+phase2_7CHM_LIG_146393688,-9.424,1,1,0,0,0,0,0,[605],GLY605(pdon)d=3.19a=147.7,True
+phase2_7CHN_LIG_168793585,-9.416,3,1,2,0,0,0,0,[605],GLY605(pdon)d=3.29a=154.0 | GLY605(ldon)d=3.43a=150.3 | GLY605(ldon)d=3.36a=120.1,True
+phase2_7CHN_LIG_169729302,-9.416,4,1,3,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.29a=154.0 | GLU603(ldon)d=3.15a=141.7 | GLY605(ldon)d=3.43a=117.2 | GLY605(ldon)d=3.36a=120.1,True
+phase2_7CHM_LIG_142416343,-9.414,3,1,2,0,0,0,0,[605],GLY605(pdon)d=3.68a=169.1 | GLY605(ldon)d=2.98a=132.3 | GLY605(ldon)d=4.04a=136.1,True
+phase2_7CHM_LIG_142416358,-9.402,2,1,1,0,0,0,0,[605],GLY605(pdon)d=3.17a=149.4 | GLY605(ldon)d=3.46a=107.2,True
+phase2_7CHM_LIG_151973166,-9.398,3,1,2,0,0,0,0,[605],GLY605(pdon)d=3.28a=150.0 | GLY605(ldon)d=2.95a=131.4 | GLY605(ldon)d=3.09a=166.2,True
+phase2_7CHN_LIG_155109143,-9.384,2,1,1,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.14a=149.2 | GLU603(ldon)d=3.06a=150.2,True
+phase2_7CHN_LIG_155109125,-9.378,2,1,1,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.23a=153.8 | GLU603(ldon)d=3.07a=136.0,True
+phase2_7CHM_LIG_122490578,-9.374,5,1,4,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.47a=152.6 | GLU603(ldon)d=3.01a=136.3 | GLY605(ldon)d=3.42a=118.2 | GLY605(ldon)d=2.97a=111.1 | GLY605(ldon)d=3.17a=100.2,True
+phase2_7CHM_LIG_150071746,-9.37,3,1,2,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.22a=148.6 | GLU603(ldon)d=3.18a=114.4 | GLY605(ldon)d=3.42a=119.3,True
+phase2_7CIL_LIG_142755078,-9.341,3,1,2,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.64a=166.7 | GLU603(ldon)d=2.95a=128.9 | GLY605(ldon)d=3.86a=128.3,True
+phase2_7CHN_LIG_155109158,-9.339,2,1,1,0,0,0,0,[605],GLY605(pdon)d=3.23a=152.2 | GLY605(ldon)d=3.26a=102.8,True
+phase2_7CHM_LIG_146393631,-9.338,3,1,2,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.18a=148.2 | GLU603(ldon)d=3.09a=154.1 | GLY605(ldon)d=3.38a=121.7,True
+phase2_7CHM_LIG_162614708,-9.327,0,0,0,0,0,0,0,[],,False
+phase2_7CHM_LIG_126482470,-9.321,6,1,5,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.19a=160.3 | GLU603(ldon)d=3.02a=142.1 | GLU603(ldon)d=3.00a=122.4 | GLY605(ldon)d=2.93a=102.7 | GLY605(ldon)d=3.48a=118.4 | GLY605(ldon)d=3.20a=105.6,True
+phase2_7CHN_LIG_166866574,-9.309,1,1,0,0,0,0,0,[605],GLY605(pdon)d=3.23a=151.5,True
+phase2_7CHM_LIG_146393798,-9.307,3,1,2,0,0,0,0,[605],GLY605(pdon)d=3.52a=145.1 | GLY605(ldon)d=3.08a=128.2 | GLY605(ldon)d=3.68a=111.7,True
+phase2_7CHM_LIG_155012424,-9.29,2,1,1,0,0,0,0,[605],GLY605(pdon)d=3.25a=150.6 | GLY605(ldon)d=3.02a=165.0,True
+phase2_7CHM_LIG_146393712,-9.283,4,1,3,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.26a=152.4 | GLU603(ldon)d=3.12a=141.1 | GLY605(ldon)d=3.25a=152.9 | GLY605(ldon)d=3.74a=134.3,True
+phase2_7CHM_LIG_142436000,-9.272,4,1,3,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.33a=153.9 | GLU603(ldon)d=3.07a=140.9 | GLY605(ldon)d=2.96a=136.9 | GLY605(ldon)d=3.50a=118.7,True
+phase2_7CHM_LIG_155012426,-9.27,3,1,2,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.23a=148.7 | GLU603(ldon)d=3.17a=125.6 | GLY605(ldon)d=3.43a=119.3,True
+phase2_7CHM_LIG_142416357,-9.259,3,1,2,0,0,0,0,[605],GLY605(pdon)d=3.83a=135.2 | GLY605(ldon)d=3.49a=134.5 | GLY605(ldon)d=2.99a=153.1,True
+phase2_7CHM_LIG_142436048,-9.255,2,1,1,0,0,0,0,[605],GLY605(pdon)d=3.24a=148.1 | GLY605(ldon)d=2.98a=129.3,True
+phase2_7CHM_LIG_118286387,-9.254,2,1,1,0,0,0,0,[605],GLY605(pdon)d=3.21a=155.9 | GLY605(ldon)d=3.77a=123.8,True
+phase2_7CHM_LIG_117881532,-9.249,3,1,2,0,0,0,0,[605],GLY605(pdon)d=3.48a=150.5 | GLY605(ldon)d=3.16a=125.7 | GLY605(ldon)d=3.22a=142.3,True
+phase2_7CHM_LIG_142416352,-9.241,5,1,4,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.25a=148.5 | GLU603(ldon)d=3.35a=103.1 | GLY605(ldon)d=2.97a=110.9 | GLY605(ldon)d=3.15a=109.9 | GLY605(ldon)d=3.15a=137.2,True
+phase2_7CHM_LIG_155562324,-9.228,4,1,3,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.21a=149.0 | GLU603(ldon)d=3.04a=140.5 | GLU603(ldon)d=3.06a=132.5 | GLY605(ldon)d=3.31a=118.4,True
+phase2_7CHM_LIG_142436084,-9.228,3,1,2,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.21a=149.3 | GLU603(ldon)d=3.13a=112.9 | GLY605(ldon)d=3.47a=113.0,True
+phase2_7CHM_LIG_69920162,-9.197,3,1,2,0,0,0,0,[605],GLY605(pdon)d=3.18a=158.7 | GLY605(ldon)d=3.26a=139.7 | GLY605(ldon)d=3.70a=104.9,True
+phase2_7CHM_LIG_142416363,-9.197,3,1,2,0,0,0,0,[605],GLY605(pdon)d=3.45a=150.8 | GLY605(ldon)d=2.93a=146.5 | GLY605(ldon)d=3.24a=148.9,True
+phase2_7CHN_LIG_166866572,-9.196,5,1,4,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.18a=156.2 | GLU603(ldon)d=3.08a=125.0 | GLY605(ldon)d=3.50a=121.8 | GLY605(ldon)d=2.99a=128.0 | GLY605(ldon)d=2.92a=109.8,True
+phase2_7CHM_LIG_155012414,-9.196,2,1,1,0,0,0,0,[605],GLY605(pdon)d=3.19a=148.4 | GLY605(ldon)d=3.38a=101.7,True
+phase2_7CHM_LIG_142435998,-9.194,4,1,3,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.30a=153.5 | GLU603(ldon)d=3.13a=113.1 | GLY605(ldon)d=2.94a=133.7 | GLY605(ldon)d=3.37a=110.1,True
+phase2_7CHM_LIG_118286393,-9.186,2,1,1,0,0,0,0,[605],GLY605(pdon)d=3.16a=149.0 | GLY605(ldon)d=2.93a=109.1,True
+phase2_7CHM_LIG_142436055,-9.159,1,1,0,0,0,0,0,[605],GLY605(pdon)d=3.64a=142.5,True
+phase2_7CHM_LIG_155012434,-9.158,2,1,1,0,0,0,0,[605],GLY605(pdon)d=3.26a=151.7 | GLY605(ldon)d=3.49a=154.9,True
+phase2_7CHM_LIG_142416349,-9.149,4,1,3,0,0,0,0,[605],GLY605(pdon)d=3.29a=151.6 | GLY605(ldon)d=3.18a=109.7 | GLY605(ldon)d=2.92a=106.3 | GLY605(ldon)d=3.02a=125.2,True
+phase2_7CIL_LIG_177211774,-9.146,3,1,2,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.03a=170.4 | GLU603(ldon)d=3.17a=108.9 | GLY605(ldon)d=3.19a=117.5,True
+phase2_7CHM_LIG_122490584,-9.138,4,1,3,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.20a=151.7 | GLU603(ldon)d=3.06a=118.6 | GLY605(ldon)d=3.40a=143.9 | GLY605(ldon)d=3.16a=108.7,True
+phase2_7CHM_LIG_155022056,-9.121,4,1,3,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.29a=151.5 | GLU603(ldon)d=3.10a=174.0 | GLY605(ldon)d=2.94a=159.2 | GLY605(ldon)d=2.92a=125.8,True
+phase2_7CHM_LIG_146393706,-9.114,3,1,2,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.31a=149.1 | GLU603(ldon)d=3.31a=171.6 | GLY605(ldon)d=3.05a=117.1,True
+phase2_7CHM_LIG_146393636,-9.105,2,1,1,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.15a=147.9 | GLU603(ldon)d=3.02a=121.9,True
+phase2_7CHM_LIG_155536065,-9.103,4,1,3,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.57a=154.2 | GLU603(ldon)d=3.14a=125.5 | GLY605(ldon)d=2.96a=147.9 | GLY605(ldon)d=3.37a=119.5,True
+phase2_7CHM_LIG_142436018,-9.1,4,1,3,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.29a=154.9 | GLU603(ldon)d=3.11a=139.0 | GLY605(ldon)d=3.46a=119.4 | GLY605(ldon)d=2.95a=141.7,True
+phase2_7CHM_LIG_142436062,-9.095,3,1,2,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.23a=149.2 | GLU603(ldon)d=3.17a=108.8 | GLY605(ldon)d=3.45a=101.8,True
+phase2_7CHN_LIG_155691506,-9.093,5,1,4,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.24a=148.9 | GLU603(ldon)d=3.21a=121.1 | GLY605(ldon)d=3.13a=110.4 | GLY605(ldon)d=3.45a=111.1 | GLY605(ldon)d=2.96a=106.1,True
+phase2_7CIL_LIG_175716355,-9.089,3,1,2,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.26a=159.9 | GLU603(ldon)d=3.06a=129.8 | GLY605(ldon)d=3.67a=144.3,True
+phase2_7CIL_LIG_155928385,-9.079,1,1,0,0,0,0,0,[605],GLY605(pdon)d=3.86a=133.8,True
+phase2_7CHN_LIG_155118967,-9.071,4,1,3,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.29a=151.5 | GLU603(ldon)d=3.13a=133.9 | GLY605(ldon)d=3.12a=159.6 | GLY605(ldon)d=3.08a=138.3,True
+phase2_7CHM_LIG_118286447,-9.07,3,1,2,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.23a=152.9 | GLU603(ldon)d=2.89a=134.9 | GLY605(ldon)d=3.53a=168.8,True
+phase2_7CHN_LIG_166866573,-9.067,5,1,4,0,0,0,0,"[603, 605]",GLY605(pdon)d=4.03a=153.7 | GLU603(ldon)d=3.18a=107.9 | GLY605(ldon)d=3.39a=119.3 | GLY605(ldon)d=2.93a=160.5 | GLY605(ldon)d=3.49a=121.7,True
+phase2_7CIL_LIG_142416310,-9.064,0,0,0,0,0,0,0,[],,False
+phase2_7CHN_LIG_155109155,-9.063,5,1,4,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.20a=154.3 | GLU603(ldon)d=3.02a=163.6 | GLY605(ldon)d=3.05a=111.6 | GLY605(ldon)d=3.42a=124.3 | GLY605(ldon)d=3.94a=113.7,True
+phase2_7CHN_LIG_155691548,-9.06,5,1,4,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.98a=163.6 | GLU603(ldon)d=3.22a=119.4 | GLY605(ldon)d=3.33a=108.3 | GLY605(ldon)d=3.15a=132.4 | GLY605(ldon)d=3.42a=119.4,True
+phase2_7CHM_LIG_118286277,-9.012,5,1,4,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.18a=149.8 | GLU603(ldon)d=3.09a=129.0 | GLY605(ldon)d=2.93a=165.7 | GLY605(ldon)d=3.48a=152.1 | GLY605(ldon)d=2.94a=131.0,True
+phase2_7CHM_LIG_118286391,-9.008,2,1,1,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.15a=148.8 | GLU603(ldon)d=2.99a=111.8,True
+phase2_7CHM_LIG_146393608,-8.996,3,1,2,0,0,0,0,[605],GLY605(pdon)d=3.16a=150.4 | GLY605(ldon)d=3.03a=112.3 | GLY605(ldon)d=2.91a=133.3,True
+phase2_7CHM_LIG_122490572,-8.984,4,1,3,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.64a=164.1 | GLU603(ldon)d=3.06a=160.4 | GLU603(ldon)d=3.16a=106.6 | GLY605(ldon)d=3.40a=118.5,True
+phase2_7CHM_LIG_142416387,-8.98,2,1,1,0,0,0,0,[605],GLY605(pdon)d=3.52a=151.3 | GLY605(ldon)d=3.26a=132.3,True
+phase2_7CIL_LIG_166673091,-8.971,4,1,3,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.07a=156.8 | GLU603(ldon)d=3.80a=113.4 | GLY605(ldon)d=3.65a=117.4 | GLY605(ldon)d=2.81a=158.5,True
+phase2_7CHN_LIG_155118908,-8.956,5,1,4,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.28a=153.8 | GLU603(ldon)d=3.13a=122.2 | GLY605(ldon)d=3.35a=119.2 | GLY605(ldon)d=2.94a=156.4 | GLY605(ldon)d=3.24a=152.2,True
+phase2_7CIL_LIG_141725056,-8.948,5,1,4,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.71a=156.6 | GLU603(ldon)d=3.27a=140.8 | GLY605(ldon)d=4.00a=152.4 | GLY605(ldon)d=3.17a=122.3 | GLY605(ldon)d=3.05a=125.5,True
+phase2_7CHM_LIG_142436036,-8.928,2,1,1,0,0,0,0,[605],GLY605(pdon)d=3.37a=147.3 | GLY605(ldon)d=3.06a=116.5,True
+phase2_7CHM_LIG_118286352,-8.927,1,1,0,0,0,0,0,[605],GLY605(pdon)d=3.26a=166.2,True
+phase2_7CIL_LIG_166635463,-8.925,2,1,1,0,0,0,0,[605],GLY605(pdon)d=3.89a=133.5 | GLY605(ldon)d=2.82a=136.0,True
+phase2_7CIL_LIG_129275413,-8.922,2,1,1,0,0,0,0,[605],GLY605(pdon)d=3.19a=157.6 | GLY605(ldon)d=2.82a=131.1,True
+phase2_7CHM_LIG_122490554,-8.917,4,1,3,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.23a=155.1 | GLU603(ldon)d=2.91a=132.7 | GLY605(ldon)d=3.48a=118.9 | GLY605(ldon)d=3.51a=107.8,True
+phase2_7CHM_LIG_146290574,-8.906,2,1,1,0,0,0,0,[605],GLY605(pdon)d=3.70a=141.4 | GLY605(ldon)d=3.10a=129.1,True
+phase2_7CHM_LIG_118286384,-8.899,3,1,2,0,0,0,0,[605],GLY605(pdon)d=3.27a=148.1 | GLY605(ldon)d=3.53a=134.6 | GLY605(ldon)d=3.48a=131.8,True
+phase2_7CHM_LIG_122457166,-8.898,0,0,0,0,0,0,0,[],,False
+phase2_7CHN_LIG_155691527,-8.898,1,1,0,0,0,0,0,[605],GLY605(pdon)d=3.32a=147.1,True
+phase2_7CHN_LIG_164091414,-8.898,1,1,0,0,0,0,0,[605],GLY605(pdon)d=3.32a=147.1,True
+phase2_7CHN_LIG_166866595,-8.89,1,1,0,0,0,0,0,[605],GLY605(pdon)d=4.01a=149.9,True
+phase2_7CHM_LIG_142416326,-8.884,3,1,2,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.30a=152.4 | GLU603(ldon)d=3.25a=104.0 | GLY605(ldon)d=2.93a=153.6,True
+phase2_7CHM_LIG_122490585,-8.883,2,1,1,0,0,0,0,[605],GLY605(pdon)d=3.17a=149.0 | GLY605(ldon)d=3.49a=117.8,True
+phase2_7CHM_LIG_155022157,-8.882,2,1,1,0,0,0,0,[605],GLY605(pdon)d=3.42a=148.3 | GLY605(ldon)d=3.04a=102.7,True
+phase2_7CIL_LIG_166675729,-8.856,4,1,3,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.15a=155.7 | GLU603(ldon)d=3.06a=100.6 | GLY605(ldon)d=2.80a=107.0 | GLY605(ldon)d=3.78a=130.4,True
+phase2_7CHM_LIG_122490555,-8.841,2,1,1,0,0,0,0,[605],GLY605(pdon)d=3.16a=153.9 | GLY605(ldon)d=3.39a=138.1,True
+phase2_7CHM_LIG_118286279,-8.84,4,1,3,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.54a=150.3 | GLU603(ldon)d=2.94a=144.2 | GLY605(ldon)d=3.29a=163.0 | GLY605(ldon)d=3.25a=156.9,True
+phase2_7CIL_LIG_142416390,-8.84,3,1,2,0,0,0,0,[605],GLY605(pdon)d=3.22a=154.9 | GLY605(ldon)d=2.89a=138.6 | GLY605(ldon)d=3.35a=165.2,True
+phase2_7CHN_LIG_166866571,-8.83,4,1,3,0,0,0,0,[605],GLY605(pdon)d=3.18a=148.1 | GLY605(ldon)d=3.13a=113.9 | GLY605(ldon)d=3.39a=102.6 | GLY605(ldon)d=2.94a=112.0,True
+phase2_7CHN_LIG_155119010,-8.828,7,1,6,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.27a=154.3 | GLU603(ldon)d=3.15a=110.4 | GLU603(ldon)d=3.92a=122.8 | GLY605(ldon)d=3.40a=131.7 | GLY605(ldon)d=3.40a=123.2 | GLY605(ldon)d=3.02a=107.3 | GLY605(ldon)d=3.57a=136.0,True
+phase2_7CIL_LIG_129244941,-8.822,4,1,3,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.17a=154.4 | GLU603(ldon)d=3.14a=124.6 | GLY605(ldon)d=3.69a=133.7 | GLY605(ldon)d=2.78a=117.3,True
+phase2_7CHN_LIG_155119025,-8.82,4,1,3,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.23a=148.8 | GLU603(ldon)d=3.21a=129.3 | GLY605(ldon)d=3.27a=132.5 | GLY605(ldon)d=3.72a=117.5,True
+phase2_7CHM_LIG_118286440,-8.814,3,1,2,0,0,0,0,[605],GLY605(pdon)d=3.73a=133.2 | GLY605(ldon)d=3.46a=134.2 | GLY605(ldon)d=2.97a=108.6,True
+phase2_7CIL_LIG_141725010,-8.813,7,1,6,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.16a=157.6 | GLU603(ldon)d=3.09a=118.4 | GLU603(ldon)d=3.63a=100.5 | GLU603(ldon)d=3.40a=153.2 | GLY605(ldon)d=4.00a=123.0 | GLY605(ldon)d=3.58a=121.0 | GLY605(ldon)d=3.06a=134.7,True
+phase2_7CHM_LIG_118286345,-8.812,3,1,2,0,0,0,0,[605],GLY605(pdon)d=3.20a=147.5 | GLY605(ldon)d=3.45a=107.0 | GLY605(ldon)d=4.10a=166.5,True
+phase2_7CIL_LIG_155621801,-8.811,6,1,5,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.13a=157.0 | GLU603(ldon)d=3.06a=109.3 | GLY605(ldon)d=3.60a=124.0 | GLY605(ldon)d=3.97a=121.8 | GLY605(ldon)d=3.48a=122.5 | GLY605(ldon)d=2.87a=111.7,True
+phase2_7CHM_LIG_142436020,-8.808,2,1,1,0,0,0,0,[605],GLY605(pdon)d=3.41a=145.0 | GLY605(ldon)d=3.70a=121.1,True
+phase2_7CIL_LIG_129244943,-8.806,2,1,1,0,0,0,0,[605],GLY605(pdon)d=3.18a=155.2 | GLY605(ldon)d=2.90a=115.0,True
+phase2_7CHM_LIG_118286467,-8.794,1,1,0,0,0,0,0,[605],GLY605(pdon)d=3.20a=147.9,True
+phase2_7CHM_LIG_122490550,-8.793,1,1,0,0,0,0,0,[605],GLY605(pdon)d=3.30a=166.0,True
+phase2_7CHM_LIG_118286459,-8.792,2,1,1,0,0,0,0,[605],GLY605(pdon)d=3.23a=154.7 | GLY605(ldon)d=3.69a=117.7,True
+phase2_7CHM_LIG_148534597,-8.777,4,1,3,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.47a=150.9 | GLU603(ldon)d=3.22a=103.4 | GLY605(ldon)d=3.22a=153.7 | GLY605(ldon)d=2.93a=111.9,True
+phase2_7CIL_LIG_142755084,-8.776,4,1,3,0,0,0,0,"[603, 605]",GLY605(pdon)d=2.91a=161.2 | GLU603(ldon)d=3.22a=119.6 | GLY605(ldon)d=3.33a=127.0 | GLY605(ldon)d=3.23a=124.7,True
+phase2_7CHM_LIG_112499966,-8.746,2,1,1,0,0,0,0,[605],GLY605(pdon)d=3.16a=148.2 | GLY605(ldon)d=2.94a=107.1,True
+phase2_7CHM_LIG_126482550,-8.743,5,1,4,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.15a=151.8 | GLU603(ldon)d=2.88a=141.8 | GLY605(ldon)d=3.43a=118.1 | GLY605(ldon)d=3.47a=152.7 | GLY605(ldon)d=3.51a=143.1,True
+phase2_7CHM_LIG_118286428,-8.737,3,1,2,0,0,0,0,[605],GLY605(pdon)d=3.80a=132.7 | GLY605(ldon)d=3.50a=130.9 | GLY605(ldon)d=2.89a=102.6,True
+phase2_7CHM_LIG_122490581,-8.729,4,1,3,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.36a=164.3 | GLU603(ldon)d=2.99a=102.4 | GLY605(ldon)d=2.91a=111.8 | GLY605(ldon)d=3.44a=118.9,True
+phase2_7CHM_LIG_146329790,-8.728,5,1,4,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.37a=157.0 | GLU603(ldon)d=3.12a=118.0 | GLU603(ldon)d=3.93a=142.5 | GLY605(ldon)d=3.20a=130.8 | GLY605(ldon)d=3.20a=106.6,True
+phase2_7CIL_LIG_142416385,-8.727,3,1,2,0,0,0,0,[605],GLY605(pdon)d=3.23a=148.9 | GLY605(ldon)d=3.44a=111.8 | GLY605(ldon)d=3.74a=168.4,True
+phase2_7CHM_LIG_118286451,-8.696,2,1,1,0,0,0,0,[605],GLY605(pdon)d=3.73a=134.9 | GLY605(ldon)d=3.12a=131.8,True
+phase2_7CHM_LIG_122490552,-8.693,3,1,2,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.19a=164.6 | GLU603(ldon)d=3.06a=139.9 | GLY605(ldon)d=2.92a=103.1,True
+phase2_7CHM_LIG_122490551,-8.674,2,1,1,0,0,0,0,[605],GLY605(pdon)d=3.24a=155.3 | GLY605(ldon)d=3.41a=128.3,True
+phase2_7CIL_LIG_129266648,-8.671,4,1,3,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.18a=154.3 | GLU603(ldon)d=3.14a=115.4 | GLY605(ldon)d=3.72a=112.9 | GLY605(ldon)d=2.82a=130.2,True
+phase2_7CIL_LIG_145336712,-8.62,2,1,1,0,0,0,0,[605],GLY605(pdon)d=3.14a=157.8 | GLY605(ldon)d=3.61a=138.7,True
+phase2_7CIL_LIG_158224339,-8.609,2,1,1,0,0,0,0,[605],GLY605(pdon)d=3.24a=154.2 | GLY605(ldon)d=2.85a=110.1,True
+phase2_7CHM_LIG_57383019,-8.605,1,0,1,0,0,0,0,[605],GLY605(ldon)d=2.81a=107.5,True
+phase2_7CHM_LIG_142416414,-8.605,3,1,2,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.23a=152.9 | GLU603(ldon)d=3.24a=118.8 | GLY605(ldon)d=2.86a=121.8,True
+phase2_7CHM_LIG_146312779,-8.605,3,1,2,0,0,0,0,[605],GLY605(pdon)d=3.44a=145.8 | GLY605(ldon)d=3.08a=125.8 | GLY605(ldon)d=3.78a=109.0,True
+phase2_7CIL_LIG_142416321,-8.6,2,1,1,0,0,0,0,[605],GLY605(pdon)d=3.22a=148.9 | GLY605(ldon)d=3.40a=103.3,True
+phase2_7CHM_LIG_122490576,-8.582,1,1,0,0,0,0,0,[605],GLY605(pdon)d=3.20a=149.3,True
+phase2_7CHM_LIG_77847232,-8.581,2,0,2,0,0,0,0,[605],GLY605(ldon)d=3.74a=134.0 | GLY605(ldon)d=4.04a=141.2,True
+phase2_7CIL_LIG_142416379,-8.571,4,1,3,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.18a=147.2 | GLU603(ldon)d=3.22a=100.6 | GLY605(ldon)d=2.88a=111.6 | GLY605(ldon)d=3.20a=133.2,True
+phase2_7CIL_LIG_129266632,-8.558,4,1,3,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.15a=149.7 | GLU603(ldon)d=3.17a=114.6 | GLY605(ldon)d=3.31a=104.6 | GLY605(ldon)d=4.09a=117.0,True
+phase2_7CIL_LIG_142416413,-8.553,2,1,1,0,0,0,0,[605],GLY605(pdon)d=3.19a=153.0 | GLY605(ldon)d=2.84a=109.2,True
+phase2_7CHN_LIG_155119024,-8.551,4,1,3,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.23a=149.1 | GLU603(ldon)d=3.19a=121.0 | GLY605(ldon)d=3.39a=101.3 | GLY605(ldon)d=3.00a=109.8,True
+phase2_7CHM_LIG_142436022,-8.546,2,1,1,0,0,0,0,[605],GLY605(pdon)d=3.63a=141.3 | GLY605(ldon)d=3.01a=135.0,True
+phase2_7CIL_LIG_142416303,-8.54,3,1,2,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.17a=151.9 | GLU603(ldon)d=3.14a=116.4 | GLY605(ldon)d=2.82a=125.7,True
+phase2_7CHM_LIG_155012431,-8.535,2,1,1,0,0,0,0,[605],GLY605(pdon)d=3.42a=143.9 | GLY605(ldon)d=2.94a=102.0,True
+phase2_7CHM_LIG_140767798,-8.525,1,0,1,0,0,0,0,[605],GLY605(ldon)d=3.92a=177.5,True
+phase2_7CHM_LIG_118286448,-8.516,2,1,1,0,0,0,0,[605],GLY605(pdon)d=3.44a=151.9 | GLY605(ldon)d=3.23a=128.5,True
+phase2_7CHM_LIG_122490553,-8.516,6,1,5,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.24a=154.1 | GLU603(ldon)d=3.05a=101.2 | GLU603(ldon)d=2.98a=110.0 | GLY605(ldon)d=3.42a=118.9 | GLY605(ldon)d=2.93a=133.7 | GLY605(ldon)d=3.51a=112.9,True
+phase2_7CHM_LIG_142416383,-8.496,1,1,0,0,0,0,0,[605],GLY605(pdon)d=3.28a=150.6,True
+phase2_7CHM_LIG_142436060,-8.476,7,1,6,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.28a=152.5 | GLU603(ldon)d=3.07a=113.3 | GLU603(ldon)d=3.24a=117.6 | GLY605(ldon)d=3.08a=141.1 | GLY605(ldon)d=3.47a=107.7 | GLY605(ldon)d=3.16a=133.2 | GLY605(ldon)d=3.35a=106.8,True
+phase2_7CHN_LIG_155118972,-8.448,3,1,2,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.21a=147.2 | GLU603(ldon)d=3.18a=137.0 | GLY605(ldon)d=3.39a=109.7,True
+phase2_7CIL_LIG_157996794,-8.383,0,0,0,0,0,0,0,[],,False
+phase2_7CHM_LIG_142416325,-8.381,4,1,3,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.21a=148.9 | GLU603(ldon)d=3.16a=143.8 | GLY605(ldon)d=3.06a=165.6 | GLY605(ldon)d=3.65a=110.1,True
+phase2_7CHM_LIG_118286449,-8.35,2,1,1,0,0,0,0,[605],GLY605(pdon)d=3.22a=151.7 | GLY605(ldon)d=3.42a=118.3,True
+phase2_7CIL_LIG_127046342,-8.333,2,1,1,0,0,0,0,[605],GLY605(pdon)d=3.00a=164.5 | GLY605(ldon)d=3.85a=130.1,True
+phase2_7CIL_LIG_142416376,-8.311,2,1,1,0,0,0,0,[605],GLY605(pdon)d=4.07a=131.8 | GLY605(ldon)d=3.69a=126.3,True
+phase2_7CHN_LIG_155119023,-8.311,5,1,4,0,0,0,0,[605],GLY605(pdon)d=3.26a=155.2 | GLY605(ldon)d=3.48a=119.2 | GLY605(ldon)d=2.97a=118.5 | GLY605(ldon)d=3.12a=117.1 | GLY605(ldon)d=3.10a=165.7,True
+phase2_7CHM_LIG_142436016,-8.254,1,1,0,0,0,0,0,[605],GLY605(pdon)d=3.34a=155.2,True
+phase2_7CHM_LIG_142436085,-8.082,2,1,1,0,0,0,0,[605],GLY605(pdon)d=3.28a=163.7 | GLY605(ldon)d=3.65a=154.2,True
+phase2_7CIL_LIG_127048092,-8.062,1,0,1,0,0,0,0,[605],GLY605(ldon)d=3.04a=151.4,True
+phase2_7CHN_LIG_155118969,-7.994,2,1,1,0,0,0,0,"[603, 605]",GLY605(pdon)d=2.89a=158.7 | GLU603(ldon)d=3.99a=143.2,True
+phase2_7CHM_LIG_155532159,-7.976,1,1,0,0,0,0,0,[605],GLY605(pdon)d=3.31a=157.5,True
+phase2_7CIL_LIG_155022217,-7.976,2,1,1,0,0,0,0,[605],GLY605(pdon)d=3.16a=149.2 | GLY605(ldon)d=2.89a=148.9,True
+phase2_7CIL_LIG_146851006,-7.97,2,0,2,0,0,0,0,[605],GLY605(ldon)d=3.19a=124.2 | GLY605(ldon)d=3.28a=143.2,True
+phase2_7CIL_LIG_142416375,-7.961,3,1,2,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.21a=148.8 | GLU603(ldon)d=3.19a=145.2 | GLY605(ldon)d=3.09a=113.9,True
+phase2_7CHT_LIG_141303240,-7.889,1,1,0,0,0,0,0,[605],GLY605(pdon)d=3.76a=151.6,True
+phase2_7CIL_LIG_151591358,-7.855,4,1,3,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.86a=162.4 | GLU603(ldon)d=3.11a=139.3 | GLY605(ldon)d=3.71a=141.6 | GLY605(ldon)d=4.01a=120.8,True
+phase2_7CIL_LIG_142416394,-7.837,2,1,1,0,0,0,0,[605],GLY605(pdon)d=3.15a=149.5 | GLY605(ldon)d=3.37a=103.4,True
+phase2_7CHN_LIG_155118918,-7.83,4,1,3,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.48a=144.9 | GLU603(ldon)d=3.52a=142.5 | GLY605(ldon)d=3.21a=118.3 | GLY605(ldon)d=2.78a=116.8,True
+phase2_7CHM_LIG_57382890,-7.815,1,0,1,0,0,0,0,[605],GLY605(ldon)d=3.22a=118.6,True
+phase2_7CIL_LIG_155022147,-7.706,4,1,3,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.21a=149.1 | GLU603(ldon)d=3.20a=100.9 | GLY605(ldon)d=3.34a=149.8 | GLY605(ldon)d=3.90a=125.4,True
+phase2_7CIL_LIG_155022106,-7.688,3,1,2,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.18a=152.4 | GLU603(ldon)d=3.10a=100.6 | GLY605(ldon)d=3.11a=146.0,True
+phase2_7CIL_LIG_142416409,-7.647,1,1,0,0,0,0,0,[605],GLY605(pdon)d=3.26a=154.5,True
+phase2_7CIL_LIG_127046344,-7.632,2,1,1,0,0,0,0,[605],GLY605(pdon)d=3.00a=157.8 | GLY605(ldon)d=3.26a=137.6,True
+phase2_7CIL_LIG_142416408,-7.556,2,1,1,0,0,0,0,[605],GLY605(pdon)d=3.32a=147.3 | GLY605(ldon)d=3.11a=154.7,True
+phase2_7CHN_LIG_145885842,-7.543,1,0,1,0,0,0,0,[605],GLY605(ldon)d=4.10a=129.9,True
+phase2_7CIL_LIG_157996792,-7.521,2,1,1,0,0,0,0,[605],GLY605(pdon)d=3.56a=152.6 | GLY605(ldon)d=3.33a=129.1,True
+phase2_7CIL_LIG_142416341,-7.489,2,1,1,0,0,0,0,[605],GLY605(pdon)d=3.17a=149.7 | GLY605(ldon)d=3.14a=170.3,True
+phase2_7CIL_LIG_127046343,-7.469,1,1,0,0,0,0,0,[605],GLY605(pdon)d=3.30a=145.0,True
+phase2_7CHM_LIG_146393630,-7.116,6,1,5,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.21a=146.3 | GLU603(ldon)d=3.13a=123.4 | GLU603(ldon)d=3.13a=117.2 | GLY605(ldon)d=3.00a=113.7 | GLY605(ldon)d=3.36a=117.6 | GLY605(ldon)d=3.34a=128.2,True
+phase2_7CHM_LIG_146393701,-7.025,3,1,2,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.51a=152.6 | GLU603(ldon)d=3.15a=137.4 | GLY605(ldon)d=3.35a=137.6,True
+phase2_7CHM_LIG_146393637,-6.956,2,1,1,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.21a=147.4 | GLU603(ldon)d=2.99a=126.5,True
+phase2_7CHN_LIG_59442199,-6.531,1,1,0,0,0,0,0,[605],GLY605(pdon)d=3.21a=156.6,True
+phase2_7CHN_LIG_59442331,-6.449,3,1,2,0,0,0,0,"[603, 605]",GLY605(pdon)d=3.92a=145.4 | GLU603(ldon)d=2.79a=150.0 | GLU603(ldon)d=2.99a=109.0,True
+phase2_7CHN_LIG_59442256,-6.195,0,0,0,0,0,0,0,[],,False
+phase2_7CHT_LIG_59442463,-5.848,0,0,0,0,0,0,0,[],,False
+phase2_7CHT_LIG_59442251,-5.775,1,0,1,0,0,0,0,[605],GLY605(ldon)d=3.16a=113.0,True
+phase2_7CHT_LIG_59442153,-5.158,0,0,0,0,0,0,0,[],,False
+phase2_7CHT_LIG_59442206,-4.96,0,0,0,0,0,0,0,[],,False
+phase2_7CHN_LIG_59442381,-4.931,0,0,0,0,0,0,0,[],,False
+phase2_7CHN_LIG_59442282,-4.924,0,0,0,0,0,0,0,[],,False
+phase2_7CHN_LIG_59442320,-4.87,0,0,0,0,0,0,0,[],,False
+phase2_7CHN_LIG_59442343,-4.834,0,0,0,0,0,0,0,[],,False
+phase2_7CHT_LIG_59442269,-4.372,0,0,0,0,0,0,0,[],,False

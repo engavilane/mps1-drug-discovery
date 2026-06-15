@@ -25,12 +25,13 @@ This project uses the crystal structure of Mps1 in complex with reversine (PDB: 
 This project is structured in two phases:
 
 ### Phase 1 — Virtual Screening of Known Inhibitors
-A dataset of **45 co-crystallised Mps1 inhibitors** (retrieved from 
-the RCSB PDB) is subjected to:
-1. Molecular docking against the Mps1 kinase domain (AutoDock Vina)
-2. Binding interaction analysis (H-bond contacts with Gly605/Glu603)
-3. ADME filtering using RDKit (Lipinski's Rule of Five, TPSA, PAINS)
-4. Two complementary ML models:
+1. Download and prepare 45 co-crystallised Mps1 inhibitors (RCSB PDB)
+2. Receptor preparation (Meeko/AutoDock Vina)
+3. Molecular docking (AutoDock Vina, exhaustiveness=16)
+4. **PLIP interaction analysis** — proper H-bond detection
+   (replaces distance-only contact counting)
+5. ADME filtering (RDKit, Lipinski Ro5 + TPSA + PAINS)
+6. Two complementary ML models:
    - **Model 1** — Interpretable Ridge Regression identifying
      physicochemical drivers of hinge binding (n=45)
    - **Model 2** — SVR predicting experimental pIC50 from ChEMBL data (n=2,352, R²=0.729)
@@ -92,21 +93,25 @@ R²=0.706 (LOOCV)                   R²=0.729 (80/20 split)
 
 Top 5 predicted binders by AutoDock Vina score:
 
-| Ligand | PDB ID | Affinity (kcal/mol) | Gly605 | Glu603 | ADME |
-|--------|--------|---------------------|--------|--------|------|
-| 7CHN_LIG | 7CHN | -10.324 | 4 | 2 | ✓ |
-| 7CHM_LIG | 7CHM | -10.288 | 4 | 2 | ✓ |
-| 7CJA_LIG | 7CJA | -10.281 | 3 | 2 | ✓ |
-| 7CHT_LIG | 7CHT | -9.970  | 4 | 2 | ✓ |
-| 7CIL_LIG | 7CIL | -9.482  | 5 | 2 | ✓ |
+| Ligand | PDB ID | Affinity (kcal/mol) | Gly605 H-bonds | Glu603 H-bonds | ADME |
+|--------|--------|---------------------|----------------|----------------|------|
+| 7CHN_LIG | 7CHN | -10.324 | 2 | 0 | ✓ |
+| 7CHM_LIG | 7CHM | -10.288 | 4 | 1 | ✓ |
+| 7CJA_LIG | 7CJA | -10.281 | 4 | 1 | ✓ |
+| 7CHT_LIG | 7CHT | -9.970  | 2 | 1 | ✓ |
+| 7CIL_LIG | 7CIL | -9.482  | — | — | ✓ |
 
 Reversine (5LJJ_AD5) scored **-9.645 kcal/mol**, consistent with 
 published Glide XP scores (-10.97 kcal/mol, Pugh et al. 2022), 
 validating the docking setup. Clinically advanced compounds 
 BAY-1217389 and BAY-1161909 scored -9.91 and -9.644 kcal/mol 
-respectively, in line with their known potency. 42/45 inhibitors 
-confirmed correct hinge binding (Gly605/Glu603 contacts). 
-26/45 passed both ADME filtering and hinge binding criteria.
+respectively, in line with their known potency. 39/45 inhibitors
+confirmed genuine hinge binding by PLIP H-bond analysis 
+(Gly605/Glu603, distance + angle criteria). Notably,
+BAY-1161909 (5N9S_LIG, Gly605 : 1 H-bond) was correctly
+reclassified as a hinge binder, previously missed by 
+distance-only analysis. 28/45 passed both ADME filtering and 
+hinge binding criteria. 
 
 > Note: AutoDock Vina scores systematically overestimate binding 
 > affinities relative to experimental values. Results are interpreted 
@@ -114,11 +119,23 @@ confirmed correct hinge binding (Gly605/Glu603 contacts).
 > consistent with established practice in the field 
 > (Pugh et al., 2022; Bolanos-Garcia, 2025).
 
-**Docking Validation:**
-Re-docking of reversine (5LJJ_AD5) into the binding site 
-yielded best RMSD = **0.666 Å** against the crystal structure 
-(exhaustiveness=32, 10 poses). Top 2 poses both < 1.0 Å. 
-Exceptional reproduction of experimental binding mode confirmed.
+**Docking Validation (three-tier hierarchy):**
+
+| Test | Result | Status |
+|------|--------|--------|
+| Self-docking RMSD (5LJJ) | 0.666 Å | ✓ Exceptional |
+| Cross-docking 5N7V (purine scaffold) | 1.332 Å | ✓ Pass |
+| Cross-docking 4JS8 (indazole scaffold) | 1.590 Å | ✓ Pass |
+| Cross-docking 5NAD (methylbenzamide) | 2.786 Å | ⚠ Borderline |
+| Cross-docking 7LQD (covalent RMS-07) | 3.193 Å | ✗ Expected |
+| Homologous docking Spearman ρ | 0.833 (p=0.005) | ✓ Validated |
+| Mean score difference | 0.094 ± 0.524 kcal/mol | ✓ No bias |
+
+All cross-docking structures aligned using DSSP rigid
+secondary structure core (helices + sheets, excluding
+activation loop 672-690 and hinge loop 603-605).
+7LQD failure attributed to irreversible Cys604 covalent
+bond — expected and scientifically appropriate.
 
 ---
 
@@ -158,32 +175,34 @@ near-optimal default parameters.
 
 ### Phase 2 — Novel Candidate Discovery
 
-235 novel candidates retrieved from PubChem (Tanimoto ≥ 0.9,
-5 seed compounds). After preparation, docking, interaction
-analysis and ADME filtering: **193/232 candidates passed
-all filters** (86% hinge binding rate, 83% ADME pass rate).
+**235 novel candidates** retrieved from PubChem
+(Tanimoto ≥ 0.9, 5 seed compounds).
 
-**Top 10 novel candidates by combined score (Vina + pIC50):**
+| Stage | Count | Rate |
+|-------|-------|------|
+| Retrieved from PubChem | 235 | — |
+| Successfully prepared | 232 | 99% |
+| PLIP hinge binders | 216 | 93% |
+| Pass ADME + hinge | 210 | 91% |
 
-| Rank | PubChem CID | Seed | Vina (kcal/mol) | pIC50 | IC50 (nM) | Gly605 | Glu603 | Combined |
-|------|-------------|------|-----------------|-------|-----------|--------|--------|----------|
-| 1 | 142416385 | 7CIL | -8.724 | 7.831 | 14.74 | 4 | 2 | 0.727 |
-| 2 | 146393630 | 7CHM | -7.168 | 6.860 | 138.19 | 4 | 2 | 0.711 |
-| 3 | 129266632 | 7CIL | -8.634 | 7.461 | 34.59 | 5 | 2 | 0.670 |
-| 4 | 129266648 | 7CIL | -8.672 | 7.461 | 34.59 | 5 | 2 | 0.658 |
-| 5 | 145336712 | 7CIL | -8.628 | 7.403 | 39.55 | 4 | 2 | 0.652 |
-| 6 | 155022217 | 7CIL | -7.976 | 7.039 | 91.34 | 1 | 0 | 0.650 |
-| 7 | 129244943 | 7CIL | -8.806 | 7.391 | 40.62 | 5 | 2 | 0.628 |
-| 8 | 129244941 | 7CIL | -8.822 | 7.391 | 40.62 | 5 | 2 | 0.626 |
-| 9 | 142416375 | 7CIL | -7.961 | 6.877 | 132.83 | 5 | 2 | 0.618 |
-| 10 | 129275413 | 7CIL | -8.922 | 7.391 | 40.62 | 5 | 2 | 0.615 |
+| Rank | CID | Seed | Affinity (kcal/mol) | Gly605 | Glu603 | IC50 pred |
+|------|-----|------|---------------------|--------|--------|-----------|
+| 1 | 155119000 | 7CHN | -10.860 | 5 | 1 | — |
+| 2 | 155118997 | 7CHN | -10.735 | 1 | 1 | — |
+| 3 | 155118910 | 7CHN | -10.439 | 3 | 0 | — |
+| 4 | 155109147 | 7CHN | -10.341 | 3 | 1 | — |
+| 5 | 155109167 | 7CHN | -10.333 | 4 | 1 | — |
 
 **Top candidate: CID 142416385**
-- IUPAC: 4-[(1-methylcyclopropyl)amino]-2-[(5-methyl-1-propan-2-ylpyrazol-4-yl)amino]-7H-pyrrolo[2,3-d]pyrimidine-5-carbonitrile
-- Scaffold: 7H-pyrrolo[2,3-d]pyrimidine (ATP-competitive kinase inhibitor core)
-- MW: 350.4 Da | LogP: — | Formula: C₁₈H₂₂N₈
-- Refined docking score confirmed at exhaustiveness=16: -8.724 kcal/mol
-- Predicted IC50: **14.74 nM** — competitive with known clinical candidates
+- IUPAC: 4-[(1-methylcyclopropyl)amino]-2-[(5-methyl-1-
+  propan-2-ylpyrazol-4-yl)amino]-7H-pyrrolo[2,3-d]
+  pyrimidine-5-carbonitrile
+- Formula: C₁₈H₂₂N₈ | MW: 350.4 Da
+- Vina: −8.724 kcal/mol (confirmed exhaustiveness=16)
+- Predicted pIC50: 7.831 → **IC50 = 14.74 nM**
+- PLIP H-bonds: 6 (Gly605 + Glu603) ✓
+- ADME: all filters passed ✓
+- Scaffold: 7H-pyrrolo[2,3-d]pyrimidine
 
 > Re-docking of top 5 candidates at exhaustiveness=16 yielded
 > scores within 0.08 kcal/mol of screening values, confirming
@@ -334,10 +353,24 @@ python scripts/prepare_ligands.py
 python scripts/run_docking.py
 ```
 
-#### 6. Interaction analysis (Gly605/Glu603)
+#### 6. PLIP interaction analysis (Gly605/Glu603)
+
+Replaces distance-only contact counting with proper H-bond
+detection (distance + angle criteria, PLIP algorithm).
+
 ```bash
-python scripts/interaction_analysis.py
+python scripts/plip_analysis.py \
+  --scores    docking/results/phase1_docking_scores.csv \
+  --results   docking/results \
+  --output    analysis/interactions_plip/phase1 \
+  --old_interactions analysis/interactions/interaction_analysis.csv
 ```
+
+> **Note:** `interaction_analysis.py` is retained for
+> reference but deprecated. PLIP identified 39/45 hinge
+> binders vs 42/45 by distance-only, correcting 9
+> misclassifications including BAY-1161909.
+
 
 #### 7. ADME filtering
 ```bash
@@ -382,12 +415,14 @@ python scripts/run_docking.py \
   --exhaustiveness 8
 ```
 
-#### 14. Interaction analysis
+#### 14. PLIP interaction analysis (Phase 2)
+
 ```bash
-python scripts/interaction_analysis.py \
-  --scores  docking/phase2_results/docking_scores.csv \
-  --results docking/phase2_results \
-  --output  analysis/phase2/interactions
+python scripts/plip_analysis.py \
+  --scores    docking/phase2_results/docking_scores.csv \
+  --results   docking/phase2_results \
+  --output    analysis/interactions_plip/phase2 \
+  --old_interactions analysis/phase2/interactions/interaction_analysis.csv
 ```
 
 #### 15. ADME filtering
@@ -437,6 +472,9 @@ python scripts/phase2_predict.py
   Model.*, 61, 3891–3898.
 - Trott, O. & Olson, A.J. (2010). AutoDock Vina: improving the speed 
   and accuracy of docking. *J. Comput. Chem.*, 31, 455–461.
+- Salentin S. et al. (2015) PLIP: fully automated 
+  protein-ligand interaction profiler. *Nucleic Acids Res.*
+  43:W443-W447. https://doi.org/10.1093/nar/gkv315
 
 ### Ligand & Receptor Preparation
 - Forli, S. et al. (2016). Computational protein-ligand docking and 
