@@ -219,10 +219,20 @@ docking-5LJJ/
 │
 ├── data/
 │   ├── raw/
-│   │   └── 5LJJ.pdb                        # Original unmodified PDB from RCSB
+│   │   ├── 5LJJ.pdb                        # Original unmodified PDB from RCSB
+│   │   ├── 5N7V.pdb                        # Cross-docking validation structure
+│   │   ├── 4JS8.pdb                        # Cross-docking validation structure
+│   │   ├── 5NAD.pdb                        # Cross-docking validation structure
+│   │   └── 7LQD.pdb                        # Cross-docking validation structure
 │   ├── receptor/
 │   │   ├── receptor_clean.pdb              # Waters/ligands/artefacts removed
-│   │   └── receptor.pdbqt                  # Vina-ready receptor (Meeko)
+│   │   ├── receptor.pdbqt                  # Vina-ready receptor (Meeko)
+│   │   ├── reversine_crystal_coords.npy    # Crystal coordinates for RMSD validation
+│   │   ├── 5N7V_aligned_dssp.pdb           # 5N7V aligned to 5LJJ (DSSP rigid core)
+│   │   ├── 4JS8_aligned.pdb                # 4JS8 aligned to 5LJJ
+│   │   ├── 5NAD_aligned.pdb                # 5NAD aligned to 5LJJ
+│   │   ├── 7LQD_aligned_trimmed.pdb        # 7LQD aligned to 5LJJ (trimmed)
+│   │   └── *_homo_aligned.pdb              # Top 10 receptors for homologous docking
 │   ├── ligands/
 │   │   ├── compounds.csv                   # PDB ID input list
 │   │   ├── download_log.csv                # Download status per ligand
@@ -237,8 +247,10 @@ docking-5LJJ/
 │
 ├── docking/
 │   ├── results/
-│   │   ├── docking_scores.csv              # Vina scores for all 45 ligands
-│   │   └── *_out.pdbqt                     # Docked poses (one per ligand)
+│   │   ├── phase1_docking_scores.csv       # Vina scores for all 45 ligands
+│   │   ├── *_out.pdbqt                     # Docked poses (one per ligand)
+│   │   ├── 5LJJ_AD5_redock_out.pdbqt       # Reversine re-docked (RMSD validation)
+│   │   └── reversine_crossdock_*_out.pdbqt # Cross-docking poses
 │   └── phase2_results/
 │       ├── docking_scores.csv              # Vina scores for 232 candidates
 │       ├── *_out.pdbqt                     # Docked poses (one per candidate)
@@ -246,15 +258,34 @@ docking-5LJJ/
 │
 ├── analysis/
 │   ├── interactions/
-│   │   ├── interaction_analysis.csv        # Gly605/Glu603 contact counts
+│   │   ├── interaction_analysis.csv        # DEPRECATED — distance-based contacts
 │   │   └── figures/
-│   │       ├── 5LJJ_AD5.png               # Reversine in binding site (reference)
-│   │       ├── 5LJJ_7CHN.png              # Best Phase 1 binder — dual hinge contact
-│   │       ├── 5LJJ_5N9S.png              # Non-binder — no hinge contact
-│   │       └── phase2_top_candidate.png   # CID 142416385 in binding site
+│   │       ├── 5LJJ-AD5.png               # Reversine in binding site
+│   │       ├── 5LJJ-AD5_zoom.png          # Reversine — zoom on hinge contacts
+│   │       ├── 5LJJ-7CHN.png              # Best Phase 1 binder (7CHN)
+│   │       ├── 5LJJ-7CHN_zoom.png         # 7CHN — zoom on hinge contacts
+│   │       ├── 5LJJ-5N9S.png              # BAY-1161909 binding mode
+│   │       ├── 5LJJ-5N9S_zoom.png         # BAY-1161909 — zoom on hinge
+│   │       ├── 5LJJ_reversine_pocket.png  # Reversine with pocket surface
+│   │       ├── comparison_reversine_candidate.png  # Reversine vs CID 142416385
+│   │       ├── phase2_top_candidate.png   # CID 142416385 in binding site
+│   │       ├── phase2_top_candidate_pocket.png     # CID 142416385 with pocket
+│   │       └── Figure_prep_PyMOL.ipynb    # PyMOL figure preparation notebook
+│   ├── interactions_plip/
+│   │   ├── phase1/
+│   │   │   └── plip_interactions.csv      # PLIP H-bond analysis — 39/45 binders
+│   │   └── phase2/
+│   │       └── plip_interactions.csv      # PLIP H-bond analysis — 216/232 binders
 │   ├── adme/
 │   │   ├── adme_full.csv                   # All 45 ligands + descriptors + flags
-│   │   └── adme_candidates.csv             # 26 candidates passing ADME + hinge
+│   │   └── adme_candidates.csv             # 26 candidates (distance-based, deprecated)
+│   ├── adme_plip/
+│   │   ├── phase1/
+│   │   │   ├── adme_full.csv               # All 45 ligands + descriptors + flags
+│   │   │   └── adme_candidates.csv         # 28 candidates passing ADME + hinge
+│   │   └── phase2/
+│   │       ├── adme_full.csv               # All 232 candidates + descriptors
+│   │       └── adme_candidates.csv         # 210 candidates passing ADME + hinge
 │   ├── ic50/
 │   │   ├── chembl_mps1_ic50.csv            # 2,352 Mps1 IC50 values from ChEMBL
 │   │   └── ic50_matches.csv                # Matches between our 45 and ChEMBL
@@ -271,18 +302,22 @@ docking-5LJJ/
 │   │       ├── chembl_predictions.csv      # Model 2 predicted vs actual
 │   │       ├── chembl_model_comparison.csv
 │   │       └── chembl_svr_tuned.pkl        # Hyperparameter-tuned SVR
+│   ├── validation/
+│   │   ├── rmsd_validation.csv             # Self-docking RMSD (0.666 Å)
+│   │   ├── crossdocking_validation.csv     # Cross-docking across 4 conformations
+│   │   ├── homologous_docking.csv          # Top 9 in native receptors (ρ=0.833)
+│   │   └── top5_refined_scores.csv         # Top 5 Phase 2 re-docked (e=16)
 │   └── phase2/
 │       ├── phase2_candidates.csv           # 235 candidates from similarity search
-│       ├── phase2_final_candidates.csv     # 193 ranked by combined score
-│       ├── top5_refined_scores.csv         # Refined docking at exhaustiveness=16
+│       ├── phase2_final_candidates.csv     # 210 ranked by combined score (PLIP)
 │       ├── interactions/
-│       │   └── interaction_analysis.csv    # Phase 2 Gly605/Glu603 contacts
+│       │   └── interaction_analysis.csv    # DEPRECATED — distance-based contacts
 │       └── adme/
 │           ├── adme_full.csv               # All 232 candidates + descriptors
-│           └── adme_candidates.csv         # 193 passing ADME + hinge
+│           └── adme_candidates.csv         # 193 (distance-based, deprecated)
 │
 ├── notebooks/
-│   ├── 01_docking_analysis.ipynb           # Docking results exploration
+│   ├── 01_docking_analysis.ipynb           # Docking results + validation
 │   ├── 02_adme_filter.ipynb                # ADME filtering visualisation
 │   └── 03_ml_model.ipynb                   # ML model analysis and plots
 │
@@ -292,13 +327,18 @@ docking-5LJJ/
     ├── prepare_ligands.py                  # Meeko PDBQT preparation (Phase 1+2)
     ├── run_docking.py                      # AutoDock Vina batch docking (Phase 1+2)
     ├── parse_results.py                    # Score extraction and ranking
-    ├── interaction_analysis.py             # Gly605/Glu603 contact analysis (Phase 1+2)
+    ├── interaction_analysis.py             # DEPRECATED — replaced by plip_analysis.py
+    ├── plip_analysis.py                    # PLIP H-bond detection (Phase 1+2)
     ├── adme_filter.py                      # RDKit ADME descriptors + PAINS (Phase 1+2)
-    ├── ml_model.py                         # Model 1 — Vina score prediction
+    ├── ml_model.py                         # Model 1 — interpretable feature importance
     ├── get_ic50.py                         # ChEMBL IC50 retrieval
     ├── ml_chembl.py                        # Model 2 — pIC50 prediction (ChEMBL)
     ├── phase2_similarity_search.py         # PubChem similarity search (5 seeds)
-    └── phase2_predict.py                   # pIC50 prediction + combined ranking
+    ├── phase2_predict.py                   # pIC50 prediction + combined ranking
+    ├── rmsd_validation.py                  # Self-docking RMSD validation
+    ├── crossdock_5N7V.py                   # Cross-docking 5N7V (DSSP alignment)
+    ├── crossdock_validation.py             # Cross-docking across 4 conformations
+    └── homologous_docking.py               # Top 10 in native receptors (Spearman ρ)
 ```
 
 ---
