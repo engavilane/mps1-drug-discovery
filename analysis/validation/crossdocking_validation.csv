@@ -1,0 +1,4 @@
+pdb_id,ligand,scaffold,sup_rmsd,best_cross_rmsd,pass
+5N7V,MPI-0479605,Purine,0.423,1.332,True
+5NAD,BAY-1217389,Methylbenzamide,0.662,2.786,False
+4JS8,Compound 401348,Indazole,0.487,1.59,True
