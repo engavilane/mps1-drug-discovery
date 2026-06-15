@@ -114,6 +114,12 @@ confirmed correct hinge binding (Gly605/Glu603 contacts).
 > consistent with established practice in the field 
 > (Pugh et al., 2022; Bolanos-Garcia, 2025).
 
+**Docking Validation:**
+Re-docking of reversine (5LJJ_AD5) into the binding site 
+yielded best RMSD = **0.666 Å** against the crystal structure 
+(exhaustiveness=32, 10 poses). Top 2 poses both < 1.0 Å. 
+Exceptional reproduction of experimental binding mode confirmed.
+
 ---
 
 ### Machine Learning Models
