@@ -163,6 +163,103 @@ print(f"BEST MODEL: {best_name}")
 print(f"  R²={best_r2:.3f}")
 print(f"{'=' * 60}")
 
+# Best model summary 
+print(f"\n{'=' * 60}")
+print(f"BEST MODEL: {best_name}")
+print(f"  R²={best_r2:.3f}")
+print(f"{'=' * 60}")
+
+# ── K-fold Cross Validation ───────────────────────────────
+print(f"\n{'=' * 60}")
+print("10-FOLD CROSS VALIDATION (best model)")
+print(f"{'=' * 60}")
+
+from sklearn.model_selection import KFold
+from sklearn.pipeline import Pipeline
+
+best_feat_set = best_name.split(" | ")[0]
+X_best        = feature_sets[best_feat_set]
+
+kf   = KFold(n_splits=10, shuffle=True, random_state=42)
+pipe = Pipeline([
+    ("scaler", StandardScaler()),
+    ("model",  best_model)
+])
+
+r2_scores   = cross_val_score(
+    pipe, X_best, y,
+    cv=kf, scoring="r2"
+)
+rmse_scores = np.sqrt(-cross_val_score(
+    pipe, X_best, y,
+    cv=kf, scoring="neg_mean_squared_error"
+))
+mae_scores  = -cross_val_score(
+    pipe, X_best, y,
+    cv=kf, scoring="neg_mean_absolute_error"
+)
+
+print(f"\nModel:        {best_name}")
+print(f"CV folds:     10")
+print(f"Dataset size: {len(y)} compounds\n")
+print(f"{'Metric':<6} {'Mean':>7} {'Std':>7} "
+      f"{'Min':>7} {'Max':>7} {'95% CI':>18}")
+print("-" * 55)
+
+for metric_name, scores in [
+    ("R2",   r2_scores),
+    ("RMSE", rmse_scores),
+    ("MAE",  mae_scores)
+]:
+    ci_low  = scores.mean() - 1.96 * scores.std()
+    ci_high = scores.mean() + 1.96 * scores.std()
+    print(f"{metric_name:<6} "
+          f"{scores.mean():>7.3f} "
+          f"{scores.std():>7.3f} "
+          f"{scores.min():>7.3f} "
+          f"{scores.max():>7.3f} "
+          f"  [{ci_low:.3f}, {ci_high:.3f}]")
+
+print(f"\nSingle 80/20 split R²: {best_r2:.3f}")
+print(f"10-fold CV R² mean:    "
+      f"{r2_scores.mean():.3f} ± {r2_scores.std():.3f}")
+
+diff = abs(r2_scores.mean() - best_r2)
+if diff < 0.05:
+    print("✓ CV confirms single split result — no overfitting")
+elif r2_scores.mean() < best_r2 - 0.05:
+    print("⚠ CV R² lower than single split — possible overfitting")
+else:
+    print("✓ CV R² consistent with single split")
+
+# Save CV results
+cv_df = pd.DataFrame({
+    "fold": range(1, 11),
+    "r2":   r2_scores,
+    "rmse": rmse_scores,
+    "mae":  mae_scores
+})
+cv_df.to_csv(OUTPUT_DIR / "chembl_cv_results.csv", index=False)
+
+summary_cv = pd.DataFrame({
+    "metric":       ["R2",   "RMSE",   "MAE"],
+    "mean":         [r2_scores.mean(),
+                     rmse_scores.mean(),
+                     mae_scores.mean()],
+    "std":          [r2_scores.std(),
+                     rmse_scores.std(),
+                     mae_scores.std()],
+    "ci_low":       [r2_scores.mean()   - 1.96*r2_scores.std(),
+                     rmse_scores.mean() - 1.96*rmse_scores.std(),
+                     mae_scores.mean()  - 1.96*mae_scores.std()],
+    "ci_high":      [r2_scores.mean()   + 1.96*r2_scores.std(),
+                     rmse_scores.mean() + 1.96*rmse_scores.std(),
+                     mae_scores.mean()  + 1.96*mae_scores.std()],
+    "single_split": [best_r2, None, None]
+})
+summary_cv.to_csv(OUTPUT_DIR / "chembl_cv_summary.csv", index=False)
+print(f"\nCV results → {OUTPUT_DIR}/chembl_cv_results.csv")
+print(f"CV summary → {OUTPUT_DIR}/chembl_cv_summary.csv")
 
 # Feature importance (Random Forest)
 if "Random Forest" in best_name:
