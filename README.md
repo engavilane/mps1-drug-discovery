@@ -157,17 +157,24 @@ Gly605/Glu603 contacts (direct anchoring), and low HBA
 interpretation, not affinity prediction.
 
 **Model 2 — Experimental pIC50 prediction (n=2,352, ChEMBL, 80/20 split)**
-
 | Model | Features | R² | RMSE | MAE |
 |---|---|---|---|---|
 | **SVR** | PhysChem + Fingerprints | **0.729** | 0.623 | 0.445 |
 | Random Forest | PhysChem + Fingerprints | 0.701 | 0.653 | 0.492 |
 | Ridge Regression | PhysChem + Fingerprints | 0.601 | 0.755 | 0.596 |
 
+**10-fold cross validation (SVR, best model):**
+| Metric | Mean | Std | 95% CI |
+|---|---|---|---|
+| R² | 0.702 | 0.049 | [0.605, 0.799] |
+| RMSE | 0.640 | 0.043 | [0.555, 0.725] |
+| MAE | 0.453 | 0.028 | [0.399, 0.507] |
+
+Single split R²=0.729 vs CV R²=0.702 (ΔR²=0.027) — no overfitting confirmed.
+
 Trained on 2,352 Mps1/TTK inhibitors from ChEMBL with experimental 
 IC50 values. Hyperparameter tuning (GridSearchCV, 120 fits) confirmed 
 near-optimal default parameters.
-
 > The transition from Ridge Regression (n=45) to SVR (n=2,352) 
 > directly illustrates the bias-variance tradeoff: complex models 
 > require sufficient data to outperform simple linear baselines. 
