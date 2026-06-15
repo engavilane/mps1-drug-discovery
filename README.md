@@ -31,8 +31,9 @@ the RCSB PDB) is subjected to:
 2. Binding interaction analysis (H-bond contacts with Gly605/Glu603)
 3. ADME filtering using RDKit (Lipinski's Rule of Five, TPSA, PAINS)
 4. Two complementary ML models:
-   - **Model 1** — Ridge Regression on Vina scores (n=45, R²=0.706)
-   - **Model 2** — SVR on experimental pIC50 from ChEMBL (n=2,352, R²=0.729)
+   - **Model 1** — Interpretable Ridge Regression identifying
+     physicochemical drivers of hinge binding (n=45)
+   - **Model 2** — SVR predicting experimental pIC50 from ChEMBL data (n=2,352, R²=0.729)
 
 ### Phase 2 — Novel Candidate Discovery *(complete)*
 The best inhibitors identified in Phase 1 are used as seeds for:
@@ -117,7 +118,7 @@ confirmed correct hinge binding (Gly605/Glu603 contacts).
 
 ### Machine Learning Models
 
-**Model 1 — Vina score prediction (n=45, LOOCV)**
+**Model 1 — Interpretable ML model to identify physicochemical drivers of Mps1 hinge binding (Ridge Regression, n=45, LOOCV)**
 
 | Model | Features | R² | RMSE | MAE |
 |---|---|---|---|---|
@@ -125,8 +126,11 @@ confirmed correct hinge binding (Gly605/Glu603 contacts).
 | Random Forest | PhysChem only | 0.471 | 0.626 | 0.462 |
 | SVR | PhysChem only | 0.409 | 0.662 | 0.467 |
 
-Key drivers of affinity: aromatic rings, LogP, TPSA, 
-Gly605/Glu603 contacts (Ridge coefficients).
+Ridge coefficients reveal key molecular drivers of hinge binding:
+aromatic rings (π-stacking), TPSA (polar hinge contacts),
+Gly605/Glu603 contacts (direct anchoring), and low HBA
+(reduced desolvation penalty). Model used for mechanistic
+interpretation, not affinity prediction.
 
 **Model 2 — Experimental pIC50 prediction (n=2,352, ChEMBL, 80/20 split)**
 
