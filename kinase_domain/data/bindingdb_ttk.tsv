@@ -1,0 +1,584 @@
+Entry	Reviewed	Entry Name	Protein names	Gene Names	Organism	Length
+O14896	reviewed	IRF6_HUMAN	Interferon regulatory factor 6 (IRF-6)	IRF6	Homo sapiens (Human)	467
+Q9UPP1	reviewed	PHF8_HUMAN	Histone lysine demethylase PHF8 (EC 1.14.11.-) (EC 1.14.11.65) (Lysine demethylase 7B) (PHD finger protein 8) ([histone H3]-dimethyl-L-lysine(36) demethylase PHF8) ([histone H3]-dimethyl-L-lysine(9) demethylase PHF8)	PHF8 KDM7B KIAA1111 ZNF422	Homo sapiens (Human)	1060
+A0A0Q9YWZ8	unreviewed	A0A0Q9YWZ8_9GAMM	DNA 3'-5' helicase (EC 5.6.2.4) (DNA 3'-5' helicase II)	uvrD mutU recL HT99x_014965	Candidatus Berkiella aquae	723
+A0A1D3DTD8	unreviewed	A0A1D3DTD8_9ACTN	Chaperone protein DnaK (HSP70) (Heat shock 70 kDa protein) (Heat shock protein 70)	dnaK J116_014965	Streptomyces thermolilacinus SPC6	615
+A0A2G5U815	unreviewed	A0A2G5U815_9PELO	Long-chain-fatty-acid--CoA ligase (EC 6.2.1.3)	Cnig_chr_IV.g14965 B9Z55_014965	Caenorhabditis nigoni	700
+A0A371IZW7	unreviewed	A0A371IZW7_9FIRM	ATP synthase subunit alpha (EC 7.1.2.2) (ATP synthase F1 sector subunit alpha) (F-ATPase subunit alpha)	atpA CHL78_014965	Romboutsia weinsteinii	500
+A0A3S1AZ40	unreviewed	A0A3S1AZ40_9BACT	Acetylglutamate kinase (EC 2.7.2.8) (N-acetyl-L-glutamate 5-phosphotransferase) (NAG kinase) (NAGK)	argB ECE50_014965	Chitinophaga solisilvae	262
+A0A445KB44	unreviewed	A0A445KB44_GLYSO	Elongator complex protein 3 (EC 2.3.1.-)	D0Y65_014965	Glycine soja (Wild soybean)	567
+A0A5N0V950	unreviewed	A0A5N0V950_9PSEU	Adenylosuccinate synthetase (AMPSase) (AdSS) (EC 6.3.4.4) (IMP--aspartate ligase)	purA FPZ12_014965	Amycolatopsis acidicola	428
+A0A7J7XJ13	unreviewed	A0A7J7XJ13_MYOMY	PDZ and LIM domain protein 4	mMyoMyo1_014965	Myotis myotis (Greater mouse-eared bat) (Vespertilio myotis)	332
+A0A923GGN7	unreviewed	A0A923GGN7_9PSED	Bacterioferritin (EC 1.16.3.1)	bfr HU738_014965	Pseudomonas vlassakiae	157
+A0A9Q2I9J3	unreviewed	A0A9Q2I9J3_9GAMM	Riboflavin biosynthesis protein RibD [Includes: Diaminohydroxyphosphoribosylaminopyrimidine deaminase (DRAP deaminase) (EC 3.5.4.26) (Riboflavin-specific deaminase); 5-amino-6-(5-phosphoribosylamino)uracil reductase (EC 1.1.1.193) (HTP reductase)]	ribD IG609_014965	Pectobacterium quasiaquaticum	378
+A0AA88PHJ0	unreviewed	A0AA88PHJ0_9TELE	Guanine nucleotide-binding protein G(i) subunit alpha-2 (Adenylate cyclase-inhibiting G alpha protein)	Q8A67_014965	Cirrhinus molitorella (mud carp)	355
+A0AAW0P0F2	unreviewed	A0AAW0P0F2_9GOBI	TAF6-like RNA polymerase II p300/CBP-associated factor-associated factor 65 kDa subunit 6L (PCAF-associated factor 65-alpha)	WMY93_014965	Mugilogobius chulae (yellowstripe goby)	824
+A0AAX0WV97	unreviewed	A0AAX0WV97_9GAMM	Imidazolonepropionase (EC 3.5.2.7) (Imidazolone-5-propionate hydrolase)	hutI A6J39_014965	Legionella anisa	407
+A0ABQ9A036	unreviewed	A0ABQ9A036_9ROSI	S-adenosylmethionine decarboxylase proenzyme (EC 4.1.1.50)	OIU77_014965	Salix suchowensis	345
+A0ABS6QCF8	unreviewed	A0ABS6QCF8_9PSED	Broad specificity amino-acid racemase (EC 5.1.1.10)	alr HU760_014965	Pseudomonas oryzicola	409
+A0ABS7SRJ3	unreviewed	A0ABS7SRJ3_9BURK	tRNA pseudouridine synthase A (EC 5.4.99.12) (tRNA pseudouridine(38-40) synthase) (tRNA pseudouridylate synthase I) (tRNA-uridine isomerase I)	truA I4X03_014965	Massilia soli	274
+A0ABT0FRW5	unreviewed	A0ABT0FRW5_ACTLZ	DNA-directed RNA polymerase subunit beta' (RNAP subunit beta') (EC 2.7.7.6) (RNA polymerase subunit beta') (Transcriptase subunit beta')	rpoC MF672_014965	Actinomadura luzonensis	1291
+A0ABU8Z742	unreviewed	A0ABU8Z742_9ENTR	Phosphoglucosamine mutase (EC 5.4.2.10)	glmM QFI66_014965	Raoultella scottii	445
+A0ABV0WB21	unreviewed	A0ABV0WB21_9TELE	Adenylosuccinate synthetase (EC 6.3.4.4)	ADSS2_3 XENORESO_014965	Xenotaenia resolanae	332
+A0ABX6PGD8	unreviewed	A0ABX6PGD8_9HYPH	ATP synthase subunit alpha (EC 7.1.2.2) (ATP synthase F1 sector subunit alpha) (F-ATPase subunit alpha)	atpA FFM53_014965	Rhizobium indicum	509
+A0ABZ1C341	unreviewed	A0ABZ1C341_9BACT	ATP synthase subunit alpha (EC 7.1.2.2) (ATP synthase F1 sector subunit alpha) (F-ATPase subunit alpha)	atpA K1X11_014965	Actomonas aquatica	507
+A0A127K835	unreviewed	A0A127K835_9RHOO	Sensor protein (EC 2.7.13.3)	AC731_014965	Thauera humireducens	636
+A0A161IP94	unreviewed	A0A161IP94_9BACL	Large ribosomal subunit protein bL21	rplU ABE65_014965	Fictibacillus phosphorivorans	102
+A0A1D5ZHG4	unreviewed	A0A1D5ZHG4_WHEAT	Eukaryotic translation initiation factor 5A (eIF-5A)	LOC123102730	Triticum aestivum (Wheat)	160
+A0A1J4N2U1	unreviewed	A0A1J4N2U1_9ACTN	Glutamate synthase subunit alpha	UG56_014965	Nocardioides luteus	1518
+A0A1S2MDL2	unreviewed	A0A1S2MDL2_9BACI	Phosphate-binding protein	AWH56_014965	Anaerobacillus isosaccharinicus	332
+A0A1V4K0F8	unreviewed	A0A1V4K0F8_PATFA	CCAAT/enhancer-binding protein	CEBPA AV530_014965	Patagioenas fasciata monilis	311
+A0A1V4K238	unreviewed	A0A1V4K238_PATFA	CCAAT/enhancer-binding protein	CEBPA AV530_014965	Patagioenas fasciata monilis	325
+A0A232ETH9	unreviewed	A0A232ETH9_9HYME	AAA+ ATPase domain-containing protein	TSAR_014965	Trichomalopsis sarcophagae	444
+A0A2G5P7C2	unreviewed	A0A2G5P7C2_9MYCO	NADH-quinone oxidoreductase subunit F (EC 7.1.1.-)	CQY22_014965	Mycolicibacterium brumae	433
+A0A2S7STP8	unreviewed	A0A2S7STP8_9BACT	Large ribosomal subunit protein uL14	rplN CJD36_014965	Flavipsychrobacter stenotrophus	122
+A0A2U2HJ99	unreviewed	A0A2U2HJ99_9BURK	L-ribulose-5-phosphate 4-epimerase (EC 5.1.3.4)	araD C7C56_014965	Massilia glaciei	230
+A0A316WSP7	unreviewed	A0A316WSP7_9FLAO	Transcription termination/antitermination protein NusG	nusG C1638_014965	Chryseobacterium oncorhynchi	180
+A0A328E669	unreviewed	A0A328E669_9ASTE	Major facilitator superfamily (MFS) profile domain-containing protein	DM860_014965	Cuscuta australis	502
+A0A367KAS6	unreviewed	A0A367KAS6_RHIAZ	methylcrotonoyl-CoA carboxylase (EC 6.4.1.4) (3-methylcrotonyl-CoA carboxylase 2) (3-methylcrotonyl-CoA:carbon dioxide ligase subunit beta)	MCCC2_2 CU097_014965	Rhizopus azygosporus (Rhizopus microsporus var. azygosporus)	572
+A0A399G067	unreviewed	A0A399G067_9ACTN	Peptide chain release factor 1 (RF-1)	prfA NI17_014965	Thermobifida halotolerans	354
+A0A3M2RDY4	unreviewed	A0A3M2RDY4_9HYPO	Protein YAE1 (Protein yae1)	CDV36_014965	Fusarium kuroshium	223
+A0A428NSI0	unreviewed	A0A428NSI0_9HYPO	Isotrichodermin C-15 hydroxylase	CEP54_014965	Fusarium duplospermum	534
+A0A430L4P6	unreviewed	A0A430L4P6_9HYPO	RNA-dependent RNA polymerase (EC 2.7.7.48)	BHE90_014965	Fusarium euwallaceae	1032
+A0A482TTE2	unreviewed	A0A482TTE2_9FLAO	Replication-associated recombination protein A	DR871_014965	Flavobacterium petrolei	425
+A0A498NSH3	unreviewed	A0A498NSH3_LABRO	Polypeptide N-acetylgalactosaminyltransferase (EC 2.4.1.-) (Protein-UDP acetylgalactosaminyltransferase)	ROHU_014965	Labeo rohita (Indian major carp) (Cyprinus rohita)	360
+A0A4U0UHD8	unreviewed	A0A4U0UHD8_9PEZI	Major facilitator superfamily (MFS) profile domain-containing protein	LTR91_014965	Friedmanniomyces endolithicus	621
+A0A4U5V149	unreviewed	A0A4U5V149_COLLU	Cell adhesion molecule 1 (Synaptic cell adhesion molecule)	D9C73_014965	Collichthys lucidus (Big head croaker) (Sciaena lucida)	440
+A0A553R6N5	unreviewed	A0A553R6N5_9TELE	Hexosyltransferase	DNTS_014965	Danionella cerebrum	992
+A0A5B6VJA2	unreviewed	A0A5B6VJA2_9ROSI	Calcineurin B-like protein	EPI10_014965	Gossypium australe	82
+A0A5B6VJE3	unreviewed	A0A5B6VJE3_9ROSI	Calcineurin B-like protein	EPI10_014965	Gossypium australe	179
+A0A5J5CPX1	unreviewed	A0A5J5CPX1_9PERO	Sulfotransferase (EC 2.8.2.-)	FQN60_014965	Etheostoma spectabile (orangethroat darter)	439
+A0A5N3XJ99	unreviewed	A0A5N3XJ99_MUNRE	Lipocalin/cytosolic fatty-acid binding domain-containing protein	FD755_014965	Muntiacus reevesi (Reeves' muntjac) (Cervus reevesi)	212
+A0A5N5INI2	unreviewed	A0A5N5INI2_9FLAO	Replication-associated recombination protein A	FOT42_014965	Flagellimonas hadalis	425
+A0A5N5L456	unreviewed	A0A5N5L456_9ROSI	50S ribosomal protein L33, chloroplastic	DKX38_014965	Salix brachista	84
+A0A5N6RBB5	unreviewed	A0A5N6RBB5_9ROSI	HSF-type DNA-binding domain-containing protein	FH972_014965	Carpinus fangiana	484
+A0A5P0YS46	unreviewed	A0A5P0YS46_9ACTN	L-glutamate gamma-semialdehyde dehydrogenase (EC 1.2.1.88) (L-glutamate gamma-semialdehyde dehydrogenase)	pruA FNX44_014965	Streptomyces alkaliterrae	543
+A0A5P2G9L4	unreviewed	A0A5P2G9L4_9BACT	DNA repair protein RecN (Recombination protein N)	recN E0W69_014965	Rhizosphaericola mali	552
+A0A6A6M931	unreviewed	A0A6A6M931_HEVBR	Cation-transporting ATPase	GH714_014965	Hevea brasiliensis (Para rubber tree) (Siphonia brasiliensis)	1018
+A0A7H8DQ72	unreviewed	A0A7H8DQ72_VIBAL	Hydroxyacylglutathione hydrolase (EC 3.1.2.6) (Glyoxalase II) (Glx II)	gloB AL553_014965	Vibrio alginolyticus	252
+A0A7J5YJK3	unreviewed	A0A7J5YJK3_DISMA	Stanniocalcin (STC) (Corpuscles of Stannius protein)	F7725_014965	Dissostichus mawsoni (Antarctic cod)	139
+A0A7J7FJX9	unreviewed	A0A7J7FJX9_DICBM	ATP synthase subunit beta (EC 7.1.2.2)	HPG69_014965	Diceros bicornis minor (South-central black rhinoceros)	528
+A0A7J8IP35	unreviewed	A0A7J8IP35_ROUAE	PBX homeobox 3	HJG63_014965	Rousettus aegyptiacus (Egyptian fruit bat) (Pteropus aegyptiacus)	253
+A0A7J8IPB2	unreviewed	A0A7J8IPB2_ROUAE	PBX homeobox 3	HJG63_014965	Rousettus aegyptiacus (Egyptian fruit bat) (Pteropus aegyptiacus)	359
+A0A7J8IQ08	unreviewed	A0A7J8IQ08_ROUAE	PBX homeobox 3	HJG63_014965	Rousettus aegyptiacus (Egyptian fruit bat) (Pteropus aegyptiacus)	434
+A0A7J8J8T8	unreviewed	A0A7J8J8T8_MOLMO	26S proteasome non-ATPase regulatory subunit 10 (26S proteasome regulatory subunit p28) (Gankyrin)	HJG59_014965	Molossus molossus (Pallas' mastiff bat) (Vespertilio molossus)	226
+A0A7J8J8W7	unreviewed	A0A7J8J8W7_MOLMO	26S proteasome non-ATPase regulatory subunit 10 (26S proteasome regulatory subunit p28) (Gankyrin)	HJG59_014965	Molossus molossus (Pallas' mastiff bat) (Vespertilio molossus)	173
+A0A7J8U9X8	unreviewed	A0A7J8U9X8_9ROSI	Cellulose synthase domain-containing protein	Goklo_014965	Gossypium klotzschianum	1143
+A0A7J8XJP4	unreviewed	A0A7J8XJP4_GOSAI	Kinesin motor domain-containing protein	Goari_014965	Gossypium aridum (American cotton) (Erioxylum aridum)	298
+A0A7J8ZXT0	unreviewed	A0A7J8ZXT0_9ROSI	GrpE protein homolog	Golax_014965	Gossypium laxum	342
+A0A7J9J8K6	unreviewed	A0A7J9J8K6_9ROSI	Mitoferrin-like	Goarm_014965	Gossypium armourianum	321
+A0A834YZX8	unreviewed	A0A834YZX8_TETSI	C2H2-type domain-containing protein	HHK36_014965	Tetracentron sinense (Spur-leaf)	220
+A0A835UT83	unreviewed	A0A835UT83_VANPL	Ribose-phosphate pyrophosphokinase N-terminal domain-containing protein	HPP92_014965	Vanilla planifolia (Vanilla)	168
+A0A843B9L0	unreviewed	A0A843B9L0_9BURK	peptidylprolyl isomerase (EC 5.2.1.8)	HF327_014965	Comamonas suwonensis	261
+A0A843UNF1	unreviewed	A0A843UNF1_COLES	Cytochrome b6-f complex subunit 6 (Cytochrome b6-f complex subunit PetL) (Cytochrome b6-f complex subunit VI)	Taro_014965	Colocasia esculenta (Wild taro) (Arum esculentum)	61
+A0A846H895	unreviewed	A0A846H895_9CYAN	Gamma-glutamyl phosphate reductase (GPR) (EC 1.2.1.41) (Glutamate-5-semialdehyde dehydrogenase) (Glutamyl-gamma-semialdehyde dehydrogenase) (GSA dehydrogenase)	proA PI95_014965	Hassallia byssoidea VB512170	435
+A0A8E4RDV5	unreviewed	A0A8E4RDV5_MYCMU	Cutinase (EC 3.1.1.-)	C1S78_014965	Mycolicibacterium mucogenicum DSM 44124	239
+A0A8H3W0N1	unreviewed	A0A8H3W0N1_9PEZI	Arginase (EC 3.5.3.1)	GQ607_014965	Colletotrichum asianum	463
+A0A8H7T451	unreviewed	A0A8H7T451_9HELO	ATP-dependent helicase	IFR04_014965	Cadophora malorum	1076
+A0A8J4TDX3	unreviewed	A0A8J4TDX3_CLAMG	Protein Jade-1 (Jade family PHD finger protein 1) (PHD finger protein 17)	jade1 DAT39_014965	Clarias magur (Asian catfish) (Macropteronotus magur)	799
+A0A8J6AJ69	unreviewed	A0A8J6AJ69_GALPY	Syntaxin-binding protein 5-like	J0S82_014965	Galemys pyrenaicus (Iberian desman) (Pyrenean desman)	635
+A0A8J6D569	unreviewed	A0A8J6D569_9ROSI	Protein kinase domain-containing protein	CXB51_014965	Gossypium anomalum	449
+A0A8T0A944	unreviewed	A0A8T0A944_SILME	Serine/threonine-protein phosphatase PGAM5, mitochondrial (EC 3.1.3.16) (Phosphoglycerate mutase family member 5) (Serine/threonine-protein phosphatase Pgam5, mitochondrial)	HF521_014965	Silurus meridionalis (Southern catfish) (Silurus soldatovi meridionalis)	198
+A0A8T0EQN3	unreviewed	A0A8T0EQN3_ARGBR	Eukaryotic translation initiation factor 4 gamma 2	HNY73_014965	Argiope bruennichi (Wasp spider) (Aranea bruennichi)	802
+A0A8T1V4J4	unreviewed	A0A8T1V4J4_9STRA	Phosphate transporter	PHYPSEUDO_014965	Phytophthora pseudosyringae	505
+A0A8T2JQR7	unreviewed	A0A8T2JQR7_9PIPI	Centrosomin N-terminal motif 1 domain-containing protein	GDO86_014965	Hymenochirus boettgeri (Congo dwarf clawed frog)	465
+A0A974XZW9	unreviewed	A0A974XZW9_9GAMM	Elongation factor protein EfpL	yeiP efpL I8J32_014965	Agrilutibacter solisilvae	188
+A0A9D3NGZ0	unreviewed	A0A9D3NGZ0_9TELE	DIX domain-containing protein	KOW79_014965	Hemibagrus wyckioides	445
+A0A9D5BP73	unreviewed	A0A9D5BP73_PEA	Serine incorporator	KIW84_014965	Pisum sativum (Garden pea) (Lathyrus oleraceus)	409
+A0A9Q0HMB7	unreviewed	A0A9Q0HMB7_9POAL	non-specific serine/threonine protein kinase (EC 2.7.11.1)	LUZ63_014965	Rhynchospora breviuscula	392
+A0A9Q0J453	unreviewed	A0A9Q0J453_9ROSI	Expansin	EXPA4_1 Tsubulata_014965	Turnera subulata	262
+A0A9Q0QQS7	unreviewed	A0A9Q0QQS7_9MAGN	Cytochrome b561 and DOMON domain-containing protein	NE237_014965	Protea cynaroides	387
+A0AA38CSU7	unreviewed	A0AA38CSU7_TAXCH	Hexosyltransferase (EC 2.4.1.-)	KI387_014965	Taxus chinensis (Chinese yew) (Taxus wallichiana var. chinensis)	350
+A0AA38IH09	unreviewed	A0AA38IH09_9CUCU	DDE Tnp4 domain-containing protein	Zmor_014965	Zophobas morio	371
+A0AA38ZI63	unreviewed	A0AA38ZI63_VITRO	Protein DETOXIFICATION	PVL29_014965	Vitis rotundifolia (Muscadine grape)	412
+A0AA38ZI68	unreviewed	A0AA38ZI68_VITRO	Protein DETOXIFICATION (Multidrug and toxic compound extrusion protein)	PVL29_014965	Vitis rotundifolia (Muscadine grape)	474
+A0AA38ZI69	unreviewed	A0AA38ZI69_VITRO	Protein DETOXIFICATION (Multidrug and toxic compound extrusion protein)	PVL29_014965	Vitis rotundifolia (Muscadine grape)	490
+A0AA39M553	unreviewed	A0AA39M553_9BILA	Neurotransmitter-gated ion-channel ligand-binding domain-containing protein	QR680_014965	Steinernema hermaphroditum	482
+A0AA39SI23	unreviewed	A0AA39SI23_ACESA	3-oxoacyl-[acyl-carrier-protein] synthase, mitochondrial (Beta-ketoacyl-ACP synthase)	LWI29_014965	Acer saccharum (Sugar maple)	479
+A0AA40LUL1	unreviewed	A0AA40LUL1_CNENI	Beta-defensin	QTO34_014965	Cnephaeus nilssonii (Northern bat) (Eptesicus nilssonii)	169
+A0AA88D4M3	unreviewed	A0AA88D4M3_FICCA	AAA+ ATPase domain-containing protein	TIFTF001_014965	Ficus carica (Common fig)	539
+A0AA88HKK0	unreviewed	A0AA88HKK0_ARTSF	BRCT domain-containing protein	QYM36_014965	Artemia franciscana (Brine shrimp) (Artemia sanfranciscana)	514
+A0AA88L450	unreviewed	A0AA88L450_ARTSF	BRCT domain-containing protein	QYM36_014965	Artemia franciscana (Brine shrimp) (Artemia sanfranciscana)	517
+A0AA88MJB0	unreviewed	A0AA88MJB0_CHASR	lysophospholipase (EC 3.1.1.5)	Q5P01_014965	Channa striata (Snakehead murrel) (Ophicephalus striatus)	1318
+A0AA90H485	unreviewed	A0AA90H485_9ACTN	Isoprenyl transferase (EC 2.5.1.-)	POF43_014965	Streptantibioticus silvisoli	253
+A0AAD4TXN2	unreviewed	A0AAD4TXN2_OVIAM	Palmitoyltransferase (EC 2.3.1.225)	MG293_014965	Ovis ammon polii	308
+A0AAD5PSU4	unreviewed	A0AAD5PSU4_9CRUS	Ubiquitin carboxyl-terminal hydrolase 7 (EC 3.4.19.12) (Ubiquitin thioesterase 7) (Ubiquitin-specific-processing protease 7)	GHT06_014965	Daphnia sinensis	1109
+A0AAD5WBX6	unreviewed	A0AAD5WBX6_9POAL	PWWP domain-containing protein	LUZ61_014965	Rhynchospora tenuis	1134
+A0AAD6W531	unreviewed	A0AAD6W531_9ROSI	Glycosyltransferase family 92 protein (EC 2.4.1.-)	NC653_014965	Populus alba x Populus x berolinensis	615
+A0AAD8X5Z4	unreviewed	A0AAD8X5Z4_LOLMU	PUM-HD domain-containing protein	QYE76_014965	Lolium multiflorum (Italian ryegrass) (Lolium perenne subsp. multiflorum)	882
+A0AAD9BYP1	unreviewed	A0AAD9BYP1_DISEL	FACT complex subunit	KUDE01_014965	Dissostichus eleginoides (Patagonian toothfish) (Dissostichus amissus)	952
+A0AAD9DRD6	unreviewed	A0AAD9DRD6_9TELE	Bile salt export pump	P4O66_014965	Electrophorus voltai	1234
+A0AAE0RU99	unreviewed	A0AAE0RU99_9BIVA	BHLH domain-containing protein	CHS0354_014965	Potamilus streckersoni	1157
+A0AAE1MV85	unreviewed	A0AAE1MV85_9FABA	Protein kinase domain-containing protein	QN277_014965	Acacia crassicarpa (northern wattle)	444
+A0AAF0TQ55	unreviewed	A0AAF0TQ55_SOLVR	RING-type E3 ubiquitin transferase (EC 2.3.2.27)	MTR67_014965	Solanum verrucosum	312
+A0AAN7P0C1	unreviewed	A0AAN7P0C1_9COLE	Peptidase S1 domain-containing protein	RN001_014965	Aquatica leii	465
+A0AAN8AG76	unreviewed	A0AAN8AG76_ELEMC	Calcium uniporter protein	PBY51_014965	Eleginops maclovinus (Patagonian blennie) (Eleginus maclovinus)	377
+A0AAN8E3R6	unreviewed	A0AAN8E3R6_CHAGU	Bactericidal permeability-increasing protein (BPI)	CgunFtcFv8_014965	Champsocephalus gunnari (Mackerel icefish)	453
+A0AAN8JJ52	unreviewed	A0AAN8JJ52_PATCE	WD repeat-containing protein 82	SNE40_014965	Patella caerulea (Rayed Mediterranean limpet)	313
+A0AAP0JL65	unreviewed	A0AAP0JL65_9MAGN	Major facilitator superfamily (MFS) profile domain-containing protein	Syun_014965	Stephania yunnanensis	592
+A0AAU7EE98	unreviewed	A0AAU7EE98_9FLAO	aminodeoxychorismate synthase (EC 2.6.1.85)	pabB QLS71_014965	Mariniflexile litorale	430
+A0AAV6QT41	unreviewed	A0AAV6QT41_SOLSE	Solute carrier family 12 member 6 isoform X1	JOB18_014965	Solea senegalensis (Senegalese sole)	1184
+A0AAV7E3Y1	unreviewed	A0AAV7E3Y1_ARIFI	GDT1 family protein	H6P81_014965	Aristolochia fimbriata (White veined hardy Dutchman's pipe vine)	227
+A0AAV8E2B2	unreviewed	A0AAV8E2B2_9POAL	3-ketoacyl-CoA synthase (EC 2.3.1.-)	LUZ62_014965 LUZ62_059845	Rhynchospora pubera	470
+A0AAV8R4F3	unreviewed	A0AAV8R4F3_ENSVE	soluble epoxide hydrolase (EC 3.3.2.10)	OPV22_014965	Ensete ventricosum (Abyssinian banana) (Musa ensete)	321
+A0AAV8TWQ3	unreviewed	A0AAV8TWQ3_ERYNO	Tubulin beta chain	K2173_014965	Erythroxylum novogranatense (Peruvian coca) (Erythroxylum coca var. novogranatense)	447
+A0AAV8WZK7	unreviewed	A0AAV8WZK7_9CUCU	CCR4-NOT transcription complex subunit 10	NQ314_014965	Rhamnusium bicolor	97
+A0AAV8YY06	unreviewed	A0AAV8YY06_9CUCU	Phosphate carrier protein, mitochondrial	NQ318_014965	Aromia moschata	353
+A0AAV9KUC8	unreviewed	A0AAV9KUC8_9SOLN	Uncharacterized protein	R3W88_014965	Solanum pinnatisectum (tansyleaf nightshade)	346
+A0AAV9RJG5	unreviewed	A0AAV9RJG5_9TELE	Melanotransferrin	CRENBAI_014965	Crenichthys baileyi (White River springfish)	418
+A0AAW0FMF7	unreviewed	A0AAW0FMF7_9APHY	Autophagy-related protein	QCA50_014965	Cerrena zonata	316
+A0AAW1EV07	unreviewed	A0AAW1EV07_ZOAVI	Solute carrier family 66 member 2 (PQ-loop repeat-containing protein 1)	VZT92_014965 VZT92_015906	Zoarces viviparus (Viviparous eelpout) (Blennius viviparus)	271
+A0AAW1Z0U3	unreviewed	A0AAW1Z0U3_CULAL	Corticotropin-releasing factor-binding protein (CRF-BP) (CRF-binding protein) (Corticotropin-releasing hormone-binding protein)	ABG768_014965	Culter alburnus (Topmouth culter)	321
+A0AAW2CT12	unreviewed	A0AAW2CT12_9ROSI	MLO-like protein	MLO SO802_014965	Lithocarpus litseifolius	555
+A0AB34GCY2	unreviewed	A0AB34GCY2_ESCRO	RNA helicase (EC 3.6.4.13)	J1605_014965	Eschrichtius robustus (California gray whale) (Eschrichtius gibbosus)	639
+A0ABD0TES7	unreviewed	A0ABD0TES7_LOXSC	40S ribosomal protein S24	ABMA27_014965	Loxostege sticticalis (Beet webworm moth)	132
+A0ABD0UPU3	unreviewed	A0ABD0UPU3_DENTH	C2H2-type domain-containing protein	M5K25_014965	Dendrobium thyrsiflorum (Pinecone-like raceme dendrobium) (Orchid)	465
+A0ABD2H3Z1	unreviewed	A0ABD2H3Z1_PAGBO	Uncharacterized protein	OYC64_014965	Pagothenia borchgrevinki (Bald rockcod) (Trematomus borchgrevinki)	460
+A0ABD2WAP9	unreviewed	A0ABD2WAP9_9HYME	Ig-like domain-containing protein	TKK_014965	Trichogramma kaykai	535
+A0ABD2WAQ1	unreviewed	A0ABD2WAQ1_9HYME	Ig-like domain-containing protein	TKK_014965	Trichogramma kaykai	590
+A0ABD2WB06	unreviewed	A0ABD2WB06_9HYME	Ig-like domain-containing protein	TKK_014965	Trichogramma kaykai	546
+A0ABD2WBV4	unreviewed	A0ABD2WBV4_9HYME	Ig-like domain-containing protein	TKK_014965	Trichogramma kaykai	566
+A0ABD2WC94	unreviewed	A0ABD2WC94_9HYME	Ig-like domain-containing protein	TKK_014965	Trichogramma kaykai	480
+A0ABM1Z4D5	unreviewed	A0ABM1Z4D5_AEDAL	Glucose-methanol-choline oxidoreductase N-terminal domain-containing protein		Aedes albopictus (Asian tiger mosquito) (Stegomyia albopicta)	624
+A0ABQ5SKY8	unreviewed	A0ABQ5SKY8_9CHLO	proline--tRNA ligase (EC 6.1.1.15) (Prolyl-tRNA synthetase)	VaNZ11_014965	Volvox africanus	572
+A0ABQ7Q5Y3	unreviewed	A0ABQ7Q5Y3_PLUXY	Vacuolar protein sorting-associated protein 35	JYU34_014965	Plutella xylostella (Diamondback moth) (Plutella maculipennis)	858
+A0ABQ8JH32	unreviewed	A0ABQ8JH32_DERPT	O-acyltransferase	DGAT1_4 DERP_014965	Dermatophagoides pteronyssinus (European house dust mite)	498
+A0ABQ9V872	unreviewed	A0ABQ9V872_SAGOE	Phosphofructokinase domain-containing protein	P7K49_014965	Saguinus oedipus (Cotton-top tamarin) (Oedipomidas oedipus)	159
+A0ABR0ALD4	unreviewed	A0ABR0ALD4_9CRUS	Medium-chain acyl-CoA ligase ACSF2, mitochondrial	OUZ56_014965	Daphnia magna	205
+A0ABR0PW60	unreviewed	A0ABR0PW60_GOSAR	4-coumarate--CoA ligase (EC 6.2.1.12)	PVK06_014965	Gossypium arboreum (Tree cotton) (Gossypium nanking)	543
+A0ABR0WYP1	unreviewed	A0ABR0WYP1_REHGL	non-specific serine/threonine protein kinase (EC 2.7.11.1)	DH2020_014965	Rehmannia glutinosa (Chinese foxglove)	816
+A0ABR1E2I6	unreviewed	A0ABR1E2I6_NECAM	Caveolin	Necator_chrV.g19757 RB195_014965	Necator americanus (Human hookworm)	243
+A0ABR1J1A1	unreviewed	A0ABR1J1A1_9AGAR	BZIP domain-containing protein	VKT23_014965	Stygiomarasmius scandens	425
+A0ABR1PUT6	unreviewed	A0ABR1PUT6_9PEZI	phenylalanine--tRNA ligase (EC 6.1.1.20) (Phenylalanyl-tRNA synthetase beta subunit)	PG986_014965	Apiospora aurea	605
+A0ABR1RQE9	unreviewed	A0ABR1RQE9_9PEZI	Amino acid transporter transmembrane domain-containing protein	PG993_014965	Apiospora rasikravindrae	534
+A0ABR1UYL6	unreviewed	A0ABR1UYL6_9PEZI	polynucleotide adenylyltransferase (EC 2.7.7.19)	PG997_014965	Apiospora hydei	877
+A0ABR2HJZ5	unreviewed	A0ABR2HJZ5_9PEZI	ribonuclease T1 (EC 4.6.1.24)	PGQ11_014965	Apiospora arundinis	182
+A0ABR2TQP1	unreviewed	A0ABR2TQP1_9ROSI	Auxin efflux carrier component	V6N11_014965	Hibiscus sabdariffa (roselle)	232
+A0ABS2D098	unreviewed	A0ABS2D098_9FLAO	Tyrosine recombinase XerC	xerD xerC H9X54_014965	Flavobacterium macrobrachii	299
+A0ABS4DC40	unreviewed	A0ABS4DC40_9CHLR	Fluoride-specific ion channel FluC	crcB fluC EYB53_014965	Candidatus Chloroploca mongolica	123
+A0ABT5SBZ4	unreviewed	A0ABT5SBZ4_9FLAO	phosphoribosylglycinamide formyltransferase 1 (EC 2.1.2.2) (5'-phosphoribosylglycinamide transformylase) (GAR transformylase)	N5A56_014965	Polaribacter ponticola	190
+A0ABU3MXC8	unreviewed	A0ABU3MXC8_9BURK	Na+/H+ antiporter	OYC61_014965	Alcaligenes nematophilus	544
+A0ABU6KUQ1	unreviewed	A0ABU6KUQ1_ENTAS	Phosphogluconate dehydratase (EC 4.2.1.12)	edd QAA55_014965	Enterobacter asburiae	603
+A0ABV0PPE2	unreviewed	A0ABV0PPE2_9TELE	Alpha-1D adrenergic receptor	ADRA1D GOODEAATRI_014965	Goodea atripinnis	307
+A0ABV0SFD6	unreviewed	A0ABV0SFD6_9TELE	Neurotransmitter-gated ion-channel transmembrane domain-containing protein	XENOCAPTIV_014965	Xenoophorus captivus	257
+A0ABV0UUC7	unreviewed	A0ABV0UUC7_9TELE	F-actin-capping protein subunit beta	CAP2 ILYODFUR_014965	Ilyodon furcidens (goldbreast splitfin)	281
+A0ABX2IMV7	unreviewed	A0ABX2IMV7_9RHOO	Energy transducer TonB	HJ583_014965	Uliginosibacterium aquaticum	234
+A0ABX6QQ26	unreviewed	A0ABX6QQ26_9HYPH	Fumarate hydratase class I (EC 4.2.1.2)	FE840_014965	Peteryoungia desertarenae	535
+A0ABX6V993	unreviewed	A0ABX6V993_9GAMM	tRNA (cytidine/uridine-2'-O-)-methyltransferase TrmJ (EC 2.1.1.200) (tRNA (cytidine(32)/uridine(32)-2'-O)-methyltransferase) (tRNA Cm32/Um32 methyltransferase)	trmJ FM038_014965	Shewanella eurypsychrophilus	254
+A0ABX7R9S0	unreviewed	A0ABX7R9S0_9GAMM	Arginine--tRNA ligase (EC 6.1.1.19) (Arginyl-tRNA synthetase) (ArgRS)	argS HIV01_014965	Lysobacter arenosi	562
+A0ABX8PPX8	unreviewed	A0ABX8PPX8_9PSED	histidine kinase (EC 2.7.13.3)	HU718_014965	Pseudomonas tensinigenes	444
+A0ABY7GGQ0	unreviewed	A0ABY7GGQ0_9GAMM	Apolipoprotein N-acyltransferase (ALP N-acyltransferase) (EC 2.3.1.269)	lnt NM686_014965	Methylomonas rapida	519
+A0ACC3CV38	unreviewed	A0ACC3CV38_9PEZI	Threonylcarbamoyl-AMP synthase (EC 2.7.7.87) (L-threonylcarbamoyladenylate synthase)	LTS18_014965	Coniosporium uncinatum	351
+Q6N5T3	unreviewed	Q6N5T3_RHOPA	Protein-export membrane protein SecG	secG TX73_014965	Rhodopseudomonas palustris (strain ATCC BAA-98 / CGA009)	134
+Q7B9X2	unreviewed	Q7B9X2_ECOLX	Cadaverine/lysine antiporter	cadB cadB_4 A2J79_002819 A5U30_001308 ABE91_000715 ACU57_10075 B6R15_003551 B6R31_000870 BANRA_05215 BCB93_001187 BG944_002493 BGM66_001111 BK300_12265 BK383_04870 BKL28_001675 BMT50_07040 BMT91_20610 BRV02_002348 BTQ06_23965 BvCmsKKP061_00269 BXT93_07060 C0P57_004033 C1Q91_002266 C2R31_001796 C3F40_14665 C719_004103 C9160_07630 C9194_00655 CCS08_02000 CG702_00350 CQ842_09530 CQ842_11895 CR538_23325 CTR35_003090 CV83915_01900 CWS33_03325 D3C88_20435 D3G36_10450 D4N09_04225 D9D43_19175 D9E49_17255 D9J61_09315 DD762_22705 DIV22_19685 DL968_13200 DNQ45_18375 DNX30_08285 DS732_02430 DTL43_19415 DU321_10195 E4K51_08860 E5H86_11760 E6D34_18930 EAI46_05940 ECs5114 EIA08_14720 EIZ93_10855 EN85_000873 EPS76_07730 EPS97_09980 EWK56_08900 ExPECSC038_04640 F7N46_12440 F9413_14175 F9B07_06210 FIJ20_11530 FJQ40_01850 FKO60_18075 FOI11_014965 FOI11_20715 FPI65_25445 FPS11_04095 FV293_00640 FZU14_10030 G3V95_12165 G5603_09400 GAI89_04600 GAJ12_10960 GNW61_00550 GOP25_19275 GP711_14790 GP965_07095 GP975_02945 GQM04_14970 GQM21_05730 GRC73_06210 GRW05_17865 GRW24_20475 GUC01_08830 HEP30_014250 HEP34_003894 HHH44_003362 HIE29_003686 HJQ60_005261 HKA49_000941 HLX92_12595 HLZ39_08710 HLZ50_12810 HMV95_08820 HV209_20175 HVV39_13975 HVW04_12965 HVW43_14195 HX136_22910 I6H02_16480 IDONEFKE_01473 IFC14_002052 J0541_004581 J8F57_000155 JNA65_10825 JNA68_18485 JNP96_02340 NCTC10082_01927 NCTC10279_03303 NCTC10418_06900 NCTC10429_06292 NCTC10764_02775 NCTC11181_01800 NCTC7922_05192 NCTC7928_03855 NCTC8179_04848 NCTC8333_05331 NCTC8603_04392 NCTC8621_04691 NCTC8622_01928 NCTC8960_02121 NCTC8985_03792 NCTC9001_04718 NCTC9044_02476 NCTC9045_05365 NCTC9075_06200 NCTC9077_05703 NCTC9702_05474 NCTC9706_01836 NCTC9962_03873 NY836_27400 OFN31_11020 OGM49_01515 P6223_000376 PWL68_003403 Q2V20_10440 QDW62_23710 QO046_18300 R8O40_002677 SAMEA3752557_02095 TUM18780_40170 V9Z47_24110 WR15_07230	Escherichia coli	444
+A0A061G058	unreviewed	A0A061G058_THECC	Gag-pro-like protein	TCM_014965	Theobroma cacao (Cacao) (Cocoa)	446
+A0A064CNA1	unreviewed	A0A064CNA1_9MYCO	Membrane protein	Y900_014965	Mycolicibacterium aromaticivorans JS19b1 = JCM 16368	967
+A0A0G4M0D3	unreviewed	A0A0G4M0D3_VERLO	A to I editase domain-containing protein	BN1708_014965	Verticillium longisporum (Verticillium dahliae var. longisporum)	322
+A0A0M0LRA5	unreviewed	A0A0M0LRA5_9EUKA	Nucleotide-diphospho-sugar transferase domain-containing protein	Ctob_014965	Chrysochromulina tobinii	913
+A0A126T6V1	unreviewed	A0A126T6V1_9GAMM	N-acylneuraminate cytidylyltransferase	JT25_014965	Methylomonas denitrificans	233
+A0A151SXI1	unreviewed	A0A151SXI1_CAJCA	Copia protein	KK1_014965	Cajanus cajan (Pigeon pea) (Cajanus indicus)	196
+A0A162P2E7	unreviewed	A0A162P2E7_9CRUS	Uncharacterized protein	APZ42_014965	Daphnia magna	67
+A0A1B1S510	unreviewed	A0A1B1S510_9BACL	IrrE N-terminal-like domain-containing protein	I858_014965	Planococcus versutus	247
+A0A1B1Z773	unreviewed	A0A1B1Z773_9BACL	RCK C-terminal domain-containing protein	ABE41_014965	Fictibacillus arsenicus	233
+A0A1B3XR12	unreviewed	A0A1B3XR12_9BACI	Biotin carboxyl carrier protein of acetyl-CoA carboxylase	ABE28_014965	Peribacillus muralis	162
+A0A1E5XT60	unreviewed	A0A1E5XT60_9HYPH	Sugar ABC transporter permease	VW23_014965	Devosia insulae DS-56	278
+A0A1J4NXE1	unreviewed	A0A1J4NXE1_9ACTN	YCII-related domain-containing protein	WN71_014965	Streptomyces mangrovisoli	137
+A0A1J4Q324	unreviewed	A0A1J4Q324_9ACTN	DoxX family protein	VT52_014965	Streptomyces malaysiense	152
+A0A1S1WUM6	unreviewed	A0A1S1WUM6_9NEIS	DUF2325 domain-containing protein	QCL97_014965	Chromobacterium amazonense	98
+A0A1S8D4P8	unreviewed	A0A1S8D4P8_9PROT	Methylhydantoinase	APZ41_014965	Roseomonas mucosa	552
+A0A1Y3ARM1	unreviewed	A0A1Y3ARM1_EURMA	Sushi domain-containing protein	BLA29_014965	Euroglyphus maynei (Mayne's house dust mite)	63
+A0A226N5T6	unreviewed	A0A226N5T6_CALSU	Uncharacterized protein	ASZ78_014965	Callipepla squamata (Scaled quail)	236
+A0A2A3JZS5	unreviewed	A0A2A3JZS5_9RHOB	Tripartite tricarboxylate transporter TctB family protein	CLG85_014965	Alloyangia mangrovi	143
+A0A2G4EZN2	unreviewed	A0A2G4EZN2_9CYAN	Pirin family protein	CP500_014965	Tychonema bourrellyi FEM_GT703	232
+A0A2I0K7V1	unreviewed	A0A2I0K7V1_PUNGR	Uncharacterized protein	CRG98_014965	Punica granatum (Pomegranate)	214
+A0A2I5TL78	unreviewed	A0A2I5TL78_PROCF	Phage tail tape measure protein	Ser39006_014965	Prodigiosinella confusarubida (Serratia sp. (strain ATCC 39006))	775
+A0A2J7ZG55	unreviewed	A0A2J7ZG55_9CHLO	Activator heat shock protein ATPase 1	TSOC_014965	Tetrabaena socialis	112
+A0A2J9V0G8	unreviewed	A0A2J9V0G8_VIBMI	Uncharacterized protein	AL544_014965	Vibrio mimicus	327
+A0A2N0B474	unreviewed	A0A2N0B474_9LEPT	Uncharacterized protein	CH379_014965	Leptospira ellisii	218
+A0A2P4NLJ7	unreviewed	A0A2P4NLJ7_9EURY	Sulfate ABC transporter permease	AUR65_014965	Haloferax marisrubri	269
+A0A2P4SAZ5	unreviewed	A0A2P4SAZ5_BAMTH	Nuclear envelope integral membrane protein 1	CIB84_014965	Bambusicola thoracicus (Chinese bamboo-partridge) (Perdix thoracica)	276
+A0A2T7UB04	unreviewed	A0A2T7UB04_9BURK	Fimbrial assembly protein	H663_014965	Limnohabitans planktonicus II-D5	216
+A0A2U9BZB8	unreviewed	A0A2U9BZB8_SCOMX	Putative large neutral amino acids transporter small subunit 1-like	SMAX5B_014965	Scophthalmus maximus (Turbot) (Psetta maxima)	536
+A0A2U9C0M0	unreviewed	A0A2U9C0M0_SCOMX	Putative large neutral amino acids transporter small subunit 1-like isoform 2 (Putative large neutral amino acids transporter small subunit 1-like isoform 3)	SMAX5B_014965	Scophthalmus maximus (Turbot) (Psetta maxima)	537
+A0A2W1N6X0	unreviewed	A0A2W1N6X0_PAEXE	5-deoxy-glucuronate isomerase (EC 5.3.1.30)	iolB CBW46_014965	Paenibacillus xerothermodurans	265
+A0A316XAQ7	unreviewed	A0A316XAQ7_9FLAO	Uncharacterized protein	C1631_014965	Chryseobacterium phosphatilyticum	121
+A0A345SXT3	unreviewed	A0A345SXT3_9ACTN	DNA phosphorothioation system sulfurtransferase DndC	dndC C7M71_014965	Peterkaempfera bronchialis	499
+A0A369K4V3	unreviewed	A0A369K4V3_HYPMA	Uncharacterized protein	Hypma_014965	Hypsizygus marmoreus (White beech mushroom) (Agaricus marmoreus)	120
+A0A371JC71	unreviewed	A0A371JC71_9FIRM	Uncharacterized protein	CG710_014965	Lachnotalea glycerini	377
+A0A3A8A6G7	unreviewed	A0A3A8A6G7_9HYPH	Type II toxin-antitoxin system RelE/ParE family toxin	DEM25_014965	Oceaniradius stylonematis	112
+A0A3M7QT69	unreviewed	A0A3M7QT69_BRAPC	Uncharacterized protein	BpHYR1_014965	Brachionus plicatilis (Marine rotifer) (Brachionus muelleri)	127
+A0A3R7ESX4	unreviewed	A0A3R7ESX4_9ACTN	DUF6571 domain-containing protein	SFRA_014965	Streptomyces xinghaiensis	749
+A0A3R7NUD5	unreviewed	A0A3R7NUD5_PENVA	GST-N-Metaxin-like protein	C7M84_014965	Penaeus vannamei (Whiteleg shrimp) (Litopenaeus vannamei)	288
+A0A3S1B0Z5	unreviewed	A0A3S1B0Z5_ELYCH	Uncharacterized protein	EGW08_014965	Elysia chlorotica (Eastern emerald elysia) (Sea slug)	155
+A0A409XI64	unreviewed	A0A409XI64_PSICY	Uncharacterized protein	CVT25_014965	Psilocybe cyanescens	85
+A0A409YXQ8	unreviewed	A0A409YXQ8_9AGAR	Uncharacterized protein	CVT26_014965	Gymnopilus dilepis	202
+A0A422QUU2	unreviewed	A0A422QUU2_9RHOB	Gamma carbonic anhydrase family protein	A7A09_014965	Paracoccus methylarcula	173
+A0A428PIR6	unreviewed	A0A428PIR6_9HYPO	NADP-dependent mannitol dehydrogenase	CEP51_014965	Fusarium floridanum	269
+A0A428SHJ0	unreviewed	A0A428SHJ0_9HYPO	Uncharacterized protein	CEP52_014965	Fusarium oligoseptatum	154
+A0A428ST50	unreviewed	A0A428ST50_9HYPO	Major facilitator superfamily (MFS) profile domain-containing protein	CDV31_014965	Fusarium ambrosium	603
+A0A429XWG0	unreviewed	A0A429XWG0_9BACI	Helix-turn-helix domain-containing protein	D4T97_014965	Siminovitchia acidinfaciens	306
+A0A443ILS8	unreviewed	A0A443ILS8_9BACI	S9 family peptidase	D4N35_014965	Siminovitchia fortis	262
+A0A482VZ83	unreviewed	A0A482VZ83_ASBVE	Uncharacterized protein	BDFB_014965	Asbolus verrucosus (Desert ironclad beetle)	34
+A0A484APC4	unreviewed	A0A484APC4_DRONA	Uncharacterized protein	AWZ03_014965	Drosophila navojoa (Fruit fly)	554
+A0A494VSY0	unreviewed	A0A494VSY0_9SPHI	DNA starvation/stationary phase protection protein	HYN43_014965	Mucilaginibacter celer	159
+A0A498K2D8	unreviewed	A0A498K2D8_MALDO	Uncharacterized protein	DVH24_014965	Malus domestica (Apple) (Pyrus malus)	365
+A0A4P9CAI5	unreviewed	A0A4P9CAI5_EUBML	DUF882 domain-containing protein	CPZ25_014965	Eubacterium maltosivorans	182
+A0A4S4E6N8	unreviewed	A0A4S4E6N8_CAMSN	Uncharacterized protein	TEA_014965	Camellia sinensis var. sinensis (China tea)	124
+A0A4U5NDG8	unreviewed	A0A4U5NDG8_STECR	Uncharacterized protein	L596_014965	Steinernema carpocapsae (Entomopathogenic nematode)	149
+A0A4U7JLN6	unreviewed	A0A4U7JLN6_9FIRM	DUF3343 domain-containing protein	EHE19_014965	Ruminiclostridium herbifermentans	87
+A0A4V6BFN9	unreviewed	A0A4V6BFN9_9BRAD	PilZ domain-containing protein	YH63_014965	Afipia massiliensis	204
+A0A4Y7J7S6	unreviewed	A0A4Y7J7S6_PAPSO	Uncharacterized protein	C5167_014965	Papaver somniferum (Opium poppy)	375
+A0A4Z2BXG2	unreviewed	A0A4Z2BXG2_9TELE	Bloodthirsty-related gene family, member 2	fugu_014965	Takifugu bimaculatus	453
+A0A4Z2IBP0	unreviewed	A0A4Z2IBP0_9TELE	Uncharacterized protein	EYF80_014965	Liparis tanakae (Tanaka's snailfish)	100
+A0A505DAJ7	unreviewed	A0A505DAJ7_9ACTN	Deacylase	FGD71_014965	Streptomyces sporangiiformans	450
+A0A540MKS5	unreviewed	A0A540MKS5_MALBA	SUI1 domain-containing protein	C1H46_014965	Malus baccata (Siberian crab apple) (Pyrus baccata)	133
+A0A562Y5Q4	unreviewed	A0A562Y5Q4_9FLAO	HigA family addiction module antidote protein	E1J38_014965	Seonamhaeicola sediminis	100
+A0A564L0H1	unreviewed	A0A564L0H1_9ENTR	ABC transporter substrate-binding protein	OXR69_014965	Klebsiella huaxiensis	532
+A0A5B0PS18	unreviewed	A0A5B0PS18_PUCGR	Rho-GAP domain-containing protein	PGT21_014965	Puccinia graminis f. sp. tritici	461
+A0A5B7DK26	unreviewed	A0A5B7DK26_PORTR	Uncharacterized protein	E2C01_014965	Portunus trituberculatus (Swimming crab) (Neptunus trituberculatus)	188
+A0A5C1I0E9	unreviewed	A0A5C1I0E9_9SPHI	Beta-xylosidase	DEO27_014965	Mucilaginibacter rubeus	559
+A0A5C4WJS7	unreviewed	A0A5C4WJS7_9ACTN	Uncharacterized protein	FH608_014965	Nonomuraea phyllanthi	475
+A0A5C7FJ93	unreviewed	A0A5C7FJ93_9BACI	Zinc ribbon domain-containing protein	FTX54_014965	Alkalicoccus halolimnae	275
+A0A5C7HW71	unreviewed	A0A5C7HW71_9ROSI	Domain X domain-containing protein	EZV62_014965	Acer yangbiense	806
+A0A5J4ZPE8	unreviewed	A0A5J4ZPE8_9ASTE	Uncharacterized protein	F0562_014965	Nyssa sinensis	231
+A0A5M4FAN9	unreviewed	A0A5M4FAN9_9ACTN	MFS transporter	ESP70_014965	Aeromicrobium ginsengisoli	490
+A0A5N3VM04	unreviewed	A0A5N3VM04_MUNMU	Uncharacterized protein	FD754_014965	Muntiacus muntjak (Barking deer) (Indian muntjac)	95
+A0A5N5GU00	unreviewed	A0A5N5GU00_9ROSA	Gag1-like clamp domain-containing protein	D8674_014965	Pyrus ussuriensis x Pyrus communis	158
+A0A5N6BVF6	unreviewed	A0A5N6BVF6_9ACTN	Uncharacterized protein	FH610_014965	Microbispora catharanthi	716
+A0A5Q6RWT5	unreviewed	A0A5Q6RWT5_9ACTN	LytR family transcriptional regulator	FE697_014965	Mumia zhuanghuii	420
+A0A641ALU4	unreviewed	A0A641ALU4_9ACTN	Serine/threonine-protein phosphatase	ESP62_014965	Aeromicrobium fastidiosum	279
+A0A6A1QAJ8	unreviewed	A0A6A1QAJ8_BALPH	Uncharacterized protein	E2I00_014965	Balaenoptera physalus (Fin whale) (Balaena physalus)	200
+A0A6A4XGL9	unreviewed	A0A6A4XGL9_AMPAM	Betaine--homocysteine S-methyltransferase 1	bhmt_3 FJT64_014965	Amphibalanus amphitrite (Striped barnacle) (Balanus amphitrite)	325
+A0A6B8KH06	unreviewed	A0A6B8KH06_9HYPH	Lipoprotein	H2LOC_014965	Methylocystis heyeri	113
+A0A6G0T3K3	unreviewed	A0A6G0T3K3_APHGL	PNPLA domain-containing protein	AGLY_014965	Aphis glycines (Soybean aphid)	517
+A0A6G0WIF7	unreviewed	A0A6G0WIF7_9STRA	Ysc84 actin-binding domain-containing protein	Ae201684_014965	Aphanomyces euteiches	329
+A0A6G1EJN2	unreviewed	A0A6G1EJN2_9ORYZ	DUF1618 domain-containing protein	E2562_014965	Oryza meyeriana var. granulata	147
+A0A6I4HYB1	unreviewed	A0A6I4HYB1_9SPHI	FAD-dependent monooxygenase	GO620_014965	Mucilaginibacter ginkgonis	534
+A0A6I4MBN8	unreviewed	A0A6I4MBN8_9ACTN	ABC transporter permease subunit	F8568_014965	Actinomadura physcomitrii	321
+A0A6M4A6X9	unreviewed	A0A6M4A6X9_9BURK	Uncharacterized protein	EJG51_014965	Undibacterium piscinae	47
+A0A6M4MFS2	unreviewed	A0A6M4MFS2_9ALTE	TIGR03013 family PEP-CTERM/XrtA system glycosyltransferase	CA267_014965	Alteromonas pelagimontana	470
+A0A6M5UIY8	unreviewed	A0A6M5UIY8_9MICO	Uncharacterized protein	FIC82_014965	Cellulosimicrobium protaetiae	157
+A0A7J6C9J0	unreviewed	A0A7J6C9J0_9TELE	Uncharacterized protein	G5714_014965	Onychostoma macrolepis	160
+A0A7J6F089	unreviewed	A0A7J6F089_CANSA	GIGANTEA C-terminal domain-containing protein	G4B88_014965	Cannabis sativa (Hemp) (Marijuana)	1170
+A0A7J6RCT2	unreviewed	A0A7J6RCT2_PEROL	Retrotransposon Pao-like RNAseH-like domain-containing protein	FOZ63_014965	Perkinsus olseni (Perkinsus atlanticus)	299
+A0A7J6WF32	unreviewed	A0A7J6WF32_THATH	Uncharacterized protein	FRX31_014965	Thalictrum thalictroides (Rue-anemone) (Anemone thalictroides)	106
+A0A7J7HB06	unreviewed	A0A7J7HB06_CAMSI	Uncharacterized protein	HYC85_014965	Camellia sinensis (Tea plant) (Thea sinensis)	291
+A0A7J7JLG9	unreviewed	A0A7J7JLG9_BUGNE	Uncharacterized protein	EB796_014965	Bugula neritina (Brown bryozoan) (Sertularia neritina)	67
+A0A7J7MTC7	unreviewed	A0A7J7MTC7_9MAGN	Uncharacterized protein	GIB67_014965	Kingdonia uniflora	82
+A0A7J7VWB1	unreviewed	A0A7J7VWB1_PIPKU	Ring finger protein 103	mPipKuh1_014965	Pipistrellus kuhlii (Kuhl's pipistrelle)	684
+A0A7J8J7K4	unreviewed	A0A7J8J7K4_MOLMO	Proteasome 26S subunit, non-ATPase 10	HJG59_014965	Molossus molossus (Pallas' mastiff bat) (Vespertilio molossus)	151
+A0A7J8J841	unreviewed	A0A7J8J841_MOLMO	Proteasome 26S subunit, non-ATPase 10	HJG59_014965	Molossus molossus (Pallas' mastiff bat) (Vespertilio molossus)	103
+A0A7J8J8I7	unreviewed	A0A7J8J8I7_MOLMO	Proteasome 26S subunit, non-ATPase 10	HJG59_014965	Molossus molossus (Pallas' mastiff bat) (Vespertilio molossus)	185
+A0A7J8LZV9	unreviewed	A0A7J8LZV9_9ROSI	Oxidative stress 3	Golob_014965	Gossypium lobatum	193
+A0A7J8RLX2	unreviewed	A0A7J8RLX2_GOSDV	(+)-delta-cadinene synthase (EC 4.2.3.13)	Godav_014965	Gossypium davidsonii (Davidson's cotton) (Gossypium klotzschianum subsp. davidsonii)	590
+A0A7J8RMZ3	unreviewed	A0A7J8RMZ3_GOSDV	Terpene synthase N-terminal domain-containing protein	Godav_014965	Gossypium davidsonii (Davidson's cotton) (Gossypium klotzschianum subsp. davidsonii)	231
+A0A7J9C0C1	unreviewed	A0A7J9C0C1_GOSGO	Uncharacterized protein	Gogos_014965	Gossypium gossypioides (Mexican cotton) (Selera gossypioides)	165
+A0A7J9DZA1	unreviewed	A0A7J9DZA1_9ROSI	Molybdenum cofactor sulfurase	Gotri_014965	Gossypium trilobum	359
+A0A7J9FZD9	unreviewed	A0A7J9FZD9_9ROSI	Uncharacterized protein	Gohar_014965	Gossypium harknessii	449
+A0A7J9LA42	unreviewed	A0A7J9LA42_GOSSC	FBD domain-containing protein	Goshw_014965	Gossypium schwendimanii (Cotton)	463
+A0A7M4D8Y9	unreviewed	A0A7M4D8Y9_9BACT	Flippase-like domain-containing protein	DWB62_014965	Labilibaculum euxinus	334
+A0A817AR45	unreviewed	A0A817AR45_BRANA	Pentatricopeptide repeat-containing protein	HID58_014965	Brassica napus (Rape)	672
+A0A822Z6F8	unreviewed	A0A822Z6F8_NELNU	Uncharacterized protein	HUJ06_014965	Nelumbo nucifera (Sacred lotus)	47
+A0A834I1K2	unreviewed	A0A834I1K2_RHYFE	Uncharacterized protein	GWI33_014965	Rhynchophorus ferrugineus (Red palm weevil) (Curculio ferrugineus)	78
+A0A834JCN2	unreviewed	A0A834JCN2_VESGE	Uncharacterized protein	HZH68_014965	Vespula germanica (German yellow jacket) (Paravespula germanica)	147
+A0A834KCK3	unreviewed	A0A834KCK3_VESPE	Uncharacterized protein	H0235_014965	Vespula pensylvanica (Western yellow jacket) (Wasp)	85
+A0A834MQ42	unreviewed	A0A834MQ42_VESVU	Uncharacterized protein	HZH66_014965	Vespula vulgaris (Yellow jacket) (Wasp)	132
+A0A834WUM0	unreviewed	A0A834WUM0_9FABA	Uncharacterized protein	G2W53_014965	Senna tora	96
+A0A835HHW3	unreviewed	A0A835HHW3_9MAGN	Uncharacterized protein	IFM89_014965	Coptis chinensis	263
+A0A835KII9	unreviewed	A0A835KII9_9POAL	Uncharacterized protein	HU200_014965	Digitaria exilis	258
+A0A835SP68	unreviewed	A0A835SP68_9CHLO	SAC3/GANP/THP3 conserved domain-containing protein	HYH02_014965	Chlamydomonas schloesseri	512
+A0A835VQA2	unreviewed	A0A835VQA2_CHLIN	NmrA-like domain-containing protein	HXX76_014965	Chlamydomonas incerta	304
+A0A836BRG5	unreviewed	A0A836BRG5_9CHLO	Uncharacterized protein	HYH03_014965	Edaphochlamys debaryana	1653
+A0A836BRR5	unreviewed	A0A836BRR5_9CHLO	Nephrocystin 3-like N-terminal domain-containing protein	HYH03_014965	Edaphochlamys debaryana	1611
+A0A8A8D0X6	unreviewed	A0A8A8D0X6_9BURK	O-acetyl-ADP-ribose deacetylase	DT99_014965	Burkholderia seminalis	174
+A0A8H3WY59	unreviewed	A0A8H3WY59_GIGMA	Uncharacterized protein	F8M41_014965	Gigaspora margarita	205
+A0A8H5CL63	unreviewed	A0A8H5CL63_9AGAR	Uncharacterized protein	D9758_014965	Tetrapyrgos nigripes	537
+A0A8H5CQD8	unreviewed	A0A8H5CQD8_9AGAR	CCHC-type domain-containing protein	D9757_014965	Collybiopsis confluens	527
+A0A8H5EZ26	unreviewed	A0A8H5EZ26_9AGAR	Uncharacterized protein	D9611_014965	Ephemerocybe angulata	78
+A0A8J4VTW6	unreviewed	A0A8J4VTW6_9ROSI	Palmitoyl-protein thioesterase 1-like	CMV_014965	Castanea mollissima (Chinese chestnut)	330
+A0A8J5LEW9	unreviewed	A0A8J5LEW9_ZINOF	F-box domain-containing protein	ZIOFF_014965	Zingiber officinale (Ginger) (Amomum zingiber)	351
+A0A8J6E8P4	unreviewed	A0A8J6E8P4_ELECQ	Ubiquitin-like protease family profile domain-containing protein	GDO78_014965	Eleutherodactylus coqui (Puerto Rican coqui)	179
+A0A8J6H5U1	unreviewed	A0A8J6H5U1_TENMO	Endonuclease/exonuclease/phosphatase domain-containing protein	GEV33_014964 GEV33_014965	Tenebrio molitor (Yellow mealworm beetle)	614
+A0A8J7VR54	unreviewed	A0A8J7VR54_9GAMM	AMP-binding protein	KB893_014965	Coralloluteibacterium stylophorae	562
+A0A8K1G5S0	unreviewed	A0A8K1G5S0_9PASS	Uncharacterized protein	HGM15179_014965	Zosterops borbonicus	509
+A0A8S9XJJ3	unreviewed	A0A8S9XJJ3_APOLU	Uncharacterized protein	GE061_014965	Apolygus lucorum (Small green plant bug) (Lygocoris lucorum)	192
+A0A8T1T3Y4	unreviewed	A0A8T1T3Y4_CHESE	Periphilin-1 C-terminal domain-containing protein	G0U57_014965	Chelydra serpentina (Snapping turtle) (Testudo serpentina)	527
+A0A8T2MK19	unreviewed	A0A8T2MK19_9TELE	Uncharacterized protein	JZ751_014965	Albula glossodonta (roundjaw bonefish)	165
+A0A8T2YCY0	unreviewed	A0A8T2YCY0_POPDE	Core domain-containing protein	H0E87_014294 H0E87_014965	Populus deltoides (Eastern poplar) (Eastern cottonwood)	179
+A0A8T3B4J8	unreviewed	A0A8T3B4J8_DENNO	Reverse transcriptase domain-containing protein	KFK09_014965	Dendrobium nobile (Orchid)	120
+A0A8T6R706	unreviewed	A0A8T6R706_9MICO	Thymidylate synthase	EPD83_014965	Phycicoccus flavus	518
+A0A8T6YTV0	unreviewed	A0A8T6YTV0_9GAMM	Cytochrome c oxidase accessory protein CcoG	ccoG CWC29_014965	Pseudoalteromonas galatheae	485
+A0A8T6ZCJ1	unreviewed	A0A8T6ZCJ1_9BURK	HAD-IIIA family hydrolase	NH14_014965	Paraburkholderia sacchari	219
+A0A8T9ASK7	unreviewed	A0A8T9ASK7_9HYPH	Methyltetrahydrofolate cobalamin methyltransferase	C1D09_014965	Mesorhizobium intechi	324
+A0A8X7W2F4	unreviewed	A0A8X7W2F4_BRACI	Uncharacterized protein	Bca52824_014965	Brassica carinata (Ethiopian mustard) (Abyssinian cabbage)	84
+A0A8X8D5Q1	unreviewed	A0A8X8D5Q1_POPTO	U-box domain-containing protein	POTOM_014965	Populus tomentosa (Chinese white poplar)	497
+A0A8X8H4X4	unreviewed	A0A8X8H4X4_9RHOB	Hydantoinase B/oxoprolinase family protein	GEU84_014965	Fertoeibacter niger	560
+A0A922HQA8	unreviewed	A0A922HQA8_DERFA	Uncharacterized protein	DERF_014965	Dermatophagoides farinae (American house dust mite)	75
+A0A923FS35	unreviewed	A0A923FS35_9PSED	LysE family translocator	HU742_014965	Pseudomonas marvdashtae	195
+A0A923JHE2	unreviewed	A0A923JHE2_9PSED	DUF481 domain-containing protein	HU727_014965	Pseudomonas khorasanensis	335
+A0A923JKF6	unreviewed	A0A923JKF6_9PSED	Type II secretion system F family protein	HU715_014965	Pseudomonas zanjanensis	321
+A0A942SV07	unreviewed	A0A942SV07_9BACI	Uncharacterized protein	KHB02_014965	Neobacillus citreus	105
+A0A949N2F4	unreviewed	A0A949N2F4_9ACTN	DUF317 domain-containing protein	JGS22_014965	Streptomyces tardus	258
+A0A967AVC3	unreviewed	A0A967AVC3_9FLAO	Vanadium-dependent haloperoxidase	FK220_014965	Pelagihabitans pacificus	455
+A0A9D4A9W0	unreviewed	A0A9D4A9W0_9ROSI	Auxin efflux carrier family protein	J1N35_014965	Gossypium stocksii	451
+A0A9D4B8U1	unreviewed	A0A9D4B8U1_9SAUR	G2/mitotic-specific cyclin-B2	KIL84_014965	Mauremys mutica (yellowpond turtle)	450
+A0A9D4NAQ1	unreviewed	A0A9D4NAQ1_DREPO	Uncharacterized protein	DPMN_014965	Dreissena polymorpha (Zebra mussel) (Mytilus polymorpha)	117
+A0A9D4PMK6	unreviewed	A0A9D4PMK6_RHISA	Uncharacterized protein	HPB52_014965	Rhipicephalus sanguineus (Brown dog tick) (Ixodes sanguineus)	145
+A0A9D5BPD3	unreviewed	A0A9D5BPD3_PEA	Serine incorporator	KIW84_014965	Pisum sativum (Garden pea) (Lathyrus oleraceus)	231
+A0A9D5CTC7	unreviewed	A0A9D5CTC7_9LILI	Uncharacterized protein	J5N97_014965	Dioscorea zingiberensis	298
+A0A9E6NWU2	unreviewed	A0A9E6NWU2_9PSED	Uncharacterized protein	HU739_014965	Pseudomonas hamedanensis	328
+A0A9E6TUS1	unreviewed	A0A9E6TUS1_9PSED	2-methylaconitate cis-trans isomerase PrpF	prpF HU752_014965	Pseudomonas vanderleydeniana	382
+A0A9E6TVY2	unreviewed	A0A9E6TVY2_9PSED	Zinc-binding dehydrogenase	HU772_014965	Pseudomonas xantholysinigenes	327
+A0A9J5ZSA0	unreviewed	A0A9J5ZSA0_SOLCO	Uncharacterized protein	H5410_014965	Solanum commersonii (Commerson's wild potato) (Commerson's nightshade)	149
+A0A9J6BAQ6	unreviewed	A0A9J6BAQ6_POLVA	Uncharacterized protein	PVAND_014965	Polypedilum vanderplanki (Sleeping chironomid midge)	571
+A0A9J6E2D7	unreviewed	A0A9J6E2D7_RHIMP	DNA mismatch repair proteins mutS family domain-containing protein	HPB51_014965	Rhipicephalus microplus (Cattle tick) (Boophilus microplus)	340
+A0A9J6FG12	unreviewed	A0A9J6FG12_HAELO	DUF4371 domain-containing protein	HPB48_014965	Haemaphysalis longicornis (Bush tick)	318
+A0A9K3DAH5	unreviewed	A0A9K3DAH5_9EUKA	Uncharacterized protein	KIPB_014965	Kipferlia bialata	76
+A0A9K3PSU6	unreviewed	A0A9K3PSU6_9STRA	Heavy-metal-associated domain containing protein	IV203_014965	Nitzschia inconspicua	73
+A0A9P6WSH5	unreviewed	A0A9P6WSH5_RHIOR	Uncharacterized protein	G6F64_014965	Rhizopus oryzae (Mucormycosis agent) (Rhizopus arrhizus var. delemar)	78
+A0A9P6Y1H5	unreviewed	A0A9P6Y1H5_9FUNG	FAD dependent oxidoreductase domain-containing protein	G6F50_014965	Rhizopus delemar	145
+A0A9P7QZ98	unreviewed	A0A9P7QZ98_9PEZI	Nicotinate-nucleotide diphosphorylase	JMJ77_014965	Colletotrichum scovillei	646
+A0A9Q0I435	unreviewed	A0A9Q0I435_9TELE	Uncharacterized protein	NHX12_014965	Muraenolepis orangiensis (Patagonian moray cod)	96
+A0A9Q0NK18	unreviewed	A0A9Q0NK18_SALVM	MAR-BINDING FILAMENT-LIKE PROTEIN	OIU85_014965	Salix viminalis (Common osier) (Basket willow)	392
+A0A9Q0PAZ2	unreviewed	A0A9Q0PAZ2_SALPP	LUMEN PROTEIN RETAINING RECEPTOR putative-RELATED	OIU79_014965	Salix purpurea (Purple osier willow)	272
+A0A9Q0T0K0	unreviewed	A0A9Q0T0K0_9ROSI	POLYCOMB GROUP PROTEIN EMBRYONIC FLOWER 2-RELATED	OIU74_014965	Salix koriyanagi	437
+A0A9Q0XZN3	unreviewed	A0A9Q0XZN3_9SAUR	Uncharacterized protein	JRQ81_014965	Phrynocephalus forsythii	228
+A0A9Q1JGT2	unreviewed	A0A9Q1JGT2_9CARY	SHSP domain-containing protein	Cgig2_014965 Cgig2_016542	Carnegiea gigantea	433
+A0A9Q1L3L5	unreviewed	A0A9Q1L3L5_ANIAC	Uncharacterized protein	K7X08_014965	Anisodus acutangulus	388
+A0A9Q3C1Y9	unreviewed	A0A9Q3C1Y9_9BASI	Uncharacterized protein	O181_014965	Austropuccinia psidii MF-1	145
+A0A9W7WB15	unreviewed	A0A9W7WB15_TRIRA	LETM1 domain-containing protein 1	IRJ41_014965	Triplophysa rosa (Cave loach)	328
+A0A9X0A268	unreviewed	A0A9X0A268_9CNID	DUF5641 domain-containing protein	OS493_014965	Desmophyllum pertusum	90
+A0A9X4BK41	unreviewed	A0A9X4BK41_9GAMM	Winged helix-turn-helix domain-containing protein	OD750_014965	Tahibacter soli	905
+A0AA38SY27	unreviewed	A0AA38SY27_9ASTR	PGG domain-containing protein	OSB04_014965	Centaurea solstitialis (yellow star-thistle)	444
+A0AA38ZIG4	unreviewed	A0AA38ZIG4_VITRO	Uncharacterized protein	PVL29_014965	Vitis rotundifolia (Muscadine grape)	397
+A0AA40KFX5	unreviewed	A0AA40KFX5_9HYME	Uncharacterized protein	K0M31_014965	Melipona bicolor	50
+A0AA41V4U6	unreviewed	A0AA41V4U6_PAPNU	Uncharacterized protein	MKW94_014965	Papaver nudicaule (Iceland poppy)	259
+A0AA88MCY1	unreviewed	A0AA88MCY1_TACVA	Uncharacterized protein	Q7C36_014965	Tachysurus vachellii (Darkbarbel catfish) (Pelteobagrus vachellii)	104
+A0AA88QWS2	unreviewed	A0AA88QWS2_9ASTE	Fe2OG dioxygenase domain-containing protein	RJ640_014965	Escallonia rubra	291
+A0AA88VK71	unreviewed	A0AA88VK71_9ASTE	Exocyst subunit Exo70 family protein	RJ639_014965	Escallonia herrerae	522
+A0AA88Y4L8	unreviewed	A0AA88Y4L8_PINIB	Uncharacterized protein	FSP39_014965	Pinctada imbricata (Atlantic pearl-oyster) (Pinctada martensii)	999
+A0AA93AQ38	unreviewed	A0AA93AQ38_9GAMM	Sugar ABC transporter permease	DMB85_014965	Pectobacterium aquaticum	332
+A0AAD3XQP4	unreviewed	A0AAD3XQP4_NEPGR	Uncharacterized protein	Nepgr_014965	Nepenthes gracilis (Slender pitcher plant)	191
+A0AAD4J707	unreviewed	A0AAD4J707_PERFH	Alpha/beta-Hydrolases superfamily protein	C2S53_014965	Perilla frutescens var. hirtella (Perilla citriodora) (Perilla setoyensis)	453
+A0AAD4WRK0	unreviewed	A0AAD4WRK0_PRUDU	MATE efflux family protein	L3X38_014965	Prunus dulcis (Almond) (Amygdalus dulcis)	283
+A0AAD4XIU0	unreviewed	A0AAD4XIU0_9MAGN	Uncharacterized protein	MKW98_014965	Papaver atlanticum	345
+A0AAD5CLF1	unreviewed	A0AAD5CLF1_AMBAR	Uncharacterized protein	M8C21_014965	Ambrosia artemisiifolia (Common ragweed)	450
+A0AAD5NJR2	unreviewed	A0AAD5NJR2_ACENE	HMA domain-containing protein	LWI28_014965	Acer negundo (Box elder)	75
+A0AAD6AKN8	unreviewed	A0AAD6AKN8_9TELE	STAS domain-containing protein	JOQ06_014965	Pogonophryne albipinna	810
+A0AAD6NS64	unreviewed	A0AAD6NS64_9ROSI	Uncharacterized protein	OIU84_014965	Salix udensis	86
+A0AAD7LVU6	unreviewed	A0AAD7LVU6_QUISA	Oligopeptide transporter	O6P43_014965	Quillaja saponaria (Soap bark tree)	141
+A0AAD7Z211	unreviewed	A0AAD7Z211_MYTSE	Mutant cadherin	PYW07_014965	Mythimna separata (Oriental armyworm) (Pseudaletia separata)	318
+A0AAD8A6K2	unreviewed	A0AAD8A6K2_DIPPU	C-type lectin domain-containing protein	L9F63_014965	Diploptera punctata (Pacific beetle cockroach)	208
+A0AAD8BJC7	unreviewed	A0AAD8BJC7_BIOPF	Uncharacterized protein	Bpfe_014965	Biomphalaria pfeifferi (Bloodfluke planorb) (Freshwater snail)	106
+A0AAD8ILX1	unreviewed	A0AAD8ILX1_9APIA	SHSP domain-containing protein	POM88_014965	Heracleum sosnowskyi	177
+A0AAD9D6A6	unreviewed	A0AAD9D6A6_9STRA	Haloacid dehalogenase family hydrolase (EC 3.1.3.-)	QTG54_014965	Skeletonema marinoi	373
+A0AAD9G0B3	unreviewed	A0AAD9G0B3_9STRA	RING-H2 finger protein ATL81	P3T76_014965	Phytophthora citrophthora	573
+A0AAD9QJR6	unreviewed	A0AAD9QJR6_ACRCE	Twist-related protein	P5673_014965	Acropora cervicornis (Staghorn coral)	136
+A0AAD9WY21	unreviewed	A0AAD9WY21_9ROSI	PLAC8 motif-containing protein	Ddye_014965	Dipteronia dyeriana	514
+A0AAE0ANV6	unreviewed	A0AAE0ANV6_9ROSI	Pentatricopeptide repeat-containing protein	Dsin_014965	Dipteronia sinensis	119
+A0AAE0QEA7	unreviewed	A0AAE0QEA7_9TELE	PH domain-containing protein	QTP70_014965	Hemibagrus guttatus	348
+A0AAE1DUW8	unreviewed	A0AAE1DUW8_9GAST	Uncharacterized protein	RRG08_014965	Elysia crispata (lettuce slug)	135
+A0AAE1KR93	unreviewed	A0AAE1KR93_PETCI	PiggyBac transposable element-derived protein domain-containing protein	Pcinc_014965	Petrolisthes cinctipes (Flat porcelain crab)	485
+A0AAE1LPZ3	unreviewed	A0AAE1LPZ3_9NEOP	LINE-1 retrotransposable element ORF1 protein	KUF71_014965	Frankliniella fusca	403
+A0AAE1PT48	unreviewed	A0AAE1PT48_9EUCA	Methyltransferase FkbM domain-containing protein	Pmani_014965	Petrolisthes manimaculis	303
+A0AAE1SC87	unreviewed	A0AAE1SC87_9SOLA	Uncharacterized protein	RND71_014965	Anisodus tanguticus	182
+A0AAE9EDD9	unreviewed	A0AAE9EDD9_CAEBR	Doublecortin domain-containing protein	L5515_014965	Caenorhabditis briggsae	461
+A0AAE9EFV8	unreviewed	A0AAE9EFV8_CAEBR	Doublecortin domain-containing protein	L5515_014965	Caenorhabditis briggsae	449
+A0AAE9YHN3	unreviewed	A0AAE9YHN3_9GAMM	Uncharacterized protein	SG35_014965	Thalassomonas actiniarum	58
+A0AAE9Z7A9	unreviewed	A0AAE9Z7A9_9GAMM	GFA family protein	SG34_014965	Thalassomonas viridans	135
+A0AAN7FQX9	unreviewed	A0AAN7FQX9_QUERU	AP-5 complex subunit beta-1	RGQ29_014965	Quercus rubra (Northern red oak) (Quercus borealis)	1110
+A0AAN7H0H0	unreviewed	A0AAN7H0H0_9MYRT	Isopenicillin N synthase-like Fe(2+) 2OG dioxygenase domain-containing protein	SAY87_014965	Trapa incisa	99
+A0AAN7KPF0	unreviewed	A0AAN7KPF0_TRANT	Uncharacterized protein	SAY86_014965	Trapa natans (Water chestnut)	157
+A0AAN7NL57	unreviewed	A0AAN7NL57_MYCAM	Sulfotransferase (EC 2.8.2.-)	QYF61_014965	Mycteria americana (Wood stork)	261
+A0AAN8BPC2	unreviewed	A0AAN8BPC2_9TELE	Calpain catalytic domain-containing protein	CesoFtcFv8_014965	Champsocephalus esox (pike icefish)	664
+A0AAN8IFR0	unreviewed	A0AAN8IFR0_TRICO	Peptidase M28 domain-containing protein	GCK32_014965	Trichostrongylus colubriformis (Black scour worm)	291
+A0AAN8TEM1	unreviewed	A0AAN8TEM1_SOLBU	Uncharacterized protein	RDI58_014965	Solanum bulbocastanum (Ornamental nightshade)	14
+A0AAN8Z1S9	unreviewed	A0AAN8Z1S9_9MAGN	Microsomal prostaglandin E synthase 2	RJ641_014965	Dillenia turbinata	382
+A0AAN9AEW4	unreviewed	A0AAN9AEW4_HALRR	Uncharacterized protein	SK128_014965	Halocaridina rubra (Hawaiian red shrimp)	79
+A0AAN9CRG6	unreviewed	A0AAN9CRG6_9TELE	Cx9C motif-containing protein 4	R3I93_014965	Phoxinus phoxinus (Eurasian minnow)	65
+A0AAN9GFX7	unreviewed	A0AAN9GFX7_9CAEN	ABC transporter TMD0 domain-containing protein	V1264_014965	Littorina saxatilis	218
+A0AAP0GYH8	unreviewed	A0AAP0GYH8_9ASTR	Uncharacterized protein	SSX86_014965	Deinandra increscens subsp. villosa	402
+A0AAP0J290	unreviewed	A0AAP0J290_9MAGN	Uncharacterized protein	Scep_014965	Stephania cephalantha	143
+A0AAP0M848	unreviewed	A0AAP0M848_9ROSI	Uncharacterized protein	WN944_014965	Citrus x changshan-huyou	146
+A0AAP0NQY3	unreviewed	A0AAP0NQY3_9MAGN	Uncharacterized protein	Sjap_014965	Stephania japonica	131
+A0AAP0RX77	unreviewed	A0AAP0RX77_LIQFO	Uncharacterized protein	L1049_014965	Liquidambar formosana (Formosan gum)	383
+A0AAP5I8T8	unreviewed	A0AAP5I8T8_AETH2	Glutathione peroxidase	G7B40_014965	Aetokthonos hydrillicola (strain Thurmond2011)	244
+A0AAQ3NK86	unreviewed	A0AAQ3NK86_VIGMU	Uncharacterized protein	V8G54_014965	Vigna mungo (Black gram) (Phaseolus mungo)	269
+A0AAQ3WL91	unreviewed	A0AAQ3WL91_PASNO	Ras-related protein RABA3	U9M48_014965	Paspalum notatum var. saurae	250
+A0AAQ4E1I0	unreviewed	A0AAQ4E1I0_AMBAM	Uncharacterized protein	V5799_014965	Amblyomma americanum (Lone star tick)	107
+A0AAU7NRP2	unreviewed	A0AAU7NRP2_9GAMM	SUF system Fe-S cluster assembly regulator	Q9L42_014965	Methylomarinum roseum	149
+A0AAV2ZYH0	unreviewed	A0AAV2ZYH0_PYXAD	VLIG-type G domain-containing protein	GDO54_014965	Pyxicephalus adspersus (African bullfrog)	1521
+A0AAV6KC14	unreviewed	A0AAV6KC14_9ERIC	MATH domain-containing protein	RHGRI_014965	Rhododendron griersonianum	701
+A0AAV6UYG6	unreviewed	A0AAV6UYG6_9ARAC	Uncharacterized protein	JTE90_014965	Oedothorax gibbosus	76
+A0AAV7AHZ4	unreviewed	A0AAV7AHZ4_ENGPU	G-protein coupled receptors family 1 profile domain-containing protein	GDO81_014965	Engystomops pustulosus (Tungara frog) (Physalaemus pustulosus)	311
+A0AAV7GN30	unreviewed	A0AAV7GN30_DENCH	HMA domain-containing protein	IEQ34_014965	Dendrobium chrysotoxum (Orchid)	93
+A0AAV7IT20	unreviewed	A0AAV7IT20_COTGL	Venom protein	KQX54_014965	Cotesia glomerata (Lepidopteran parasitic wasp) (Apanteles glomeratus)	194
+A0AAV8V7V2	unreviewed	A0AAV8V7V2_9CUCU	Tyr recombinase domain-containing protein	NQ315_014965	Exocentrus adspersus	205
+A0AAW0BMW1	unreviewed	A0AAW0BMW1_9AGAR	ATP-binding cassette transporter snq2	SNQ2_4 VNI00_014965	Paramarasmius palmivorus	758
+A0AAW0GXX0	unreviewed	A0AAW0GXX0_MYOGA	Beta-glucosidase	U0070_014965	Myodes glareolus (Bank vole) (Clethrionomys glareolus)	215
+A0AAW0SB74	unreviewed	A0AAW0SB74_SCYPA	Uncharacterized protein	O3P69_014965	Scylla paramamosain (Mud crab)	122
+A0AAW0Y3U3	unreviewed	A0AAW0Y3U3_CHEQU	Uncharacterized protein	OTU49_014965	Cherax quadricarinatus (Australian red claw crayfish)	615
+A0AAW0Y5Q3	unreviewed	A0AAW0Y5Q3_CHEQU	Uncharacterized protein	OTU49_014965	Cherax quadricarinatus (Australian red claw crayfish)	615
+A0AAW0YG11	unreviewed	A0AAW0YG11_CHEQU	Uncharacterized protein	OTU49_014965	Cherax quadricarinatus (Australian red claw crayfish)	642
+A0AAW0YGX3	unreviewed	A0AAW0YGX3_CHEQU	Uncharacterized protein	OTU49_014965	Cherax quadricarinatus (Australian red claw crayfish)	656
+A0AAW1AZ42	unreviewed	A0AAW1AZ42_CROAD	Cell surface glycoprotein MUC18-like	NXF25_014965	Crotalus adamanteus (Eastern diamondback rattlesnake)	670
+A0AAW1U7V0	unreviewed	A0AAW1U7V0_9CUCU	Ig-like domain-containing protein	WA026_014965	Henosepilachna vigintioctopunctata	140
+A0AAW1XNR3	unreviewed	A0AAW1XNR3_RUBAR	Uncharacterized protein	M0R45_014965	Rubus argutus (Southern blackberry)	93
+A0AAW2F056	unreviewed	A0AAW2F056_9HYME	Uncharacterized protein	PUN28_014965	Cardiocondyla obscurior	87
+A0AAW2Z2V2	unreviewed	A0AAW2Z2V2_9EUKA	Uncharacterized protein	AKO1_014965	Acrasis kona	191
+A0AB34JWG0	unreviewed	A0AB34JWG0_PRYPA	Uncharacterized protein	AB1Y20_014965	Prymnesium parvum (Toxic golden alga)	413
+A0ABD0QP37	unreviewed	A0ABD0QP37_CIRMR	Uncharacterized protein	M9458_014965	Cirrhinus mrigala (Mrigala)	113
+A0ABD1A5A3	unreviewed	A0ABD1A5A3_CARAN	Cell division control protein-like protein B	V5N11_014965	Cardamine amara subsp. amara	397
+A0ABD1A5B5	unreviewed	A0ABD1A5B5_CARAN	Cell division control protein-like protein B	V5N11_014965	Cardamine amara subsp. amara	416
+A0ABD1A5C8	unreviewed	A0ABD1A5C8_CARAN	Cell division control protein-like protein B	V5N11_014965	Cardamine amara subsp. amara	394
+A0ABD1CSD3	unreviewed	A0ABD1CSD3_CULPP	G-protein coupled receptors family 1 profile domain-containing protein	pipiens_014965	Culex pipiens pipiens (Northern house mosquito)	342
+A0ABD1E1E7	unreviewed	A0ABD1E1E7_HYPHA	PiggyBac transposable element-derived protein 4 C-terminal zinc-ribbon domain-containing protein	ABEB36_014965	Hypothenemus hampei (Coffee berry borer)	98
+A0ABD1JTV9	unreviewed	A0ABD1JTV9_9TELE	Tripartite motif-containing protein 16-like	ACEWY4_014965	Coilia grayii (Gray's grenadier anchovy)	686
+A0ABD1MDR7	unreviewed	A0ABD1MDR7_9FABA	Transposase-associated domain-containing protein	Fmac_014965	Flemingia macrophylla	256
+A0ABD1YKX4	unreviewed	A0ABD1YKX4_9MARC	Uncharacterized protein	R1flu_014965	Riccia fluitans	80
+A0ABD2A4I7	unreviewed	A0ABD2A4I7_VESSQ	Uncharacterized protein	V1478_014965	Vespula squamosa (Southern yellow jacket) (Wasp)	103
+A0ABD2BIY4	unreviewed	A0ABD2BIY4_VESMC	Hexamerin-like	V1477_014965	Vespula maculifrons (Eastern yellow jacket) (Wasp)	682
+A0ABD2ICP6	unreviewed	A0ABD2ICP6_HETSC	G protein-coupled receptor	niasHS_014965	Heterodera schachtii (Sugarbeet cyst nematode worm) (Tylenchus schachtii)	350
+A0ABD2LFR0	unreviewed	A0ABD2LFR0_9BILA	Obg domain-containing protein	niasHT_014965	Heterodera trifolii	552
+A0ABD2N450	unreviewed	A0ABD2N450_9CUCU	Uncharacterized protein	HHI36_014965	Cryptolaemus montrouzieri	182
+A0ABD2U1E7	unreviewed	A0ABD2U1E7_9SOLN	MYB transcription factor	AABB24_014965	Solanum stoloniferum	328
+A0ABD2ZTG7	unreviewed	A0ABD2ZTG7_9GENT	EF-hand domain-containing protein	ACH5RR_014965	Cinchona calisaya	116
+A0ABD3DE69	unreviewed	A0ABD3DE69_9LAMI	Ubiquitin-like domain-containing protein	CASFOL_014965	Castilleja foliolosa	82
+A0ABD3EZT1	unreviewed	A0ABD3EZT1_9STRA	NAD-dependent epimerase/dehydratase domain-containing protein	V7S43_014965	Phytophthora oleae	376
+A0ABD3HCQ8	unreviewed	A0ABD3HCQ8_9MARC	Uncharacterized protein	R1sor_014965	Riccia sorocarpa	166
+A0ABD3L5V3	unreviewed	A0ABD3L5V3_EUCGL	Uncharacterized protein	ACJRO7_014965	Eucalyptus globulus (Tasmanian blue gum)	414
+A0ABD3RNF6	unreviewed	A0ABD3RNF6_9LAMI	NADH dehydrogenase [ubiquinone] iron-sulfur protein 4, mitochondrial	ACJIZ3_014965	Penstemon smallii	157
+A0ABD3V5A4	unreviewed	A0ABD3V5A4_SINWO	Uncharacterized protein	ACJMK2_014965	Sinanodonta woodiana (Chinese pond mussel) (Anodonta woodiana)	76
+A0ABD6H539	unreviewed	A0ABD6H539_AGRVI	MBL fold metallo-hydrolase	BBL17_014965	Agrobacterium vitis (Rhizobium vitis)	283
+A0ABM6MWF0	unreviewed	A0ABM6MWF0_9FLAO	Phage holin family protein	BAZ09_014965	Elizabethkingia anophelis R26	102
+A0ABN4IVU0	unreviewed	A0ABN4IVU0_ECTME	Oxaloacetate decarboxylase	DW68_014965	Ectopseudomonas mendocina S5.2	592
+A0ABQ5KRL1	unreviewed	A0ABQ5KRL1_9EUKA	Uncharacterized protein	ADUPG1_014964 ADUPG1_014965 ADUPG1_014966	Aduncisulcus paluster	49
+A0ABQ7MNP9	unreviewed	A0ABQ7MNP9_BRACM	Reverse transcriptase zinc-binding domain-containing protein	A04g503010.1_BraROA IGI04_014965	Brassica rapa subsp. trilocularis	956
+A0ABQ7VTA4	unreviewed	A0ABQ7VTA4_SOLTU	Glabrous enhancer-binding protein-like DBD domain-containing protein	KY290_014965	Solanum tuberosum (Potato)	420
+A0ABQ8LNZ9	unreviewed	A0ABQ8LNZ9_LABRO	Opsin-5	H4Q32_014965	Labeo rohita (Indian major carp) (Cyprinus rohita)	310
+A0ABQ9ESE3	unreviewed	A0ABQ9ESE3_TEGGR	Uncharacterized protein	KUTeg_014965	Tegillarca granosa (Malaysian cockle) (Anadara granosa)	518
+A0ABQ9HFL6	unreviewed	A0ABQ9HFL6_9NEOP	DUF5641 domain-containing protein	PR048_014965	Dryococelus australis	90
+A0ABQ9JG07	unreviewed	A0ABQ9JG07_9CUCU	Tyr recombinase domain-containing protein	NQ317_014965	Molorchus minor	126
+A0ABQ9LWM7	unreviewed	A0ABQ9LWM7_HEVBR	GRAM domain-containing protein	P3X46_014965	Hevea brasiliensis (Para rubber tree) (Siphonia brasiliensis)	225
+A0ABR0CSJ3	unreviewed	A0ABR0CSJ3_9LAMI	Glutamine amidotransferase domain-containing protein	RD792_014965	Penstemon davidsonii	257
+A0ABR0DXQ7	unreviewed	A0ABR0DXQ7_ZASCE	BTB domain-containing protein	PRZ48_014965	Zasmidium cellare (Wine cellar mold) (Racodium cellare)	321
+A0ABR1R2Q4	unreviewed	A0ABR1R2Q4_9PEZI	Uncharacterized protein	PG991_014965	Apiospora marii	180
+A0ABR1SV53	unreviewed	A0ABR1SV53_9PEZI	Dipeptidase	PG994_014965	Apiospora phragmitis	537
+A0ABR1TJT5	unreviewed	A0ABR1TJT5_9PEZI	40S ribosomal protein S20	PG996_014965	Apiospora saccharicola	116
+A0ABR2DLR9	unreviewed	A0ABR2DLR9_9ROSI	AB hydrolase-1 domain-containing protein	V6N12_014965	Hibiscus sabdariffa (roselle)	488
+A0ABR2L2T0	unreviewed	A0ABR2L2T0_9EUKA	RING-type domain-containing protein	M9Y10_014965	Tritrichomonas musculus	255
+A0ABR2VNV5	unreviewed	A0ABR2VNV5_9FUNG	G-protein coupled receptors family 2 profile 2 domain-containing protein	K7432_014965	Basidiobolus ranarum	281
+A0ABR2Z9U6	unreviewed	A0ABR2Z9U6_9AGAR	Uncharacterized protein	AAF712_014965	Marasmius tenuissimus	281
+A0ABR3EVV3	unreviewed	A0ABR3EVV3_9AGAR	Ubiquitin-like protease family profile domain-containing protein	V5O48_014965	Marasmius crinis-equi	1019
+A0ABR3JW70	unreviewed	A0ABR3JW70_9AGAR	Uncharacterized protein	HGRIS_014965	Hohenbuehelia grisea	445
+A0ABR3JWA4	unreviewed	A0ABR3JWA4_9AGAR	Fungal N-terminal domain-containing protein	HGRIS_014965	Hohenbuehelia grisea	535
+A0ABR3NTM5	unreviewed	A0ABR3NTM5_9TELE	Aspartyl beta-hydroxylase/Triadin domain-containing protein	QQF64_014965	Cirrhinus molitorella (mud carp)	521
+A0ABS2H681	unreviewed	A0ABS2H681_9BACL	AMP-binding protein	IM700_014965	Paenibacillus rhizolycopersici	562
+A0ABS6D6K2	unreviewed	A0ABS6D6K2_9FIRM	Pentapeptide repeat-containing protein	HGO97_014965	Faecalicatena faecalis	237
+A0ABS6J9V9	unreviewed	A0ABS6J9V9_9RHOB	YggT family protein	GU927_014965	Paragemmobacter amnigenus	95
+A0ABS7XBF5	unreviewed	A0ABS7XBF5_9GAMM	Phytase	I4W93_014965	Rheinheimera maricola	639
+A0ABS8A3Y7	unreviewed	A0ABS8A3Y7_9FLAO	1-acyl-sn-glycerol-3-phosphate acyltransferase	JI747_014965	Chryseobacterium tagetis	268
+A0ABS8C826	unreviewed	A0ABS8C826_9ALTE	SIS domain-containing protein	JAO78_014965	Alishewanella maricola	195
+A0ABS8Y3R4	unreviewed	A0ABS8Y3R4_DATST	Uncharacterized protein	HAX54_014965	Datura stramonium (Jimsonweed) (Common thornapple)	167
+A0ABT1R858	unreviewed	A0ABT1R858_9HYPH	DUF952 domain-containing protein	GB927_014965	Shinella lacus	115
+A0ABT5WH80	unreviewed	A0ABT5WH80_9GAMM	Glycosyltransferase	M3I01_014965	Marinomonas maritima	393
+A0ABT6ZWN3	unreviewed	A0ABT6ZWN3_9ACTN	MBL fold metallo-hydrolase	NMN56_014965	Streptomyces iconiensis	253
+A0ABT8XFU5	unreviewed	A0ABT8XFU5_9HYPH	Uncharacterized protein	GB928_014965	Shinella curvata	77
+A0ABT9DN41	unreviewed	A0ABT9DN41_9BACI	Uncharacterized protein	KHP33_014965	Bacillus cabrialesii subsp. tritici	63
+A0ABU4JKJ8	unreviewed	A0ABU4JKJ8_9FLAO	Outer membrane protein beta-barrel domain-containing protein	NG800_014965	Epilithonimonas ginsengisoli	169
+A0ABU5CJS6	unreviewed	A0ABU5CJS6_9BACI	GNAT family N-acetyltransferase (EC 2.3.1.-)	P5G51_014965	Tigheibacillus jepli	319
+A0ABU6X4U7	unreviewed	A0ABU6X4U7_9FABA	Uncharacterized protein	PIB30_014965	Stylosanthes scabra	354
+A0ABU7BAV5	unreviewed	A0ABU7BAV5_9TELE	Uncharacterized protein	ATANTOWER_014965	Ataeniobius toweri	281
+A0ABU7F444	unreviewed	A0ABU7F444_9TELE	IQ motif and S7 domain-containing protein 3	IQSEC3_1 CHARACLAT_014965	Characodon lateralis	141
+A0ABU9F9E6	unreviewed	A0ABU9F9E6_9ENTR	L-cystine transporter	QFI96_014965	Raoultella lignicola	463
+A0ABV0ZAL1	unreviewed	A0ABV0ZAL1_9TELE	Uncharacterized protein	AMECASPLE_014965	Ameca splendens	78
+A0ABV4YUN5	unreviewed	A0ABV4YUN5_9BACI	Uncharacterized protein	P5G62_014965	Neobacillus driksii	113
+A0ABW9J8L4	unreviewed	A0ABW9J8L4_9SPHI	DUF6089 family protein	E6A44_014965	Pedobacter ureilyticus	266
+A0ABW9JJW1	unreviewed	A0ABW9JJW1_9SPHI	CcmD family protein	E5L68_014965	Pedobacter helvus	72
+A0ABX0HPM6	unreviewed	A0ABX0HPM6_9PROT	Uncharacterized protein	FF098_014965	Aquisalinus luteolus	236
+A0ABX0IWS5	unreviewed	A0ABX0IWS5_9FLAO	Lipocalin-like domain-containing protein	FIA58_014965	Flavobacterium jejuense	329
+A0ABX4HWR4	unreviewed	A0ABX4HWR4_9GAMM	Type 4 fimbrial biogenesis protein PilX N-terminal domain-containing protein	AWR36_014965	Microbulbifer flavimaris	178
+A0ABX4YFW6	unreviewed	A0ABX4YFW6_9LEPT	Alkene reductase	BES34_014965	Leptospira inadai serovar Lyme	366
+A0ABX6HTE5	unreviewed	A0ABX6HTE5_9BURK	Inclusion body protein	PI93_014965	Pandoraea fibrosis	174
+A0ABX6YX33	unreviewed	A0ABX6YX33_9RHOB	Universal stress protein	AKL02_014965	Thioclava electrotropha	283
+A0ABX9LL45	unreviewed	A0ABX9LL45_9ACTN	ArsA family ATPase	DI270_014965	Microbispora triticiradicis	379
+A0ABY3C847	unreviewed	A0ABY3C847_9GAMM	Efflux RND transporter permease subunit	EKO24_014965	Candidatus Methylobacter oryzae	1032
+A0ABY3MTL7	unreviewed	A0ABY3MTL7_9GAMM	Zinc-binding dehydrogenase	CWS31_014965	Colwellia echini	379
+A0ABY5A2R8	unreviewed	A0ABY5A2R8_9GAMM	STAS domain-containing protein	L1F06_014965	Ectopseudomonas hydrolytica	101
+A0ABY5RN76	unreviewed	A0ABY5RN76_9HYPH	YidE/YbjL duplication	HPT29_014965	Microvirga terrae	522
+A0ABY7FJS8	unreviewed	A0ABY7FJS8_MYAAR	Uncharacterized protein	MAR_014965	Mya arenaria (Soft-shell clam)	132
+A0ABY7RXD0	unreviewed	A0ABY7RXD0_9FLAO	Uncharacterized protein	MUN68_014965	Psychroserpens ponticola	57
+A0ABY9CP29	unreviewed	A0ABY9CP29_VITVI	Reverse transcriptase Ty1/copia-type domain-containing protein	VitviT2T_014965	Vitis vinifera (Grape)	86
+A0ABY9XF32	unreviewed	A0ABY9XF32_9GAMM	STY4528 family pathogenicity island replication protein	QL112_014965	Xenorhabdus griffiniae	417
+A0ABZ0N0D1	unreviewed	A0ABZ0N0D1_9GAMM	EamA family transporter	QS795_014965	Providencia zhijiangensis	301
+A0ABZ1UDV4	unreviewed	A0ABZ1UDV4_9BURK	DcrB-related protein	E7V67_014965	[Empedobacter] haloabium	281
+A0ABZ2IJN9	unreviewed	A0ABZ2IJN9_9BACT	IS5 family transposase	NEE14_014965	Parabacteroides absconsus	435
+A0ABZ2TDC7	unreviewed	A0ABZ2TDC7_9RHOB	Acetyl/propionyl/methylcrotonyl-CoA carboxylase subunit alpha	RZS32_014965	Roseovarius rhodophyticola	649
+A0AC60QUT6	unreviewed	A0AC60QUT6_IXOPE	RNase H type-1 domain-containing protein	HPB47_014965	Ixodes persulcatus (Taiga tick)	199
+A0ACB7EL34	unreviewed	A0ACB7EL34_NIBAL	Metabotropic glutamate receptor 4	GRM4.3 GBF38_014965	Nibea albiflora (Yellow drum) (Corvina albiflora)	180
+A0ACB7S0W7	unreviewed	A0ACB7S0W7_HYAAI	Enoyl reductase (ER) domain-containing protein	HPB50_014965	Hyalomma asiaticum (Tick)	396
+A0ACB7X0P6	unreviewed	A0ACB7X0P6_9ERIC	Uncharacterized protein	Vadar_014965	Vaccinium darrowii	431
+A0ACB8DEE6	unreviewed	A0ACB8DEE6_DERSI	Uncharacterized protein	HPB49_014965	Dermacentor silvarum (Tick)	191
+A0ACB8GAU1	unreviewed	A0ACB8GAU1_9SAUR	PrdX deacylase domain-containing protein 1	PRORSD1 K3G42_014965	Sphaerodactylus townsendi	176
+A0ACB8KFD1	unreviewed	A0ACB8KFD1_CITSI	(+)-lariciresinol reductase (EC 1.23.1.1) (EC 1.23.1.2) ((+)-pinoresinol reductase)	KPL71_014965	Citrus sinensis (Sweet orange) (Citrus aurantium var. sinensis)	264
+A0ACB8KFK0	unreviewed	A0ACB8KFK0_CITSI	(+)-lariciresinol reductase (EC 1.23.1.1) (EC 1.23.1.2) ((+)-pinoresinol reductase)	KPL71_014965	Citrus sinensis (Sweet orange) (Citrus aurantium var. sinensis)	312
+A0ACB8VUD9	unreviewed	A0ACB8VUD9_9TELE	Zinc finger CCHC domain-containing protein 17 (Nucleolar protein of 40 kDa) (Putative S1 RNA-binding domain protein)	L3Q82_014965	Scortum barcoo (barcoo grunter)	252
+A0ACB9NMR0	unreviewed	A0ACB9NMR0_BAUVA	Uncharacterized protein	L6164_014965	Bauhinia variegata (Purple orchid tree) (Phanera variegata)	934
+A0ACB9RF40	unreviewed	A0ACB9RF40_9MYRT	Uncharacterized protein	MLD38_014965	Melastoma candidum	232
+A0ACB9UDB5	unreviewed	A0ACB9UDB5_9CETA	ER membrane protein complex subunit 6 (Transmembrane protein 93)	MJG53_014965	Ovis ammon polii x Ovis aries	110
+A0ACC0DR81	unreviewed	A0ACC0DR81_9BASI	Uncharacterized protein	MJO28_014965	Puccinia striiformis f. sp. tritici	597
+A0ACC0KXX4	unreviewed	A0ACC0KXX4_CHOFU	Uncharacterized protein	MSG28_014965	Choristoneura fumiferana (Spruce budworm moth) (Archips fumiferana)	131
+A0ACC0VRB5	unreviewed	A0ACC0VRB5_9STRA	GST N-terminal domain-containing protein	PsorP6_014965	Peronosclerospora sorghi	250
+A0ACC1XNN9	unreviewed	A0ACC1XNN9_MELAZ	14 kDa proline-rich protein DC2.15	OWV82_014965	Melia azedarach (Chinaberry tree)	115
+A0ACC2KCU5	unreviewed	A0ACC2KCU5_PERAE	Uncharacterized protein	MRB53_014965	Persea americana (Avocado)	187
+A0ACC2P701	unreviewed	A0ACC2P701_9HYME	Spondin-like TSP1 domain-containing protein	QAD02_014965	Eretmocerus hayati	135
+A0ACC2R3F5	unreviewed	A0ACC2R3F5_9NEOP	Phosrestin-1 (Arrestin-2) (Arrestin-B) (Phosrestin I)	PYW08_014965	Mythimna loreyi	407
+A0ACC3MTB7	unreviewed	A0ACC3MTB7_9PEZI	Uncharacterized protein	LTR37_014965	Vermiconidia calcicola	746
+A0ACC4BZ02	unreviewed	A0ACC4BZ02_POPAL	Uncharacterized protein	D5086_014965	Populus alba (White poplar)	115
+A0ACC5UPZ7	unreviewed	A0ACC5UPZ7_9PSED	Aldo/keto reductase	HU758_014965	Pseudomonas kurunegalensis	273
+A0ACC7MBP4	unreviewed	A0ACC7MBP4_9BURK	Uncharacterized protein	QPK29_014965	Massilia orientalis	59
+A0ACD3RMZ6	unreviewed	A0ACD3RMZ6_LARCR	IRG-type G domain-containing protein	E3U43_014965	Larimichthys crocea (Large yellow croaker) (Pseudosciaena crocea)	397
+A0ACD3SM22	unreviewed	A0ACD3SM22_9BURK	RNA polymerase sigma-54 factor	MW7_014965	Imbroritus primus	497
+A0ACD3ZS32	unreviewed	A0ACD3ZS32_FUSSC	Zn(2)-C6 fungal-type domain-containing protein	LCI18_014965	Fusarium solani subsp. cucurbitae (Neocosmosporum cucurbitae)	734
+A0ACD5H641	unreviewed	A0ACD5H641_9PROT	Nuclear transport factor 2 family protein	GL267_014965	Acidithiobacillus ferrianus	155
+A0ACD5IN22	unreviewed	A0ACD5IN22_9PROT	Uncharacterized protein	HF292_014965	Acidithiobacillus ferruginosus	376
+A0ACF4FAZ1	unreviewed	A0ACF4FAZ1_9PEZI	Uncharacterized protein	LTR56_014965	Elasticomyces elasticus	312
+A0ACF4NIS2	unreviewed	A0ACF4NIS2_9PEZI	Uncharacterized protein	LTR66_014965	Elasticomyces elasticus	470
+A0ACF4NZX7	unreviewed	A0ACF4NZX7_9PEZI	Uncharacterized protein	LTR10_014965	Elasticomyces elasticus	1106
+A0ACF6EYT7	unreviewed	A0ACF6EYT7_9HEMI	Uncharacterized protein	WDU94_014965	Cyamophila willieti	198
+A0ACF6G9D3	unreviewed	A0ACF6G9D3_SIGHI	Heat shock cognate 71 kDa	HispidOSU_014965	Sigmodon hispidus (Hispid cotton rat)	101
+A0ACF6HH81	unreviewed	A0ACF6HH81_9PASS	Uncharacterized protein	Nmel_014965	Mimus melanotis (San Cristobal mockingbird)	194
+A0ACF6W5Q5	unreviewed	A0ACF6W5Q5_9CARY	O-fucosyltransferase 15	RDABS01_014965	Bienertia sinuspersici	567
+A0ACF7D8W5	unreviewed	A0ACF7D8W5_9CICH	RuvB-like protein 2	ACER0C_014965	Sarotherodon galilaeus (mango tilapia)	426
+A0ACF7HXS2	unreviewed	A0ACF7HXS2_9HEMI	Uncharacterized protein	QTP88_014965	Uroleucon formosanum	305
+A0ACF7JXD7	unreviewed	A0ACF7JXD7_9BIVA	Uncharacterized protein	ACF0H5_014965	Mactra antiquata	153
+A0ACF7V684	unreviewed	A0ACF7V684_TETMA	Uncharacterized protein	ABPG74_014965	Tetrahymena malaccensis	150
+A0ACF7X685	unreviewed	A0ACF7X685_9HYMN	Uncharacterized protein	ABPG72_014965	Tetrahymena utriculariae	557
+A0ACF8AMS6	unreviewed	A0ACF8AMS6_TARKO	Uncharacterized protein	LXL04_014965	Taraxacum kok-saghyz (Russian dandelion)	133
+A0ACF8HEU4	unreviewed	A0ACF8HEU4_SEMEN	Uncharacterized protein	H8957_014965	Semnopithecus entellus (Northern plains gray langur) (Presbytis entellus)	161
+A0ACF8KLL1	unreviewed	A0ACF8KLL1_9PRIM	Uncharacterized protein	H8959_014965	Pygathrix nigripes (Black-shanked douc langur)	157
+A0ACF8L8S5	unreviewed	A0ACF8L8S5_9NEOP	Uncharacterized protein	ACJJTC_014965	Scirpophaga incertulas	144
+A0ACF8P3D6	unreviewed	A0ACF8P3D6_NASLA	Uncharacterized protein	H8958_014965	Nasalis larvatus (Proboscis monkey)	861
+A0ACF8R380	unreviewed	A0ACF8R380_SOLVE	Uncharacterized protein	ScPMuIL_014965	Solemya velum (Atlantic awningclam)	370
+A0ACF8VSM7	unreviewed	A0ACF8VSM7_9ORYZ	Uncharacterized protein	ABZP36_014965	Zizania latifolia	180
+A0ACG1X6E3	unreviewed	A0ACG1X6E3_9BACT	Class I SAM-dependent methyltransferase	D0Y96_014965	Paracidobacterium acidisoli	239
+A0ACG1XT54	unreviewed	A0ACG1XT54_9PSED	Methyl-accepting chemotaxis protein	H3221_014965	Pseudomonas chaetocerotis	560
+A0ACG1YII4	unreviewed	A0ACG1YII4_9VIBR	DUF2760 domain-containing protein	BCV38_014965	Vibrio lentus	210
+A0ACG1Z8A7	unreviewed	A0ACG1Z8A7_9CHLR	Adenosylhomocysteinase (EC 3.3.1.1)	ahcY FKZ61_014965	Litorilinea aerophila	427
+A0ACG1ZLN1	unreviewed	A0ACG1ZLN1_9BACL	DUF2306 domain-containing protein	B5M42_014965	Paenibacillus athensensis	207
+A0ACG2EKQ7	unreviewed	A0ACG2EKQ7_9RHOO	CoA transferase	GO606_014965	Aromatoleum anaerobium	410
+A0ACG2EXQ4	unreviewed	A0ACG2EXQ4_9RHOO	Cache domain-containing protein	GO608_014965	Aromatoleum buckelii	295
+A0ACG2ZSA3	unreviewed	A0ACG2ZSA3_9ENTR	Arabinose ABC transporter substrate-binding protein AraF	araF QAA82_014965	Enterobacter hormaechei	329
+A0ACG3WJ83	unreviewed	A0ACG3WJ83_9MYCO	Hsp20/alpha crystallin family protein	ACAG24_014965	[Mycobacterium] bulgaricum	149
+A0ACG4IQ39	unreviewed	A0ACG4IQ39_9RHOB	LysR family transcriptional regulator	AADZ90_014965	Aestuariibius violaceus	293
+A0ACG5FKP4	unreviewed	A0ACG5FKP4_9CYAN	Glycosyltransferase	BH720_014965	Desertifilum tharense IPPAS B-1220	368
+A0ACH0H8H2	unreviewed	A0ACH0H8H2_9GLOM	Uncharacterized protein	OCT59_014965	Rhizophagus irregularis	97
+A0ACH2IS98	unreviewed	A0ACH2IS98_9TELE	Uncharacterized protein	PO909_014965	Leuciscus waleckii (Amur ide)	295
+A0ACH3UAT4	unreviewed	A0ACH3UAT4_ARAHY	Uncharacterized protein	HN873_014965	Arachis hypogaea (Peanut)	626
+A0ACH4HDG3	unreviewed	A0ACH4HDG3_9BACE	HAD family hydrolase (EC 3.-.-.-)	R3O81_014965	Bacteroides hominis	220
+A0ACH4HX72	unreviewed	A0ACH4HX72_9HYPH	SDR family oxidoreductase	RMS29_014965	Agrobacterium rosae	248
+I2N3J3	unreviewed	I2N3J3_STRT9	VTT domain-containing protein	STSU_014965	Streptomyces tsukubensis (strain DSM 42081 / NBRC 108919 / NRRL 18488 / 9993)	238
+J1S4T8	unreviewed	J1S4T8_9ACTN	YccF domain-containing protein	SU9_014965	Streptomyces auratus AGR0001	130
+K0EV18	unreviewed	K0EV18_NOCB7	Transferase	O3I_014965	Nocardia brasiliensis (strain ATCC 700358 / HUJEG-1)	364
+L1LWD9	unreviewed	L1LWD9_9PSED	ATP-binding cassette domain-containing protein	CSV86_014965	Pseudomonas bharatica CSV86	274
+W9SKL7	unreviewed	W9SKL7_9ROSA	Uncharacterized protein	L484_014965	Morus notabilis	77
