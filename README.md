@@ -188,6 +188,13 @@ near-optimal default parameters.
 > Morgan fingerprints were detrimental with n=45 but essential 
 > with n=2,352, further illustrating this principle.
 
+**Model 3 — Chemprop D-MPNN GNN (n=3,607, optimised)**
+- Architecture: depth=6, hidden_dim=600, FFN_dim=1700
+- Ensemble of 5 models → uncertainty quantification
+- Test set: R²=0.816, RMSE=0.594, MAE=0.432
+- Mean uncertainty: σ=0.186 pIC50 units
+- Outperforms SVR on all metrics after hyperparameter optimisation
+
 ### Phase 2 — Novel Candidate Discovery
 
 **235 novel candidates** retrieved from PubChem
