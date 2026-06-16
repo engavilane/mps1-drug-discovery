@@ -262,6 +262,46 @@ drop_cols = [c for c in results_df.columns
              if c.startswith("score_")]
 results_df = results_df.drop(columns=drop_cols)
 
+
+# Synthetic Accessibility Scores 
+print(f"\nComputing Synthetic Accessibility scores...")
+import sys
+from rdkit.Chem import RDConfig
+sys.path.append(RDConfig.RDContribDir)
+from SA_Score import sascorer
+
+sa_scores = []
+for _, row in results_df.iterrows():
+    name  = row["ligand"]
+    clean = name.replace("_out", "")
+    sdf   = LIGANDS_DIR / f"{clean}.sdf"
+    if not sdf.exists():
+        matches = list(LIGANDS_DIR.glob(f"*{clean}*.sdf"))
+        sdf = matches[0] if matches else None
+
+    if sdf is None:
+        sa_scores.append(None)
+        continue
+
+    mol = Chem.MolFromMolFile(str(sdf))
+    if mol is None:
+        sa_scores.append(None)
+        continue
+
+    sa_scores.append(round(sascorer.calculateScore(mol), 3))
+
+results_df["sa_score"] = sa_scores
+results_df["sa_class"] = results_df["sa_score"].apply(
+    lambda s: "easy" if s is not None and s <= 3
+    else ("moderate" if s is not None and s <= 6
+    else ("hard" if s is not None else "unknown"))
+)
+
+print(f"  Easy (1-3):     {(results_df['sa_class']=='easy').sum()}")
+print(f"  Moderate (4-6): {(results_df['sa_class']=='moderate').sum()}")
+print(f"  Hard (7-10):    {(results_df['sa_class']=='hard').sum()}")
+print(f"  Mean SA score:  {results_df['sa_score'].mean():.2f}")
+
 # Sort by combined score instead
 results_df = results_df.sort_values(
     "combined_score", ascending=False

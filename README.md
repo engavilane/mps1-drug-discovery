@@ -557,6 +557,9 @@ python scripts/phase2_predict.py
 - Salentin S. et al. (2015) PLIP: fully automated 
   protein-ligand interaction profiler. *Nucleic Acids Res.*
   43:W443-W447. https://doi.org/10.1093/nar/gkv315
+- Salentin S. et al. (2015) PLIP: fully automated protein-ligand 
+  interaction profiler. *Nucleic Acids Res.* 43:W443-W447.
+  https://doi.org/10.1093/nar/gkv315
 
 ### Ligand & Receptor Preparation
 - Forli, S. et al. (2016). Computational protein-ligand docking and 
@@ -575,6 +578,10 @@ python scripts/phase2_predict.py
 - Lipinski, C.A. et al. (2001). Experimental and computational 
   approaches to estimate solubility and permeability in drug discovery 
   and development settings. *Adv. Drug Deliv. Rev.*, 46, 3–26.
+- Ertl P. & Schuffenhauer A. (2009) Estimation of synthetic 
+  accessibility score of drug-like molecules based on molecular 
+  complexity and fragment contributions. *J Cheminform* 1:8.
+  https://doi.org/10.1186/1758-2946-1-8
 
 ### Machine Learning
 - Pedregosa, F. et al. (2011). Scikit-learn: Machine Learning in 
@@ -582,6 +589,12 @@ python scripts/phase2_predict.py
 - Morgan, H.L. (1965). The generation of a unique machine description 
   for chemical structures. *J. Chem. Doc.*, 5, 107–113. 
   *(Morgan fingerprints)*
+- Heid E. et al. (2024) Chemprop: A machine learning package for 
+  chemical property prediction. *J Chem Inf Model* 64:9-17.
+  https://doi.org/10.1021/acs.jcim.3c01250
+- Tropsha A. et al. (2003) The importance of being earnest: 
+  validation is the absolute essential for successful application 
+  and interpretation of QSPR models. *QSAR Comb Sci* 22:69-77.
 
 ### Databases
 - Berman, H.M. et al. (2000). The Protein Data Bank. 
@@ -590,6 +603,13 @@ python scripts/phase2_predict.py
   bioassay data. *Nucleic Acids Res.*, 47, D930–D940.
 - Kim, S. et al. (2016). PubChem substance and compound databases. 
   *Nucleic Acids Res.*, 44, D1202–D1213.
+- Kanev G.K. et al. (2021) KLIFS: an overhaul after the first 
+  5 years of supporting kinase research. *Nucleic Acids Res.* 
+  49:D562-D569. https://doi.org/10.1093/nar/gkaa895
+- Screpanti E. et al. (2011) Direct binding of Cenp-C to the 
+  Mis12 complex joins the inner and outer kinetochore. 
+  *Curr Biol.* 21:391-398.
+  https://doi.org/10.1016/j.cub.2011.01.051
 
 ---
 
