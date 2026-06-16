@@ -173,6 +173,12 @@ interpretation, not affinity prediction.
 
 Single split R²=0.729 vs CV R²=0.702 (ΔR²=0.027) — no overfitting confirmed.
 
+**Y-randomisation validation (OECD Principle 4):**
+- Real model R²: 0.729
+- Randomised models (n=100): R² = −0.389 ± 0.070
+- Z-score: 15.88 | p < 0.01
+- ✓ Genuine SAR confirmed — no chance correlation
+
 Trained on 2,352 Mps1/TTK inhibitors from ChEMBL with experimental 
 IC50 values. Hyperparameter tuning (GridSearchCV, 120 fits) confirmed 
 near-optimal default parameters.
