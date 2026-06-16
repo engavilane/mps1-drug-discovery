@@ -1,0 +1,8 @@
+pdb_id,sup_rmsd,quality_score,resolution,ligand,dfg,grich_distance,aligned_pdb,pdbqt,prepared
+5LJJ,0.0,8.0,3.0,AD5,in,16.8423,kinase_domain/data/receptor/ensemble/5LJJ_ensemble.pdb,kinase_domain/data/receptor/ensemble/5LJJ_ensemble_receptor.pdbqt,True
+7LQD,0.623,9.1,1.95,YB4,in,16.3887,kinase_domain/data/receptor/ensemble/7LQD_ensemble.pdb,kinase_domain/data/receptor/ensemble/7LQD_ensemble_receptor.pdbqt,True
+5AP6,0.514,9.4,2.1,PWU,in,18.0977,kinase_domain/data/receptor/ensemble/5AP6_ensemble.pdb,kinase_domain/data/receptor/ensemble/5AP6_ensemble_receptor.pdbqt,True
+4C4E,0.405,8.5,2.6,0,in,18.7392,kinase_domain/data/receptor/ensemble/4C4E_ensemble.pdb,kinase_domain/data/receptor/ensemble/4C4E_ensemble_receptor.pdbqt,True
+5AP4,0.455,8.5,2.85,O38,in,17.4414,kinase_domain/data/receptor/ensemble/5AP4_ensemble.pdb,kinase_domain/data/receptor/ensemble/5AP4_ensemble_receptor.pdbqt,True
+5AP7,0.455,9.6,2.45,SVE,in,16.4983,kinase_domain/data/receptor/ensemble/5AP7_ensemble.pdb,kinase_domain/data/receptor/ensemble/5AP7_ensemble_receptor.pdbqt,True
+3CEK,0.539,9.0,2.3,0,in,18.113,kinase_domain/data/receptor/ensemble/3CEK_ensemble.pdb,kinase_domain/data/receptor/ensemble/3CEK_ensemble_receptor.pdbqt,True
