@@ -11,3 +11,6 @@ __pycache__/
 docking/results/*.pdbqt
 docking/results/*.log
 
+# Large model checkpoint files
+*.ckpt
+kinase_domain/analysis/gnn_model/*/checkpoints/
