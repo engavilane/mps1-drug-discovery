@@ -1,0 +1,46 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket    31:
+HEADER 0  - Pocket Score                      : -0.0945
+HEADER 1  - Drug Score                        : 0.0139
+HEADER 2  - Number of alpha spheres           :    27
+HEADER 3  - Mean alpha-sphere radius          : 3.8508
+HEADER 4  - Mean alpha-sphere Solvent Acc.    : 0.5791
+HEADER 5  - Mean B-factor of pocket residues  : 0.4002
+HEADER 6  - Hydrophobicity Score              : 8.6250
+HEADER 7  - Polarity Score                    :     6
+HEADER 8  - Amino Acid based volume Score     : 4.5000
+HEADER 9  - Pocket volume (Monte Carlo)       : 298.2124
+HEADER 10 - Pocket volume (convex hull)       : 23.8775
+HEADER 11 - Charge Score                      :     2
+HEADER 12 - Local hydrophobic density Score   : 16.0000
+HEADER 13 - Number of apolar alpha sphere     :    17
+HEADER 14 - Proportion of apolar alpha sphere : 0.6296
+ATOM   1980   CD LYS B 114      22.692  43.737  91.829  0.00  0.00           C 0
+ATOM   2174   CA ASN B 139      20.844  39.987  97.509  0.00  0.00           C 0
+ATOM   2197  NE2 GLN B 141      23.986  41.433  99.763  0.00  0.00           N 0
+ATOM   2179  OD1 ASN B 139      19.790  42.950  97.717  0.52  8.57           O 0
+ATOM   2168    O LEU B 138      23.244  38.592  97.204  0.34  3.21           O 0
+ATOM   1981   CE LYS B 114      21.287  43.997  92.364  0.00  0.00           C 0
+ATOM   2170   CG LEU B 138      23.762  38.499  93.747  0.00  0.00           C 0
+ATOM   1948  CG1 VAL B 110      27.866  40.729  94.566  0.00  0.00           C 0
+ATOM   2172  CD2 LEU B 138      23.719  39.081  92.364  0.00  0.00           C 0
+ATOM   1946    O VAL B 110      27.425  40.811  91.412  0.00  0.00           O 0
+ATOM   1978   CB LYS B 114      24.052  42.066  90.499  0.00  0.00           C 0
+ATOM   1958   NZ LYS B 111      29.303  46.739  94.212  0.64  6.56           N 0
+ATOM   1954   CB LYS B 111      29.204  44.577  90.630  0.00  0.00           C 0
+ATOM   1955   CG LYS B 111      29.681  45.049  91.977  0.00  0.00           C 0
+ATOM   1951   CA LYS B 111      28.411  43.279  90.719  0.00  0.00           C 0
+ATOM   1982   NZ LYS B 114      21.189  45.280  93.117  0.71  7.66           N 0
+ATOM   2173    N ASN B 139      21.102  38.885  96.587  0.79  1.09           N 0
+ATOM   1953    O LYS B 111      27.015  42.921  88.810  0.67  4.29           O 0
+ATOM   1983    N GLN B 115      24.594  42.208  87.389  0.70  1.09           N 0
+ATOM   2015  OE1 GLN B 118      20.617  45.282  87.960  0.46  8.57           O 0
+ATOM   1979   CG LYS B 114      22.666  42.610  90.807  0.00  0.00           C 0
+ATOM   1956   CD LYS B 111      30.222  46.453  91.930  0.00  0.00           C 0
+ATOM   1987   CB GLN B 115      25.580  43.558  85.584  0.00  0.00           C 0
+ATOM   1984   CA GLN B 115      24.338  42.816  86.087  0.00  0.00           C 0
+TER
+END

@@ -1,0 +1,37 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket    25:
+HEADER 0  - Pocket Score                      : -0.0634
+HEADER 1  - Drug Score                        : 0.0086
+HEADER 2  - Number of alpha spheres           :    16
+HEADER 3  - Mean alpha-sphere radius          : 3.8739
+HEADER 4  - Mean alpha-sphere Solvent Acc.    : 0.6520
+HEADER 5  - Mean B-factor of pocket residues  : 0.5213
+HEADER 6  - Hydrophobicity Score              : 2.0000
+HEADER 7  - Polarity Score                    :     4
+HEADER 8  - Amino Acid based volume Score     : 4.8000
+HEADER 9  - Pocket volume (Monte Carlo)       : 280.1383
+HEADER 10 - Pocket volume (convex hull)       : 9.0020
+HEADER 11 - Charge Score                      :     2
+HEADER 12 - Local hydrophobic density Score   : 14.0000
+HEADER 13 - Number of apolar alpha sphere     :    15
+HEADER 14 - Proportion of apolar alpha sphere : 0.9375
+ATOM   4193   CG LYS D 111      65.916  21.764 105.269  0.00  0.00           C 0
+ATOM   4218   CD LYS D 114      64.302  28.590 105.097  0.00  0.00           C 0
+ATOM   4186  CG1 VAL D 110      65.325  24.613 109.998  0.00  0.00           C 0
+ATOM   4196   NZ LYS D 111      68.710  21.316 105.462  0.00  0.00           N 0
+ATOM   4189   CA LYS D 111      63.667  22.656 106.095  0.00  0.00           C 0
+ATOM   4191    O LYS D 111      61.839  23.655 104.900  0.67  1.07           O 0
+ATOM   4216   CB LYS D 114      62.411  27.107 105.886  0.00  0.00           C 0
+ATOM   4226   CG GLN D 115      60.931  23.991 101.881  0.00  0.00           C 0
+ATOM   4217   CG LYS D 114      62.799  28.291 105.007  0.00  0.00           C 0
+ATOM   4253  OE1 GLN D 118      61.924  28.603 101.479  0.81  8.57           O 0
+ATOM   4184    O VAL D 110      62.835  24.327 108.142  0.00  0.00           O 0
+ATOM   4192   CB LYS D 111      64.403  21.592 105.275  0.00  0.00           C 0
+ATOM   4194   CD LYS D 111      66.590  20.847 104.257  0.00  0.00           C 0
+ATOM   4229  NE2 GLN D 115      61.945  22.333 100.430  0.62  9.84           N 0
+ATOM   4195   CE LYS D 111      68.066  21.192 104.123  0.00  0.00           C 0
+TER
+END

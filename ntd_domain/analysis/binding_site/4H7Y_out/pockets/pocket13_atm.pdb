@@ -1,0 +1,38 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket    13:
+HEADER 0  - Pocket Score                      : -0.0074
+HEADER 1  - Drug Score                        : 0.0495
+HEADER 2  - Number of alpha spheres           :    21
+HEADER 3  - Mean alpha-sphere radius          : 4.0734
+HEADER 4  - Mean alpha-sphere Solvent Acc.    : 0.5773
+HEADER 5  - Mean B-factor of pocket residues  : 0.1198
+HEADER 6  - Hydrophobicity Score              : 33.1250
+HEADER 7  - Polarity Score                    :     3
+HEADER 8  - Amino Acid based volume Score     : 5.1250
+HEADER 9  - Pocket volume (Monte Carlo)       : 253.7453
+HEADER 10 - Pocket volume (convex hull)       : 3.6605
+HEADER 11 - Charge Score                      :     1
+HEADER 12 - Local hydrophobic density Score   : 19.0000
+HEADER 13 - Number of apolar alpha sphere     :    20
+HEADER 14 - Proportion of apolar alpha sphere : 0.9524
+ATOM   1234  CD2 LEU B  21      24.058  15.356  81.610  0.00  0.00           C 0
+ATOM   1586   CG ARG B  66      26.169  20.197  81.156  0.00  0.00           C 0
+ATOM   1200  CD1 LEU B  17      22.971  17.329  77.971  0.00  0.00           C 0
+ATOM   1550   CB ARG B  62      21.622  21.200  78.653  0.00  0.00           C 0
+ATOM   1579  CG1 VAL B  65      25.335  25.603  81.847  0.00  0.00           C 0
+ATOM   1827  CD1 PHE B  95      20.849  26.146  81.888  0.00  0.00           C 0
+ATOM   1615  OE1 GLU B  69      26.955  23.351  84.608  0.63  2.14           O 0
+ATOM   1616  OE2 GLU B  69      26.220  25.354  85.152  0.77  5.36           O 0
+ATOM   1552   CD ARG B  62      19.422  20.339  79.472  0.00  0.00           C 0
+ATOM   1233  CD1 LEU B  21      21.829  14.684  80.781  0.00  0.00           C 0
+ATOM    162   CG PRO A  29      24.660  16.851  85.468  0.00  0.00           C 0
+ATOM   1829  CE1 PHE B  95      21.163  25.417  80.759  0.00  0.00           C 0
+ATOM   1551   CG ARG B  62      20.302  21.572  79.315  0.00  0.00           C 0
+ATOM   1549    O ARG B  62      24.800  21.933  78.756  0.00  0.00           O 0
+ATOM   1587   CD ARG B  66      26.322  20.104  82.674  0.00  0.00           C 0
+ATOM   1547   CA ARG B  62      22.499  22.404  78.293  0.00  0.00           C 0
+TER
+END

@@ -1,0 +1,42 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket    14:
+HEADER 0  - Pocket Score                      : -0.0077
+HEADER 1  - Drug Score                        : 0.0010
+HEADER 2  - Number of alpha spheres           :    20
+HEADER 3  - Mean alpha-sphere radius          : 3.8855
+HEADER 4  - Mean alpha-sphere Solvent Acc.    : 0.6398
+HEADER 5  - Mean B-factor of pocket residues  : 0.2255
+HEADER 6  - Hydrophobicity Score              : 23.0000
+HEADER 7  - Polarity Score                    :     4
+HEADER 8  - Amino Acid based volume Score     : 4.6667
+HEADER 9  - Pocket volume (Monte Carlo)       : 252.1960
+HEADER 10 - Pocket volume (convex hull)       : 7.6192
+HEADER 11 - Charge Score                      :     0
+HEADER 12 - Local hydrophobic density Score   : 7.0000
+HEADER 13 - Number of apolar alpha sphere     :     8
+HEADER 14 - Proportion of apolar alpha sphere : 0.4000
+ATOM   2262    O ALA C  10      43.598   6.246  61.069  0.46  3.21           O 0
+ATOM   2265   CA ASN C  11      42.353   6.219  63.545  0.00  0.00           C 0
+ATOM   2315  CZ2 TRP C  16      38.234   9.289  60.152  0.00  0.00           C 0
+ATOM   2261    C ALA C  10      43.562   5.185  61.697  0.00  0.00           C 0
+ATOM   2313  CE2 TRP C  16      39.488   9.752  60.561  0.00  0.00           C 0
+ATOM   2341  CD1 LEU C  19      40.869   9.160  54.760  0.00  0.00           C 0
+ATOM   2264    N ASN C  11      43.019   5.084  62.908  0.73  1.09           N 0
+ATOM   2268   CB ASN C  11      41.233   5.727  64.461  0.00  0.00           C 0
+ATOM   2312  NE1 TRP C  16      40.264   9.376  61.624  0.00  0.00           N 0
+ATOM   2270  OD1 ASN C  11      40.117   7.817  64.212  0.00  0.00           O 0
+ATOM   2299    O ASP C  15      44.981  10.306  57.190  0.47  2.14           O 0
+ATOM   2304    N TRP C  16      44.441  10.719  59.322  0.00  0.00           N 0
+ATOM   2298    C ASP C  15      45.228  10.196  58.384  0.00  0.00           C 0
+ATOM   2300   CB ASP C  15      46.166   7.983  59.197  0.00  0.00           C 0
+ATOM   2259    N ALA C  10      44.321   4.008  59.661  0.00  0.00           N 0
+ATOM   2305   CA TRP C  16      43.295  11.558  58.958  0.00  0.00           C 0
+ATOM   2317  CH2 TRP C  16      37.690   9.851  59.029  0.00  0.00           C 0
+ATOM   2512  NH2 ARG C  41      37.122   8.691  54.171  0.66  7.66           N 0
+ATOM   2311  CD2 TRP C  16      40.185  10.760  59.867  0.00  0.00           C 0
+ATOM   2309   CG TRP C  16      41.416  10.985  60.561  0.00  0.00           C 0
+TER
+END

@@ -1,0 +1,44 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket     4:
+HEADER 0  - Pocket Score                      : 0.0286
+HEADER 1  - Drug Score                        : 0.0036
+HEADER 2  - Number of alpha spheres           :    24
+HEADER 3  - Mean alpha-sphere radius          : 3.9137
+HEADER 4  - Mean alpha-sphere Solvent Acc.    : 0.6628
+HEADER 5  - Mean B-factor of pocket residues  : 0.2207
+HEADER 6  - Hydrophobicity Score              : 23.0000
+HEADER 7  - Polarity Score                    :     4
+HEADER 8  - Amino Acid based volume Score     : 4.6667
+HEADER 9  - Pocket volume (Monte Carlo)       : 265.9056
+HEADER 10 - Pocket volume (convex hull)       : 12.1449
+HEADER 11 - Charge Score                      :     0
+HEADER 12 - Local hydrophobic density Score   : 11.0000
+HEADER 13 - Number of apolar alpha sphere     :    12
+HEADER 14 - Proportion of apolar alpha sphere : 0.5000
+ATOM   3379    O ALA D  10      25.501  26.976 115.765  0.37  4.29           O 0
+ATOM   3455  CD1 LEU D  19      28.930  24.273 122.465  0.00  0.00           C 0
+ATOM   3417   CB ASP D  15      27.621  29.543 117.623  0.00  0.00           C 0
+ATOM   3376    N ALA D  10      23.103  27.634 117.046  0.25  7.66           N 0
+ATOM   3416    O ASP D  15      30.064  28.446 119.571  0.71  3.21           O 0
+ATOM   3415    C ASP D  15      29.861  28.642 118.373  0.00  0.00           C 0
+ATOM   3421    N TRP D  16      30.308  27.816 117.425  0.00  0.00           N 0
+ATOM   3434  CH2 TRP D  16      29.384  21.061 117.909  0.00  0.00           C 0
+ATOM   3430  CE2 TRP D  16      29.226  22.817 116.330  0.00  0.00           C 0
+ATOM   3433  CZ3 TRP D  16      30.417  21.745 118.563  0.00  0.00           C 0
+ATOM   3382   CA ASN D  11      25.551  25.582 113.385  0.00  0.00           C 0
+ATOM   3385   CB ASN D  11      25.094  24.382 112.548  0.00  0.00           C 0
+ATOM   3378    C ALA D  10      24.456  26.903 115.100  0.00  0.00           C 0
+ATOM   3381    N ASN D  11      24.394  26.281 113.928  0.00  0.00           N 0
+ATOM   3422   CA TRP D  16      31.160  26.674 117.764  0.00  0.00           C 0
+ATOM   3428  CD2 TRP D  16      30.263  23.530 116.967  0.00  0.00           C 0
+ATOM   3431  CE3 TRP D  16      30.863  22.979 118.107  0.00  0.00           C 0
+ATOM   3432  CZ2 TRP D  16      28.773  21.579 116.796  0.00  0.00           C 0
+ATOM   3625  NH1 ARG D  41      28.387  20.450 122.422  0.00  0.00           N 0
+ATOM   3429  NE1 TRP D  16      28.809  23.563 115.257  0.00  0.00           N 0
+ATOM   3426   CG TRP D  16      30.471  24.742 116.224  0.00  0.00           C 0
+ATOM   3387  OD1 ASN D  11      27.244  23.369 112.800  0.57  1.07           O 0
+TER
+END

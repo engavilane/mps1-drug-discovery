@@ -1,0 +1,37 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket    20:
+HEADER 0  - Pocket Score                      : -0.0462
+HEADER 1  - Drug Score                        : 0.0007
+HEADER 2  - Number of alpha spheres           :    19
+HEADER 3  - Mean alpha-sphere radius          : 3.7923
+HEADER 4  - Mean alpha-sphere Solvent Acc.    : 0.4693
+HEADER 5  - Mean B-factor of pocket residues  : 0.0777
+HEADER 6  - Hydrophobicity Score              : -32.1429
+HEADER 7  - Polarity Score                    :     5
+HEADER 8  - Amino Acid based volume Score     : 4.2857
+HEADER 9  - Pocket volume (Monte Carlo)       : 215.4965
+HEADER 10 - Pocket volume (convex hull)       : 4.0440
+HEADER 11 - Charge Score                      :     0
+HEADER 12 - Local hydrophobic density Score   : 4.0000
+HEADER 13 - Number of apolar alpha sphere     :     5
+HEADER 14 - Proportion of apolar alpha sphere : 0.2632
+ATOM   1356   CE LYS B  37      36.485   8.485  77.502  0.00  0.00           C 0
+ATOM   1385   NE ARG B  41      31.752  10.847  72.823  0.00  0.00           N 0
+ATOM   1384   CD ARG B  41      32.670  11.654  73.641  0.00  0.00           C 0
+ATOM   2580   CG PRO C  50      39.150   9.775  71.224  0.00  0.00           C 0
+ATOM   1414  OE1 GLN B  44      34.691  13.366  71.313  0.73  4.29           O 0
+ATOM   1386   CZ ARG B  41      31.529  11.044  71.523  0.00  0.00           C 0
+ATOM   1415  NE2 GLN B  44      35.650  13.196  69.291  0.38  1.09           N 0
+ATOM   2556    O GLU C  47      34.725  10.872  67.224  0.42  9.64           O 0
+ATOM   1387  NH1 ARG B  41      32.144  12.026  70.875  0.71  1.09           N 0
+ATOM   2579   CB PRO C  50      39.353  10.994  72.097  0.00  0.00           C 0
+ATOM   1352    O LYS B  37      36.087  13.759  77.256  0.47  2.14           O 0
+ATOM   1354   CG LYS B  37      37.197  10.831  78.035  0.00  0.00           C 0
+ATOM   2595  OD1 ASP C  52      40.082  12.209  75.288  0.94  2.14           O 0
+ATOM   2588   CD PRO C  51      38.275  14.949  71.676  0.00  0.00           C 0
+ATOM   1378    N ARG B  41      34.807  15.303  74.980  0.73  1.09           N 0
+TER
+END

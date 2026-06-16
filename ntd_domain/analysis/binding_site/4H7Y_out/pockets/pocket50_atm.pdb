@@ -1,0 +1,42 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket    50:
+HEADER 0  - Pocket Score                      : -0.2348
+HEADER 1  - Drug Score                        : 0.0169
+HEADER 2  - Number of alpha spheres           :    29
+HEADER 3  - Mean alpha-sphere radius          : 3.8801
+HEADER 4  - Mean alpha-sphere Solvent Acc.    : 0.4861
+HEADER 5  - Mean B-factor of pocket residues  : 0.2410
+HEADER 6  - Hydrophobicity Score              : 34.8333
+HEADER 7  - Polarity Score                    :     3
+HEADER 8  - Amino Acid based volume Score     : 4.5000
+HEADER 9  - Pocket volume (Monte Carlo)       : 390.4791
+HEADER 10 - Pocket volume (convex hull)       : 18.2792
+HEADER 11 - Charge Score                      :     1
+HEADER 12 - Local hydrophobic density Score   : 11.8462
+HEADER 13 - Number of apolar alpha sphere     :    13
+HEADER 14 - Proportion of apolar alpha sphere : 0.4483
+ATOM   1044  CD2 LEU A 138      57.776   7.226  83.982  0.00  0.00           C 0
+ATOM   1013    O LEU A 135      57.438   2.348  81.848  0.70  4.29           O 0
+ATOM    854   CD LYS A 114      62.419   6.438  84.235  0.00  0.00           C 0
+ATOM   1017  CD2 LEU A 135      59.149   2.722  85.965  0.00  0.00           C 0
+ATOM    855   CE LYS A 114      63.111   5.119  83.936  0.00  0.00           C 0
+ATOM    856   NZ LYS A 114      63.712   5.121  82.571  0.00  0.00           N 0
+ATOM   1014   CB LEU A 135      57.719   0.994  84.809  0.00  0.00           C 0
+ATOM   1046   CA ASN A 139      58.533   4.400  78.848  0.00  0.00           C 0
+ATOM   1049   CB ASN A 139      59.292   3.083  79.020  0.00  0.00           C 0
+ATOM   1050   CG ASN A 139      60.482   2.970  78.077  0.00  0.00           C 0
+ATOM   1051  OD1 ASN A 139      61.482   3.675  78.232  0.00  0.00           O 0
+ATOM   1042   CG LEU A 138      57.109   7.153  82.621  0.00  0.00           C 0
+ATOM    822  CG1 VAL A 110      59.302  11.478  81.587  0.00  0.00           C 0
+ATOM   1045    N ASN A 139      57.434   4.508  79.807  0.00  0.00           N 0
+ATOM   1067   CD GLN A 141      58.472   9.853  75.363  0.00  0.00           C 0
+ATOM   1068  OE1 GLN A 141      58.027  10.991  75.172  0.56  9.64           O 0
+ATOM   1069  NE2 GLN A 141      59.687   9.488  74.978  0.00  0.00           N 0
+ATOM   1066   CG GLN A 141      57.651   8.787  76.075  0.00  0.00           C 0
+ATOM   1040    O LEU A 138      57.132   6.684  79.357  0.48  1.07           O 0
+ATOM   1048    O ASN A 139      58.774   4.996  76.535  0.52  9.64           O 0
+TER
+END

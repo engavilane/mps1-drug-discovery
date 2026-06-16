@@ -1,0 +1,6 @@
+pocket_id,n_alpha_spheres,dist_to_hec1_A,centre_x,centre_y,centre_z,selected,reason
+42,21,3.43,44.7,26.6,90.0,True,Closest to Hec1 interface (3.43 A)
+51,145,11.08,43.4,25.4,77.8,False,Too distant (11.08 A)
+49,134,11.58,49.1,26.2,99.0,False,Too distant (11.58 A)
+43,37,14.16,37.5,25.2,98.2,False,Too distant (14.16 A)
+40,20,15.89,40.3,37.1,76.1,False,Too distant (15.89 A)

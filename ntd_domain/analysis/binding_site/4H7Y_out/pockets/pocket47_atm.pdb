@@ -1,0 +1,43 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket    47:
+HEADER 0  - Pocket Score                      : -0.1902
+HEADER 1  - Drug Score                        : 0.0128
+HEADER 2  - Number of alpha spheres           :    31
+HEADER 3  - Mean alpha-sphere radius          : 3.9431
+HEADER 4  - Mean alpha-sphere Solvent Acc.    : 0.5012
+HEADER 5  - Mean B-factor of pocket residues  : 0.5878
+HEADER 6  - Hydrophobicity Score              : 28.4286
+HEADER 7  - Polarity Score                    :     4
+HEADER 8  - Amino Acid based volume Score     : 4.4286
+HEADER 9  - Pocket volume (Monte Carlo)       : 329.1984
+HEADER 10 - Pocket volume (convex hull)       : 11.2316
+HEADER 11 - Charge Score                      :     1
+HEADER 12 - Local hydrophobic density Score   : 15.0000
+HEADER 13 - Number of apolar alpha sphere     :    16
+HEADER 14 - Proportion of apolar alpha sphere : 0.5161
+ATOM   3072  CG1 VAL C 110      41.869  45.957  65.199  0.00  0.00           C 0
+ATOM   3106   NZ LYS C 114      47.612  46.948  70.542  0.69  9.84           N 0
+ATOM   3104   CD LYS C 114      45.986  45.120  69.997  0.00  0.00           C 0
+ATOM   3307  OD1 ASN C 139      50.100  49.138  65.344  0.60  7.50           O 0
+ATOM   3300  CD2 LEU C 138      45.765  42.875  66.032  0.00  0.00           C 0
+ATOM   3298   CG LEU C 138      46.041  43.352  64.614  0.00  0.00           C 0
+ATOM   3273  CD2 LEU C 135      49.226  41.368  69.022  0.00  0.00           C 0
+ATOM   3105   CE LYS C 114      47.306  45.494  70.657  0.00  0.00           C 0
+ATOM   3140  NE2 GLN C 118      48.252  43.809  73.615  0.73  6.56           N 0
+ATOM   3272  CD1 LEU C 135      51.215  40.335  70.107  0.00  0.00           C 0
+ATOM   3270   CB LEU C 135      51.381  41.206  67.750  0.00  0.00           C 0
+ATOM   3305   CB ASN C 139      50.671  46.838  64.974  0.00  0.00           C 0
+ATOM   3296    O LEU C 138      47.244  45.807  62.636  0.48  2.14           O 0
+ATOM   3322   CG GLN C 141      45.927  49.201  60.606  0.00  0.00           C 0
+ATOM   3325  NE2 GLN C 141      45.117  51.381  61.287  0.00  0.00           N 0
+ATOM   3304    O ASN C 139      49.439  48.759  62.702  0.42  7.50           O 0
+ATOM   3302   CA ASN C 139      49.459  46.756  64.038  0.00  0.00           C 0
+ATOM   3306   CG ASN C 139      50.769  48.169  65.701  0.00  0.00           C 0
+ATOM   3301    N ASN C 139      49.156  45.358  63.737  0.00  0.00           N 0
+ATOM   3269    O LEU C 135      50.777  43.527  65.596  0.68  1.07           O 0
+ATOM   3308  ND2 ASN C 139      51.618  48.221  66.725  0.22  9.84           N 0
+TER
+END

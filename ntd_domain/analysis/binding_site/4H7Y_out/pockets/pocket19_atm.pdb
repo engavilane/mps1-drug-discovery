@@ -1,0 +1,36 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket    19:
+HEADER 0  - Pocket Score                      : -0.0364
+HEADER 1  - Drug Score                        : 0.0004
+HEADER 2  - Number of alpha spheres           :    16
+HEADER 3  - Mean alpha-sphere radius          : 3.5935
+HEADER 4  - Mean alpha-sphere Solvent Acc.    : 0.4420
+HEADER 5  - Mean B-factor of pocket residues  : 0.0764
+HEADER 6  - Hydrophobicity Score              : 18.8000
+HEADER 7  - Polarity Score                    :     3
+HEADER 8  - Amino Acid based volume Score     : 3.4000
+HEADER 9  - Pocket volume (Monte Carlo)       : 75.1562
+HEADER 10 - Pocket volume (convex hull)       : 0.3705
+HEADER 11 - Charge Score                      :    -1
+HEADER 12 - Local hydrophobic density Score   : 3.0000
+HEADER 13 - Number of apolar alpha sphere     :     4
+HEADER 14 - Proportion of apolar alpha sphere : 0.2500
+ATOM    305   CA ALA A  48      38.107  11.805 111.496  0.00  0.00           C 0
+ATOM    298    O GLU A  47      39.951  13.754 112.234  0.47  2.14           O 0
+ATOM   3643   CB SER D  43      36.080  15.297 116.535  0.00  0.00           C 0
+ATOM   3644   OG SER D  43      37.487  15.088 116.528  0.65  3.21           O 0
+ATOM   3674  OE1 GLU D  47      31.967  14.759 109.502  0.00  0.00           O 0
+ATOM    308   CB ALA A  48      36.655  11.601 111.114  0.00  0.00           C 0
+ATOM    276    O GLN A  44      36.549  14.041 108.539  0.00  0.00           O 0
+ATOM   3671   CB GLU D  47      31.735  15.966 112.013  0.00  0.00           C 0
+ATOM    297    C GLU A  47      39.561  13.719 111.064  0.00  0.00           C 0
+ATOM    304    N ALA A  48      38.739  12.782 110.604  0.00  0.00           N 0
+ATOM    299   CB GLU A  47      39.101  16.018 110.196  0.00  0.00           C 0
+ATOM   3642    O SER D  43      33.985  16.816 114.549  0.61  5.36           O 0
+ATOM   3665  CG2 ILE D  46      36.480  18.737 111.111  0.00  0.00           C 0
+ATOM   3667    N GLU D  47      33.007  18.079 112.021  0.00  0.00           N 0
+TER
+END
