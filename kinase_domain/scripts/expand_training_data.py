@@ -1,12 +1,13 @@
 """
 Training data expansion for Mps1/TTK QSAR model.
+# Sources:
+#   1. ChEMBL IC50 (original) — 2,352 compounds
+#   2. ChEMBL Ki + Kd (expanded) — 1,255 additional compounds
+#   Total: 3,607 unique compounds after deduplication
+#
+# Note: BindingDB (API 404) and PubChem BioAssay (0 dose-response
+# assays found) were attempted but unavailable at time of retrieval.
 
-Sources:
-  1. ChEMBL — broader query including Ki, Kd, percent inhibition
-  2. BindingDB — Ki and IC50 values
-  3. PubChem BioAssay — HTS data
-
-Target: 5,000-10,000 unique compounds with pIC50 equivalent
 """
 
 import pandas as pd
@@ -20,14 +21,16 @@ import time
 import warnings
 warnings.filterwarnings('ignore')
 
-# ── Paths ─────────────────────────────────────────────────
+
+# Paths 
 OUTPUT_DIR = Path("kinase_domain/analysis/ic50")
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 EXISTING_CSV = OUTPUT_DIR / "chembl_mps1_ic50.csv"
 EXPANDED_CSV = OUTPUT_DIR / "expanded_mps1_activity.csv"
 
-# ── Constants ─────────────────────────────────────────────
+
+# Constants 
 # ChEMBL target ID for Mps1/TTK
 CHEMBL_TARGET = "CHEMBL4523"
 
@@ -36,7 +39,8 @@ CHEMBL_TARGET = "CHEMBL4523"
 # pKi   = -log10(Ki in M)
 # These are comparable for competitive inhibitors
 
-# ── Source 1 — ChEMBL broader query ──────────────────────
+
+# Source 1 — ChEMBL broader query
 print("=" * 60)
 print("SOURCE 1 — ChEMBL (expanded query)")
 print("=" * 60)
@@ -121,7 +125,8 @@ chembl_df = pd.DataFrame(chembl_rows)
 print(f"  Raw ChEMBL records: {len(chembl_df)}")
 print(f"  Activity types: {chembl_df['activity_type'].value_counts().to_dict()}")
 
-# ── Source 2 — BindingDB ──────────────────────────────────
+
+# Source 2 — BindingDB 
 print(f"\n{'=' * 60}")
 print("SOURCE 2 — BindingDB")
 print("=" * 60)
@@ -214,7 +219,8 @@ except Exception as e:
 bindingdb_df = pd.DataFrame(bindingdb_rows)
 print(f"  Valid BindingDB records: {len(bindingdb_df)}")
 
-# ── Source 3 — PubChem BioAssay ───────────────────────────
+
+# Source 3 — PubChem BioAssay 
 print(f"\n{'=' * 60}")
 print("SOURCE 3 — PubChem BioAssay")
 print("=" * 60)
@@ -324,7 +330,8 @@ except Exception as e:
 pubchem_df = pd.DataFrame(pubchem_rows)
 print(f"  Valid PubChem records: {len(pubchem_df)}")
 
-# ── Combine all sources ───────────────────────────────────
+
+# Combine all sources 
 print(f"\n{'=' * 60}")
 print("COMBINING AND DEDUPLICATING")
 print("=" * 60)
@@ -359,7 +366,8 @@ if len(pubchem_df) > 0:
 combined_df = pd.concat(all_dfs, ignore_index=True)
 print(f"Total before deduplication: {len(combined_df)}")
 
-# ── Standardise SMILES and deduplicate ────────────────────
+
+# Standardise SMILES and deduplicate
 print("Standardising SMILES...")
 valid_rows = []
 inchikeys  = set()
@@ -409,7 +417,8 @@ final_df = pd.DataFrame(valid_rows)
 final_df = final_df.sort_values("pIC50", ascending=False)
 final_df.to_csv(EXPANDED_CSV, index=False)
 
-# ── Summary ───────────────────────────────────────────────
+
+# Summary 
 print(f"\n{'=' * 60}")
 print("EXPANSION SUMMARY")
 print("=" * 60)
