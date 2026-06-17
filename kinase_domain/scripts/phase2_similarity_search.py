@@ -11,10 +11,10 @@ from rdkit.Chem import AllChem, Descriptors, rdMolDescriptors, DataStructs
 
 # Paths
 LIGANDS_DIR    = Path("kinase_domain/data/ligands/raw")
-PHASE2_DIR     = Path("kinase_domain/data/phase2")
+PHASE2_DIR     = Path("kinase_domain/data/phase2b")
 PHASE2_SDF     = PHASE2_DIR / "raw"
 PHASE2_PDBQT   = PHASE2_DIR / "pdbqt"
-OUTPUT_DIR     = Path("kinase_domain/analysis/phase2")
+OUTPUT_DIR     = Path("kinase_domain/analysis/phase2b")
 
 for d in [PHASE2_SDF, PHASE2_PDBQT, OUTPUT_DIR]:
     d.mkdir(parents=True, exist_ok=True)
@@ -29,17 +29,15 @@ FILTERS = {
     "HeavyAtoms":(19,  37),
     "LogP":      (1,   7),
 }
-TANIMOTO_THRESHOLD = 0.9
+TANIMOTO_THRESHOLD = 0.7
 
 
-# Seed compounds (top ADME + dual hinge binders)
-SEEDS = [
-    "7CHN_LIG",
-    "7CHM_LIG",
-    "7CJA_LIG",
-    "7CHT_LIG",
-    "7CIL_LIG",
-]
+# Load seeds from CSV
+
+seeds_df = pd.read_csv(
+    "kinase_domain/analysis/phase2/phase2b_seeds.csv"
+)
+SEEDS = seeds_df['smiles'].tolist()
 
 
 # Load existing ligand fingerprints to avoid duplicates 
@@ -101,20 +99,10 @@ print(f"Tanimoto threshold: {TANIMOTO_THRESHOLD}")
 print(f"Seeds: {', '.join(SEEDS)}")
 print("=" * 60)
 
-for seed_name in SEEDS:
-    sdf_path = LIGANDS_DIR / f"{seed_name}.sdf"
-    if not sdf_path.exists():
-        print(f"\n✗ Seed not found: {seed_name}")
-        continue
-
-    seed_mol = Chem.MolFromMolFile(str(sdf_path))
-    if seed_mol is None:
-        print(f"\n Could not parse: {seed_name}")
-        continue
-
-    # Get CID for seed
-    seed_smiles = Chem.MolToSmiles(seed_mol)
-    print(f"\nSearching similar compounds for: {seed_name}")
+for seed_idx, seed_smiles in enumerate(SEEDS):
+    seed_name = f"seed_{seed_idx}"
+    print(f"\nSearching similar compounds for: {seed_name} "
+          f"(pIC50={seeds_df.iloc[seed_idx]['pIC50']:.3f})")
 
     try:
         seed_results = pcp.get_compounds(
@@ -202,7 +190,7 @@ for seed_name in SEEDS:
             else:
                 conformer = "3d"
 
-            filename = f"phase2_{seed_name}_{cid}.sdf"
+            filename = f"phase2b_{seed_name}_{cid}.sdf"
             filepath = PHASE2_SDF / filename
             with open(filepath, "w") as f:
                 f.write(r.text)
