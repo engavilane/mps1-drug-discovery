@@ -13,13 +13,28 @@ from rdkit import Chem
 import subprocess
 import tempfile
 import os
+import argparse
 import warnings
 warnings.filterwarnings('ignore')
 
-CANDIDATES_CSV = "kinase_domain/analysis/phase2/phase2_final_candidates.csv"
-MODEL_DIR      = "kinase_domain/analysis/gnn_model/optimised"
-LIGANDS_DIR    = Path("kinase_domain/data/phase2/raw")
-OUTPUT_DIR     = Path("kinase_domain/analysis/phase2")
+parser = argparse.ArgumentParser(
+    description="GNN pIC50 prediction for docking candidates"
+)
+parser.add_argument("--candidates",
+    default="kinase_domain/analysis/phase2/phase2_final_candidates.csv")
+parser.add_argument("--ligands",
+    default="kinase_domain/data/phase2/raw")
+parser.add_argument("--model_dir",
+    default="kinase_domain/analysis/gnn_model/optimised")
+parser.add_argument("--output",
+    default="kinase_domain/analysis/phase2")
+args = parser.parse_args()
+
+CANDIDATES_CSV = args.candidates
+MODEL_DIR      = args.model_dir
+LIGANDS_DIR    = Path(args.ligands)
+OUTPUT_DIR     = Path(args.output)
+OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 print("GNN pIC50 Prediction — Optimised Chemprop Ensemble")
 print("=" * 55)
