@@ -1,0 +1,16 @@
+# Aurora B kinase docking grid — 4TND
+# Resolution: 1.8 A, ANP (ATP analogue) co-crystallised
+# Grid centre: ANP ligand centre of mass
+# Used for: Mps1 selectivity counter-screen
+
+center_x = 28.42
+center_y = -38.19
+center_z = 26.10
+
+size_x = 22
+size_y = 22
+size_z = 22
+
+exhaustiveness = 16
+num_modes      = 9
+energy_range   = 3

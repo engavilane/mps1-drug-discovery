@@ -40,7 +40,7 @@ RESULTS_DIR.mkdir(parents=True, exist_ok=True)
 CENTER   = [-34.48, -15.66, -10.38]
 BOX_SIZE = [20, 33, 21]
 
-SELECTED_RECEPTORS = ['5AP7', '5AP6', '3CEK']
+SELECTED_RECEPTORS = ['5AP7']
 
 receptors = [
     r for r in sorted(RECEPTOR_DIR.glob('*.pdbqt'))
@@ -87,7 +87,6 @@ for lig_idx, lig_path in enumerate(ligands):
             '--size_z',         str(BOX_SIZE[2]),
             '--exhaustiveness', str(args.exhaustiveness),
             '--num_modes',      '5',
-            '--quiet',
         ]
 
         try:
@@ -100,15 +99,13 @@ for lig_idx, lig_path in enumerate(ligands):
 
             score = None
             for line in r.stdout.split('\n'):
-                line = line.strip()
-                if line.startswith('1 '):
-                    parts = line.split()
-                    if len(parts) >= 2:
-                        try:
-                            score = float(parts[1])
-                            break
-                        except:
-                            pass
+                parts = line.split()
+                if len(parts) >= 2 and parts[0] == '1':
+                    try:
+                        score = float(parts[1])
+                        break
+                    except:
+                        pass
 
             rec_scores[rec_name] = score
 
