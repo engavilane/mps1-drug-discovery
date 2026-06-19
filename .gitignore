@@ -14,3 +14,4 @@ docking/results/*.log
 # Large model checkpoint files
 *.ckpt
 kinase_domain/analysis/gnn_model/*/checkpoints/
+kinase_domain/analysis/gnn_model/multitask/*/checkpoints/
