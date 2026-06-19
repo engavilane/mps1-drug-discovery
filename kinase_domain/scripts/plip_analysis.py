@@ -85,7 +85,8 @@ def create_complex_pdb(receptor_pdb, ligand_lines, out_path):
         with open(receptor_pdb) as rec:
             for line in rec:
                 if line.startswith(("ATOM", "HETATM")):
-                    out.write(line)
+                    pdb_line = f"{line[:66].rstrip():<66}\n"
+                    out.write(pdb_line)
         for line in ligand_lines:
             out.write(line)
         out.write("END\n")
@@ -162,9 +163,11 @@ failed  = []
 # Main loop 
 for idx, row in scores_df.iterrows():
     ligand_name = row["ligand"]
-    score       = row["affinity_kcal"]
+    score = row.get("affinity_kcal", row.get("final_score", row.get("best_score", 0)))
 
     pdbqt_path = RESULTS_DIR / f"{ligand_name}_out.pdbqt"
+    if not pdbqt_path.exists():
+        pdbqt_path = RESULTS_DIR / f"{ligand_name}_5AP7_out.pdbqt"
     if not pdbqt_path.exists():
         pdbqt_path = RESULTS_DIR / f"{ligand_name}.pdbqt"
     if not pdbqt_path.exists():

@@ -184,9 +184,9 @@ print("-" * 55)
 
 for _, r in valid_df.nlargest(10, 'pIC50_gnn').iterrows():
     name = r['ligand'].replace('phase2_', '')[:30]
-    diff = r['pIC50_gnn'] - r['pIC50_pred']
+    diff = r['pIC50_gnn'] - r.get('pIC50_pred', r['pIC50_gnn'])
     print(f"  {name:<30} "
-          f"{r['pIC50_pred']:>7.3f} "
+          f"{r.get('pIC50_pred', 0):>7.3f} "
           f"{r['pIC50_gnn']:>7.3f} "
           f"{diff:>+6.3f}")
 

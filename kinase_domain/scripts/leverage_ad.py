@@ -26,7 +26,7 @@ warnings.filterwarnings('ignore')
 
 CHEMBL_CSV     = "kinase_domain/analysis/ic50/expanded_mps1_activity.csv"
 CANDIDATES_CSV = "kinase_domain/analysis/phase2/phase2_final_candidates.csv"
-PHASE2B_CSV    = "kinase_domain/analysis/phase2b/phase2b_candidates.csv"
+PHASE2B_CSV    = "kinase_domain/analysis/phase2b/admet_candidates_clean.csv"
 OUTPUT_DIR     = Path("kinase_domain/analysis/ml_model/chembl")
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
