@@ -1,6 +1,6 @@
-ligand,score_5NTT,score_WT,score_diff,resistant
-phase2b_seed_4_44199470,-6.3,-8.3,2.000000000000001,True
-phase2b_seed_4_66555847,-6.8,-8.9,2.1000000000000005,True
-phase2b_seed_4_90072314,-6.2,-8.6,2.3999999999999995,True
-phase2b_seed_4_86713879,-6.2,-8.7,2.499999999999999,True
-phase2b_seed_4_44217530,-6.1,-8.7,2.5999999999999996,True
+ligand,score_WT,score_C604Y,delta,resistant
+phase2b_seed_4_44199470,-8.3,-5.604,2.696,True
+phase2b_seed_4_66555847,-8.9,-6.337,2.563,True
+phase2b_seed_4_90072314,-8.6,-5.962,2.638,True
+phase2b_seed_4_86713879,-8.7,-6.078,2.622,True
+phase2b_seed_4_44217530,-8.7,-6.131,2.569,True
