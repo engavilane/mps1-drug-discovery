@@ -406,6 +406,10 @@ Multi-objective Optimisation
 
 ---
 
+## Licence
+This project is licensed under the MIT Licence — see [LICENSE](LICENSE) for details.
+
+
 ## AI Disclosure
 
 This project used Claude (Anthropic) as an assistance tool for code development and results analysis. The author has reviewed, edited, and assumes full responsibility for all content.
