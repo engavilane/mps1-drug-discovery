@@ -1,728 +1,411 @@
-# In Silico Drug Discovery Targeting Mps1/TTK Kinase 
-## ATP-Competitive and NTD-Targeting Inhibitor Discovery Pipeline
+# Mps1/TTK In Silico Drug Discovery Pipeline
 
-> Structure-based virtual screening combining ensemble docking, 
-> graph neural network QSAR, and NTD allosteric targeting for 
-> Mps1/TTK kinase inhibitor discovery — MSc Bioinformatics 
-> internship, Oxford Brookes University, 2026.
+> Ensemble docking, graph neural network QSAR, and first computational allosteric targeting of the Mps1 NTD TPR domain — MSc Bioinformatics internship, Oxford Brookes University, 2026.
 
----
-
-## About Me
-
-I am a 1st year Master's student in Bioinformatics currently completing an internship in computational drug discovery. This project represents my first full end-to-end in silico drug discovery pipeline, combining structural bioinformatics, cheminformatics, and machine learning.
+**Author:** Enya Gavilan Esquitino  
+**Supervisor:** Prof. Victor M. Bolanos-Garcia  
+**Institution:** Oxford Brookes University  
 
 ---
 
 ## Biological Context
 
-The protein kinase **Mps1** (monopolar spindle 1), also known as **TTK**, is the most upstream regulator of the **Spindle Assembly Checkpoint (SAC)** — the evolutionarily conserved surveillance mechanism that ensures accurate chromosome segregation during cell division. Mps1 is overexpressed in a wide range of aggressive tumour types including breast, bladder, thyroid, pancreatic, and brain cancers, making it a promising drug target for cancer therapy.
+**Mps1/TTK** (Monopolar Spindle 1 / Threonine Tyrosine Kinase) is the master regulator of the Spindle Assembly Checkpoint (SAC), overexpressed in triple-negative breast cancer, glioblastoma, pancreatic ductal adenocarcinoma, and colorectal cancer. This pipeline targets two complementary sites:
 
-Several Mps1 inhibitors have reached clinical trials, including **BAY-1217389**, **BAY-1161909**, **BOS-172722**, and **CFI-402257**, though none have yet received clinical approval. All known small-molecule inhibitors are ATP-competitive and bind the kinase hinge region, establishing key hydrogen bond interactions with residues **Gly605** and **Glu603**.
-
-This project uses the crystal structure of Mps1 in complex with reversine (PDB: **5LJJ**, resolution 3.00 Å) as the receptor for molecular docking.
-
----
-
-## Project Overview
-
-This pipeline is structured in three campaigns:
-
-### Campaign 1 — Kinase Domain: Known Inhibitor Analysis (Phase 1)
-1. Download and prepare 45 co-crystallised Mps1 inhibitors (RCSB PDB)
-2. Ensemble receptor preparation (7 diverse conformations, KLIFS-validated)
-3. Molecular docking (AutoDock Vina, exhaustiveness=16)
-4. PLIP interaction analysis (Gly605/Glu603 H-bond detection)
-5. ADME filtering (RDKit, Lipinski Ro5 + TPSA + PAINS + Brenk)
-6. ML Model 1 — Ridge Regression (n=45, interpretable feature importance)
-7. ML Model 2 — SVR (n=2,352 ChEMBL, R²=0.729)
-8. ML Model 3 — Chemprop D-MPNN GNN (n=3,607, R²=0.816)
-
-### Campaign 2 — Kinase Domain: Novel Candidate Discovery (Phase 2A + 2B)
-**Phase 2A** (PDB-seeded, SVR-ranked):
-1. PubChem similarity search (Tanimoto ≥ 0.9, 5 PDB seeds)
-2. Ensemble docking + PLIP + ADME + SVR ranking
-3. 210 candidates identified — applicability domain limitation noted
-
-**Phase 2B** (ChEMBL-seeded, GNN-ranked):
-1. 5 diverse ChEMBL seeds selected (pIC50 > 10, max Tanimoto ≤ 0.4)
-2. PubChem similarity search (Tanimoto ≥ 0.7)
-3. GNINA ensemble docking (7 receptors, GPU-accelerated)
-4. PLIP + full ADMET + GNN predictions with uncertainty
-5. Pareto optimisation (multi-objective ranking)
-
-### Campaign 3 — NTD Domain: Allosteric Targeting (Novel)
-1. 4H7Y TPR domain receptor preparation (1.8 Å, apo)
-2. fpocket binding site detection → Pocket 42 (3.43 Å from Hec1 interface)
-3. AlphaFold2-Multimer validation (TPR pLDDT=96.1, Hec1 disordered)
-4. ZINC fragment library virtual screen (fragment-based drug discovery)
-5. PLIP + ADMET + NTD candidate ranking
+- **Kinase domain** — ATP-binding hinge region (Gly605/Glu603 hydrogen bond pharmacophore)
+- **NTD TPR domain** — Hec1/Ndc80 protein-protein interaction interface (novel allosteric strategy)
 
 ---
 
-## Pipeline Architecture
+## Pipeline Overview
 
-```
-CAMPAIGN 1 — KINASE DOMAIN (Phase 1)
-45 PDB Mps1 inhibitor structures
-        ↓
-Ensemble receptor prep (75 KLIFS structures → 7 diverse PDBQTs)
-        ↓
-AutoDock Vina docking (exhaustiveness=16)
-        ↓
-PLIP interaction analysis (Gly605/Glu603 H-bonds)
-        ↓
-ADME filtering (Lipinski + TPSA + PAINS + Brenk)
-        ↓
-ML Model 1 (Ridge, n=45) → feature importance
-ML Model 2 (SVR, n=2,352) → pIC50 prediction R²=0.729
-ML Model 3 (GNN D-MPNN, n=3,607) → pIC50 + uncertainty R²=0.816
+### Campaign 1 — Kinase Domain: Validation & Baseline (Phase 1)
+1. 45 co-crystallised Mps1 inhibitors retrieved from RCSB/KLIFS
+2. Ensemble receptor preparation (75 KLIFS structures → 7 diverse conformations)
+3. AutoDock Vina docking (exhaustiveness=16)
+4. PLIP interaction analysis (Gly605/Glu603 H-bond detection, geometric criteria)
+5. ADME filtering (Lipinski Ro5, TPSA, PAINS, Brenk, SA score)
+6. ML Model 1 — Ridge Regression (n=45, LOOCV, R²=0.706)
+7. ML Model 2 — SVR (n=2,352 ChEMBL, 10-fold CV, R²=0.729)
+8. ML Model 3 — D-MPNN GNN ensemble (n=3,607, R²=0.816, σ=0.186)
 
-CAMPAIGN 2A — NOVEL CANDIDATES (PDB seeds)
-5 PDB seeds → PubChem (Tanimoto ≥ 0.9) → 235 candidates
-        ↓
-Vina docking → PLIP → ADME → SVR ranking
-        ↓
-210 candidates (applicability domain limitation noted)
+### Campaign 2 — Kinase Domain: Novel Candidate Discovery (Phase 2B)
+1. 5 diverse ChEMBL seeds (pIC50 ≥ 10.4, max pairwise Tanimoto ≤ 0.4)
+2. PubChem similarity search (Tanimoto ≥ 0.7) → 395 candidates
+3. Smina ensemble docking (3 receptors) + GNINA CNN rescoring (top 50)
+4. PLIP hinge interaction analysis → 233/354 hinge binders
+5. Full ADMET filtering (SwissADME) → 163/233 pass
+6. D-MPNN GNN pIC50 prediction + uncertainty quantification
+7. Multi-task GNN (Mps1 + Aurora B + hERG) → selectivity and safety
+8. Aurora B counter-screen (docking into 4TND)
+9. Multi-objective Pareto optimisation (5 objectives) → 25 front-1 candidates
+10. Resistance mutation docking (C604Y mutant, 5NTT)
 
-CAMPAIGN 2B — NOVEL CANDIDATES (ChEMBL seeds)
-5 ChEMBL seeds (pIC50>10) → PubChem (Tanimoto ≥ 0.7) → 395 candidates
-        ↓
-GNINA ensemble docking (7 receptors, GPU)
-        ↓
-PLIP → full ADMET → GNN predictions + uncertainty
-        ↓
-Pareto optimisation → final candidates
-
-CAMPAIGN 3 — NTD ALLOSTERIC TARGETING
-4H7Y (TPR domain, 1.8 Å)
-        ↓
-fpocket → Pocket 42 (3.43 Å from Hec1 interface)
-        ↓
-AlphaFold2-Multimer (complex validation)
-        ↓
-ZINC fragment library docking (GNINA)
-        ↓
-PLIP → ADMET → NTD candidates
-```
+### Campaign 3 — NTD Domain: First Allosteric Campaign
+1. 4H7Y TPR domain (1.8 Å, apo) receptor preparation
+2. fpocket binding site detection → Hec1 interface (Pocket 42)
+3. AlphaFold2-Multimer complex prediction (TPR pLDDT=96.1)
+4. 988 ZINC fragments screened (MW ≤ 320 Da, LogP ≤ 3.5)
+5. GNINA docking (exhaustiveness=16) → 964 scored
+6. PLIP interface analysis (residues 104,107,108,111,140,141,144,145,173,174,177,178)
+7. Top 10 interface binders identified (Lys107/Arg108 contacts)
 
 ---
 
 ## Key Results
 
-### Phase 1 — Docking & Interaction Analysis
-
-Top 5 predicted binders by AutoDock Vina score:
-
-| Ligand | PDB ID | Affinity (kcal/mol) | Gly605 H-bonds | Glu603 H-bonds | ADME |
-|--------|--------|---------------------|----------------|----------------|------|
-| 7CHN_LIG | 7CHN | -10.324 | 2 | 0 | ✓ |
-| 7CHM_LIG | 7CHM | -10.288 | 4 | 1 | ✓ |
-| 7CJA_LIG | 7CJA | -10.281 | 4 | 1 | ✓ |
-| 7CHT_LIG | 7CHT | -9.970  | 2 | 1 | ✓ |
-| 7CIL_LIG | 7CIL | -9.482  | — | — | ✓ |
-
-Reversine (5LJJ_AD5) scored **-9.645 kcal/mol**, consistent with 
-published Glide XP scores (-10.97 kcal/mol, Pugh et al. 2022), 
-validating the docking setup. Clinically advanced compounds 
-BAY-1217389 and BAY-1161909 scored -9.91 and -9.644 kcal/mol 
-respectively, in line with their known potency. 39/45 inhibitors
-confirmed genuine hinge binding by PLIP H-bond analysis 
-(Gly605/Glu603, distance + angle criteria). Notably,
-BAY-1161909 (5N9S_LIG, Gly605 : 1 H-bond) was correctly
-reclassified as a hinge binder, previously missed by 
-distance-only analysis. 28/45 passed both ADME filtering and 
-hinge binding criteria. 
-
-> Note: AutoDock Vina scores systematically overestimate binding 
-> affinities relative to experimental values. Results are interpreted 
-> in terms of relative ranking rather than absolute affinity prediction, 
-> consistent with established practice in the field 
-> (Pugh et al., 2022; Bolanos-Garcia, 2025).
-
-**Docking Validation (three-tier hierarchy):**
-
-| Test | Result | Status |
-|------|--------|--------|
-| Self-docking RMSD (5LJJ) | 0.666 Å | ✓ Exceptional |
-| Cross-docking 5N7V (purine scaffold) | 1.332 Å | ✓ Pass |
-| Cross-docking 4JS8 (indazole scaffold) | 1.590 Å | ✓ Pass |
-| Cross-docking 5NAD (methylbenzamide) | 2.786 Å | ⚠ Borderline |
-| Cross-docking 7LQD (covalent RMS-07) | 3.193 Å | ✗ Expected |
-| Homologous docking Spearman ρ | 0.833 (p=0.005) | ✓ Validated |
-| Mean score difference | 0.094 ± 0.524 kcal/mol | ✓ No bias |
-
-All cross-docking structures aligned using DSSP rigid
-secondary structure core (helices + sheets, excluding
-activation loop 672-690 and hinge loop 603-605).
-7LQD failure attributed to irreversible Cys604 covalent
-bond — expected and scientifically appropriate.
-
----
-
-### Machine Learning Models
-
-**Model 1 — Interpretable ML model to identify physicochemical drivers of Mps1 hinge binding (Ridge Regression, n=45, LOOCV)**
-
-| Model | Features | R² | RMSE | MAE |
-|---|---|---|---|---|
-| **Ridge Regression** | PhysChem only | **0.706** | 0.467 | 0.370 |
-| Random Forest | PhysChem only | 0.471 | 0.626 | 0.462 |
-| SVR | PhysChem only | 0.409 | 0.662 | 0.467 |
-
-Ridge coefficients reveal key molecular drivers of hinge binding:
-aromatic rings (π-stacking), TPSA (polar hinge contacts),
-Gly605/Glu603 contacts (direct anchoring), and low HBA
-(reduced desolvation penalty). Model used for mechanistic
-interpretation, not affinity prediction.
-
-**Model 2 — Experimental pIC50 prediction (n=2,352, ChEMBL, 80/20 split)**
-| Model | Features | R² | RMSE | MAE |
-|---|---|---|---|---|
-| **SVR** | PhysChem + Fingerprints | **0.729** | 0.623 | 0.445 |
-| Random Forest | PhysChem + Fingerprints | 0.701 | 0.653 | 0.492 |
-| Ridge Regression | PhysChem + Fingerprints | 0.601 | 0.755 | 0.596 |
-
-**10-fold cross validation (SVR, best model):**
-| Metric | Mean | Std | 95% CI |
-|---|---|---|---|
-| R² | 0.702 | 0.049 | [0.605, 0.799] |
-| RMSE | 0.640 | 0.043 | [0.555, 0.725] |
-| MAE | 0.453 | 0.028 | [0.399, 0.507] |
-
-Single split R²=0.729 vs CV R²=0.702 (ΔR²=0.027) — no overfitting confirmed.
-
-**Y-randomisation validation (OECD Principle 4):**
-- Real model R²: 0.729
-- Randomised models (n=100): R² = −0.389 ± 0.070
-- Z-score: 15.88 | p < 0.01
-- ✓ Genuine SAR confirmed — no chance correlation
-
-Trained on 2,352 Mps1/TTK inhibitors from ChEMBL with experimental 
-IC50 values. Hyperparameter tuning (GridSearchCV, 120 fits) confirmed 
-near-optimal default parameters.
-> The transition from Ridge Regression (n=45) to SVR (n=2,352) 
-> directly illustrates the bias-variance tradeoff: complex models 
-> require sufficient data to outperform simple linear baselines. 
-> Morgan fingerprints were detrimental with n=45 but essential 
-> with n=2,352, further illustrating this principle.
-
-**Model 3 — Chemprop D-MPNN GNN (n=3,607, optimised)**
-- Architecture: depth=6, hidden_dim=600, FFN_dim=1700
-- Ensemble of 5 models → uncertainty quantification
-- Test set: R²=0.816, RMSE=0.594, MAE=0.432
-- Mean uncertainty: σ=0.186 pIC50 units
-- Outperforms SVR on all metrics after hyperparameter optimisation
-
-> Model 2 (SVR) predictions for Phase 2A candidates revealed an 
-> applicability domain limitation — Phase 2A compounds have mean 
-> Tanimoto similarity of 0.287 to the ChEMBL training set. 
-> Model 3 (GNN) was used for Phase 2B candidate ranking, 
-> providing more reliable predictions within the training 
-> distribution.
-
-### Phase 2A — PDB-Seeded Novel Candidate Discovery
-
-**235 novel candidates** retrieved from PubChem
-(Tanimoto ≥ 0.9, 5 seed compounds).
-
-| Stage | Count | Rate |
-|-------|-------|------|
-| Retrieved from PubChem | 235 | — |
-| Successfully prepared | 232 | 99% |
-| PLIP hinge binders | 216 | 93% |
-| Pass ADME + hinge | 210 | 91% |
-
-| Rank | CID | Seed | Affinity (kcal/mol) | Gly605 | Glu603 | IC50 pred |
-|------|-----|------|---------------------|--------|--------|-----------|
-| 1 | 155119000 | 7CHN | -10.860 | 5 | 1 | — |
-| 2 | 155118997 | 7CHN | -10.735 | 1 | 1 | — |
-| 3 | 155118910 | 7CHN | -10.439 | 3 | 0 | — |
-| 4 | 155109147 | 7CHN | -10.341 | 3 | 1 | — |
-| 5 | 155109167 | 7CHN | -10.333 | 4 | 1 | — |
-
-**Top candidate by combined score: phase2_7CHM_LIG_146393701**
-- Rank 1 under equal weighting (0.5/0.5) and Vina-heavy (0.7/0.3)
-- Identified only by PLIP analysis — missed by distance-based
-  interaction analysis, demonstrating the value of proper H-bond
-  detection
-
-**Priority candidate for experimental validation: CID 142416385**
-- Rank 1 by predicted pIC50 and strongest overall profile
-- Recommended over combined-score rank 1 (7CHM_LIG_146393701)
-  due to substantially stronger docking score (−8.724 vs
-  −7.025 kcal/mol) and predicted IC50 (14.74 vs 80.22 nM)
-- IUPAC: 4-[(1-methylcyclopropyl)amino]-2-[(5-methyl-1-
-  propan-2-ylpyrazol-4-yl)amino]-7H-pyrrolo[2,3-d]
-  pyrimidine-5-carbonitrile
-- Formula: C₁₈H₂₂N₈ | MW: 350.4 Da
-- Vina: −8.724 kcal/mol (confirmed exhaustiveness=16)
-- Predicted pIC50: 7.831 → **IC50 = 14.74 nM**
-- PLIP H-bonds: 6 (Gly605 + Glu603) ✓
-- ADME: all filters passed ✓
-- Scaffold: 7H-pyrrolo[2,3-d]pyrimidine
-- Consistent across all weighting schemes (ranks 2-18) —
-  robust to combined score weighting choice
-
-**Combined score sensitivity analysis:**
-| Weighting | Vina-heavy (0.7/0.3) | Equal (0.5/0.5) | pIC50-heavy (0.3/0.7) |
-|---|---|---|---|
-| Spearman ρ vs equal | 0.889 | — | 0.933 |
-
-Equal weighting validated — top candidates robust across all schemes.
-
-> Re-docking of top 5 candidates at exhaustiveness=16 yielded
-> scores within 0.08 kcal/mol of screening values, confirming
-> pose convergence and validating the exhaustiveness=8 screening
-> protocol.
-
-### Phase 2B — ChEMBL-Seeded Novel Candidates *(in progress)*
-
-5 diverse seeds selected from ChEMBL (pIC50 10.4–11.4, 
-max pairwise Tanimoto ≤ 0.4):
-
-| Stage | Count | Rate |
-|-------|-------|------|
-| Retrieved from PubChem (Tanimoto ≥ 0.7) | 395 | — |
-| Successfully prepared | 385 | 97% |
-| GNINA ensemble docking (7 receptors) | TBD | — |
-| PLIP + ADMET + GNN ranking | TBD | — |
-
-Seeds: experimentally validated sub-nanomolar Mps1 inhibitors
-from ChEMBL (IC50 0.004–0.040 nM), selected to ensure
-Phase 2B candidates fall within the GNN applicability domain.
-
-### Campaign 3 — NTD Allosteric Targeting *(in progress)*
-
-**Target:** Mps1 TPR domain (4H7Y, 1.8 Å) — Hec1/Ndc80 interface
-
-- Binding site: Pocket 42 (fpocket), 3.43 Å from Hec1 interface
-- Grid: centre=[45.64, 27.59, 88.97], box=30×30×30 Å
-- AlphaFold2-Multimer: TPR pLDDT=96.1 (high confidence),
-  Hec1 tail pLDDT=33.3 (intrinsically disordered — expected)
-- Library: ZINC fragment-like subset (MW≤300, LogP≤3)
-- Rationale: block Mps1 kinetochore localisation without
-  competing with intracellular ATP pool
+| Metric | Value |
+|--------|-------|
+| Self-docking RMSD (5LJJ) | 0.666 Å |
+| Cross-docking mean RMSD | 1.903 ± 0.633 Å |
+| Homologous docking ρ | 0.833 (p=0.005) |
+| PLIP Phase 1 hinge binders | 39/45 (86.7%) |
+| PLIP Phase 2B hinge binders | 233/354 (65.8%) |
+| Ridge Regression R² | 0.706 (LOOCV) |
+| SVR R² | 0.729 (10-fold CV) |
+| GNN R² | 0.816 (held-out test) |
+| Y-randomisation Z-score | 15.88 (p < 0.01) |
+| Phase 2B ADMET pass rate | 163/233 (70.0%) |
+| Pareto front 1 candidates | 25 |
+| **Top candidate pIC50** | **9.228 (IC50 = 0.59 nM)** |
+| **Top candidate SI vs Aurora B** | **1353** |
+| NTD top fragment score | -8.943 kcal/mol (zinc_div_0277) |
+| NTD interface binders | 10/20 (Lys107 or Arg108) |
+| C604Y resistance Δ | +2.56 to +2.70 kcal/mol (all susceptible) |
 
 ---
 
 ## Repository Structure
 
 ```
-docking-5LJJ/
-├── README.md                                # Project description and results
-├── environment.yml                          # Conda reproducible environment
+mps1-drug-discovery/
 │
-├── data/
-│   ├── raw/
-│   │   ├── 5LJJ.pdb                        # Original unmodified PDB from RCSB
-│   │   ├── 5N7V.pdb                        # Cross-docking validation structure
-│   │   ├── 4JS8.pdb                        # Cross-docking validation structure
-│   │   ├── 5NAD.pdb                        # Cross-docking validation structure
-│   │   └── 7LQD.pdb                        # Cross-docking validation structure
-│   ├── receptor/
-│   │   ├── receptor_clean.pdb              # Waters/ligands/artefacts removed
-│   │   ├── receptor.pdbqt                  # Vina-ready receptor (Meeko)
-│   │   ├── reversine_crystal_coords.npy    # Crystal coordinates for RMSD validation
-│   │   ├── 5N7V_aligned_dssp.pdb           # 5N7V aligned to 5LJJ (DSSP rigid core)
-│   │   ├── 4JS8_aligned.pdb                # 4JS8 aligned to 5LJJ
-│   │   ├── 5NAD_aligned.pdb                # 5NAD aligned to 5LJJ
-│   │   ├── 7LQD_aligned_trimmed.pdb        # 7LQD aligned to 5LJJ (trimmed)
-│   │   └── *_homo_aligned.pdb              # Top 10 receptors for homologous docking
-│   ├── ligands/
-│   │   ├── compounds.csv                   # PDB ID input list
-│   │   ├── download_log.csv                # Download status per ligand
-│   │   ├── preparation_log.txt             # Meeko preparation log
-│   │   ├── native_ligand.pdb               # Reversine (AD5) — reference ligand
-│   │   ├── raw/                            # 45 SDF files (PubChem/RCSB)
-│   │   └── pdbqt/                          # 45 prepared PDBQT files (Meeko)
-│   └── phase2/
-│       ├── raw/                            # 235 novel candidate SDF files
-│       ├── pdbqt/                          # 232 prepared PDBQT files
-│       └── preparation_log.txt             # Meeko preparation log (Phase 2)
+├── kinase_domain/
+│   ├── data/
+│   │   ├── raw/                        # PDB structures (5LJJ, 5NTT, etc.)
+│   │   ├── receptor/
+│   │   │   └── ensemble/               # 7 KLIFS-validated receptor PDBQTs
+│   │   ├── ligands/
+│   │   │   ├── raw/                    # 45 Phase 1 SDF files
+│   │   │   └── pdbqt/                  # 45 Phase 1 PDBQT files
+│   │   ├── phase2/                     # Phase 2A candidates (PDB-seeded)
+│   │   ├── phase2b/                    # Phase 2B candidates (ChEMBL-seeded)
+│   │   │   ├── raw/                    # 395 SDF files
+│   │   │   └── pdbqt/                  # 385 PDBQT files
+│   │   ├── libraries/                  # Chemical libraries
+│   │   └── bindingdb_ttk.tsv           # BindingDB TTK activity data
+│   │
+│   ├── docking/
+│   │   ├── results/                    # Phase 1 docked poses + scores
+│   │   ├── phase2_results/             # Phase 2A docked poses + scores
+│   │   ├── phase2b_results/            # Phase 2B docked poses + scores
+│   │   ├── selectivity_results/        # Aurora B counter-screen (4TND)
+│   │   └── resistance_results/         # C604Y mutant docking (5NTT)
+│   │
+│   ├── analysis/
+│   │   ├── validation/                 # RMSD, cross-docking, homologous
+│   │   ├── interactions/               # Legacy distance-based (deprecated)
+│   │   ├── interactions_plip/
+│   │   │   ├── phase1/                 # PLIP results (39/45 hinge binders)
+│   │   │   └── phase2/                 # PLIP results (Phase 2A)
+│   │   ├── adme/                       # Phase 1 ADME results
+│   │   ├── adme_plip/                  # ADME + PLIP combined (Phase 1+2A)
+│   │   ├── admet/                      # Full ADMET results
+│   │   ├── ic50/                       # ChEMBL + BindingDB training data
+│   │   ├── ml_model/
+│   │   │   ├── best_model.pkl          # Ridge Regression (Model 1)
+│   │   │   ├── ridge_coefficients.csv
+│   │   │   └── chembl/                 # SVR + validation (Model 2)
+│   │   ├── gnn_model/
+│   │   │   ├── optimised/              # D-MPNN GNN ensemble (5 models)
+│   │   │   └── multitask/              # Multi-task GNN (Mps1+AuroraB+hERG)
+│   │   ├── phase2/                     # Phase 2A results
+│   │   ├── phase2b/
+│   │   │   ├── plip/                   # PLIP hinge binders (233/354)
+│   │   │   ├── admet_candidates_clean.csv  # 163 ADMET-passing candidates
+│   │   │   ├── phase2b_multitask_predictions.csv
+│   │   │   └── swissadme_top5.csv
+│   │   ├── pareto/                     # Pareto optimisation results
+│   │   ├── selectivity/                # Selectivity analysis
+│   │   ├── resistance/                 # Resistance mutation analysis
+│   │   ├── consensus_docking/          # Consensus docking results
+│   │   └── md_simulations/             # MD analysis results
+│   │
+│   ├── notebooks/
+│   │   ├── Mps1_ChemProp_Training.ipynb   # D-MPNN hyperparameter optimisation
+│   │   ├── GNINA_top50.ipynb              # Phase 2B GNINA CNN rescoring
+│   │   └── Multi_task_GNN.ipynb           # Multi-task GNN training
+│   │
+│   └── scripts/
+│       ├── download_ligands.py
+│       ├── cleanup_ligands.py
+│       ├── prepare_ligands.py
+│       ├── ensemble_receptor_prep.py
+│       ├── run_docking.py
+│       ├── run_ensemble_docking.py
+│       ├── run_smina_ensemble.py
+│       ├── plip_analysis.py
+│       ├── filter_hinge_binders.py
+│       ├── admet_filter.py
+│       ├── ml_model.py
+│       ├── ml_chembl.py
+│       ├── expand_training_data.py
+│       ├── gnn_predict.py
+│       ├── multitask_predict.py
+│       ├── get_multitask_data.py
+│       ├── prepare_multitask_data.py
+│       ├── y_randomisation.py
+│       ├── leverage_ad.py
+│       ├── applicability_domain.py
+│       ├── synthetic_accessibility.py
+│       ├── phase2_similarity_search.py
+│       ├── phase2b_seed_selection.py
+│       ├── phase2_predict.py
+│       ├── merge_docking_scores.py
+│       ├── pareto_optimisation.py
+│       ├── selectivity_screen.py
+│       ├── rmsd_validation.py
+│       ├── crossdock_5N7V.py
+│       ├── crossdock_validation.py
+│       ├── homologous_docking.py
+│       ├── prepare_crossdock_receptor.py
+│       ├── get_ic50.py
+│       └── run_phase2b_pipeline.sh
 │
-├── docking/
-│   ├── results/
-│   │   ├── phase1_docking_scores.csv       # Vina scores for all 45 ligands
-│   │   ├── *_out.pdbqt                     # Docked poses (one per ligand)
-│   │   ├── 5LJJ_AD5_redock_out.pdbqt       # Reversine re-docked (RMSD validation)
-│   │   └── reversine_crossdock_*_out.pdbqt # Cross-docking poses
-│   └── phase2_results/
-│       ├── docking_scores.csv              # Vina scores for 232 candidates
-│       ├── *_out.pdbqt                     # Docked poses (one per candidate)
-│       └── *_refined_out.pdbqt             # Top 5 re-docked at exhaustiveness=16
+├── ntd_domain/
+│   ├── data/
+│   │   ├── raw/                        # 4H7Y PDB + fixed structure
+│   │   ├── receptor/                   # 4H7Y PDBQT receptor
+│   │   └── libraries/
+│   │       ├── zinc_1000_diverse.smi   # 988 ZINC fragment library
+│   │       └── pdbqt/                  # Prepared fragment PDBQTs
+│   ├── docking/
+│   │   ├── results/                    # All GNINA docking results
+│   │   └── top20_results/              # Top 20 docked poses
+│   ├── analysis/
+│   │   ├── ntd_docking_scores.csv      # All 964 fragment scores
+│   │   ├── ntd_top_candidates.csv      # Top 10 fragments
+│   │   ├── alphafold_model.png         # AlphaFold2-Multimer figure
+│   │   ├── admet/                      # NTD fragment ADMET results
+│   │   ├── binding_site/               # fpocket binding site analysis
+│   │   ├── fragments/                  # Fragment analysis
+│   │   ├── leads/                      # Lead fragment results
+│   │   └── plip_top20/
+│   │       └── ntd_plip_interactions.csv
+│   └── scripts/
+│       ├── ntd_receptor_prep.py
+│       ├── prepare_zinc_library.py
+│       ├── ntd_docking.py
+│       └── ntd_plip_analysis.py
 │
-├── analysis/
-│   ├── interactions/
-│   │   ├── interaction_analysis.csv        # DEPRECATED — distance-based contacts
-│   │   └── figures/
-│   │       ├── 5LJJ-AD5.png               # Reversine in binding site
-│   │       ├── 5LJJ-AD5_zoom.png          # Reversine — zoom on hinge contacts
-│   │       ├── 5LJJ-7CHN.png              # Best Phase 1 binder (7CHN)
-│   │       ├── 5LJJ-7CHN_zoom.png         # 7CHN — zoom on hinge contacts
-│   │       ├── 5LJJ-5N9S.png              # BAY-1161909 binding mode
-│   │       ├── 5LJJ-5N9S_zoom.png         # BAY-1161909 — zoom on hinge
-│   │       ├── 5LJJ_reversine_pocket.png  # Reversine with pocket surface
-│   │       ├── comparison_reversine_candidate.png  # Reversine vs CID 142416385
-│   │       ├── phase2_top_candidate.png   # CID 142416385 in binding site
-│   │       ├── phase2_top_candidate_pocket.png     # CID 142416385 with pocket
-│   │       └── Figure_prep_PyMOL.ipynb    # PyMOL figure preparation notebook
-│   ├── interactions_plip/
-│   │   ├── phase1/
-│   │   │   └── plip_interactions.csv      # PLIP H-bond analysis — 39/45 binders
-│   │   └── phase2/
-│   │       └── plip_interactions.csv      # PLIP H-bond analysis — 216/232 binders
-│   ├── adme/
-│   │   ├── adme_full.csv                   # All 45 ligands + descriptors + flags
-│   │   └── adme_candidates.csv             # 26 candidates (distance-based, deprecated)
-│   ├── adme_plip/
-│   │   ├── phase1/
-│   │   │   ├── adme_full.csv               # All 45 ligands + descriptors + flags
-│   │   │   └── adme_candidates.csv         # 28 candidates passing ADME + hinge
-│   │   └── phase2/
-│   │       ├── adme_full.csv               # All 232 candidates + descriptors
-│   │       └── adme_candidates.csv         # 210 candidates passing ADME + hinge
-│   ├── ic50/
-│   │   ├── chembl_mps1_ic50.csv            # 2,352 Mps1 IC50 values from ChEMBL
-│   │   └── ic50_matches.csv                # Matches between our 45 and ChEMBL
-│   ├── ml_model/
-│   │   ├── best_model.pkl                  # Model 1 — Ridge Regression (Vina)
-│   │   ├── scaler.pkl                      # Scaler for Model 1
-│   │   ├── variance_selector.pkl           # Variance filter for Model 1
-│   │   ├── predictions.csv                 # Model 1 predicted vs actual
-│   │   ├── ridge_coefficients.csv          # Ridge feature coefficients
-│   │   └── chembl/
-│   │       ├── chembl_best_model.pkl       # Model 2 — SVR (ChEMBL pIC50)
-│   │       ├── chembl_scaler.pkl           # Scaler for Model 2
-│   │       ├── chembl_variance_selector.pkl
-│   │       ├── chembl_predictions.csv      # Model 2 predicted vs actual
-│   │       ├── chembl_model_comparison.csv
-│   │       └── chembl_svr_tuned.pkl        # Hyperparameter-tuned SVR
-│   ├── validation/
-│   │   ├── rmsd_validation.csv             # Self-docking RMSD (0.666 Å)
-│   │   ├── crossdocking_validation.csv     # Cross-docking across 4 conformations
-│   │   ├── homologous_docking.csv          # Top 9 in native receptors (ρ=0.833)
-│   │   └── top5_refined_scores.csv         # Top 5 Phase 2 re-docked (e=16)
-│   └── phase2/
-│       ├── phase2_candidates.csv           # 235 candidates from similarity search
-│       ├── phase2_final_candidates.csv     # 210 ranked by combined score (PLIP)
-│       ├── interactions/
-│       │   └── interaction_analysis.csv    # DEPRECATED — distance-based contacts
-│       └── adme/
-│           ├── adme_full.csv               # All 232 candidates + descriptors
-│           └── adme_candidates.csv         # 193 (distance-based, deprecated)
+├── md_simulations/
+│   ├── kinase_domain/
+│   │   ├── systems/                    # 5 holo systems (EM-minimised)
+│   │   ├── topol/                      # GROMACS topologies (GAFF2/AMBER99sb-ildn)
+│   │   ├── mdp/                        # MDP files (EM, NVT, NPT, MD)
+│   │   ├── analysis/                   # MD trajectory analysis
+│   │   └── scripts/                    # MD preparation scripts
+│   └── ntd_domain/
+│       ├── systems/                    # NTD apo system
+│       ├── topol/                      # NTD topology
+│       ├── mdp/                        # NTD MDP files
+│       ├── results/                    # NTD MD results (future work)
+│       └── analysis/                   # NTD trajectory analysis
 │
-├── notebooks/
-│   ├── 01_docking_analysis.ipynb           # Docking results + validation
-│   ├── 02_adme_filter.ipynb                # ADME filtering visualisation
-│   └── 03_ml_model.ipynb                   # ML model analysis and plots
+├── shared/
+│   ├── figures/                        # Shared publication figures
+│   └── models/                         # Shared ML model files
 │
-└── scripts/
-    ├── download_ligands.py                 # PubChem/RCSB automated download
-    ├── cleanup_ligands.py                  # File renaming and deduplication
-    ├── prepare_ligands.py                  # Meeko PDBQT preparation (Phase 1+2)
-    ├── run_docking.py                      # AutoDock Vina batch docking (Phase 1+2)
-    ├── parse_results.py                    # Score extraction and ranking
-    ├── interaction_analysis.py             # DEPRECATED — replaced by plip_analysis.py
-    ├── plip_analysis.py                    # PLIP H-bond detection (Phase 1+2)
-    ├── adme_filter.py                      # RDKit ADME descriptors + PAINS (Phase 1+2)
-    ├── ml_model.py                         # Model 1 — interpretable feature importance
-    ├── get_ic50.py                         # ChEMBL IC50 retrieval
-    ├── ml_chembl.py                        # Model 2 — pIC50 prediction (ChEMBL)
-    ├── phase2_similarity_search.py         # PubChem similarity search (5 seeds)
-    ├── phase2_predict.py                   # pIC50 prediction + combined ranking
-    ├── rmsd_validation.py                  # Self-docking RMSD validation
-    ├── crossdock_5N7V.py                   # Cross-docking 5N7V (DSSP alignment)
-    ├── crossdock_validation.py             # Cross-docking across 4 conformations
-    └── homologous_docking.py               # Top 10 in native receptors (Spearman ρ)
+├── report_figures/
+│   ├── poses/                          # PDB files for PyMOL visualisation
+│   ├── kinase_top3_structures.png      # Chemical structures (top 3 kinase)
+│   ├── ntd_top3_structures.png         # Chemical structures (top 3 NTD)
+│   ├── kinase_docking_pose.png         # PyMOL — kinase binding pose
+│   ├── ntd_docking_pose.png            # PyMOL — NTD binding pose
+│   ├── resistance_WT_pose.png          # PyMOL — WT binding pose
+│   ├── resistance_C604Y_pose.png       # PyMOL — C604Y mutant pose
+│   ├── resistance_superimposed.png     # PyMOL — WT vs C604Y overlay
+│   └── pkcsm_input.smi                 # SMILES for ADMET submission
+│
+├── README.md
+└── environment.yml                     # Conda reproducible environment
 ```
-
----
-
-## Requirements
-
-Create and activate the conda environment:
-
-```bash
-conda env create -f environment.yml
-conda activate docking
-```
-Key dependencies: `vina`, `meeko`, `rdkit`, `pubchempy`, `pandas`, 
-`scikit-learn`, `requests`, `numpy`, `scipy`, `joblib`, 
-`chembl-webresource-client`, `mdanalysis`
 
 ---
 
 ## Reproducing the Pipeline
 
 ### Setup
+
 ```bash
+git clone https://github.com/engavilane/mps1-drug-discovery
+cd mps1-drug-discovery
 conda env create -f environment.yml
 conda activate docking
 ```
 
-### Phase 1
-
-#### 1. Download ligands
-```bash
-python scripts/download_ligands.py
-```
-
-#### 2. Clean and rename ligand files
-```bash
-python scripts/cleanup_ligands.py
-```
-
-#### 3. Prepare receptor
-```bash
-mk_prepare_receptor.py -i data/receptor/receptor_clean.pdb \
-                       -o data/receptor/receptor -p
-```
-
-#### 4. Prepare ligands
-```bash
-python scripts/prepare_ligands.py
-```
-
-#### 5. Run docking
-```bash
-python scripts/run_docking.py
-```
-
-#### 6. PLIP interaction analysis (Gly605/Glu603)
-
-Replaces distance-only contact counting with proper H-bond
-detection (distance + angle criteria, PLIP algorithm).
+### Campaign 1 — Kinase Domain Phase 1
 
 ```bash
-python scripts/plip_analysis.py \
-  --scores    docking/results/phase1_docking_scores.csv \
-  --results   docking/results \
-  --output    analysis/interactions_plip/phase1 \
-  --old_interactions analysis/interactions/interaction_analysis.csv
+python kinase_domain/scripts/download_ligands.py
+python kinase_domain/scripts/cleanup_ligands.py
+python kinase_domain/scripts/prepare_ligands.py
+python kinase_domain/scripts/ensemble_receptor_prep.py
+python kinase_domain/scripts/run_docking.py
+python kinase_domain/scripts/rmsd_validation.py
+python kinase_domain/scripts/crossdock_validation.py
+python kinase_domain/scripts/homologous_docking.py
+python kinase_domain/scripts/plip_analysis.py
+python kinase_domain/scripts/admet_filter.py
+python kinase_domain/scripts/ml_model.py
+python kinase_domain/scripts/ml_chembl.py
+python kinase_domain/scripts/y_randomisation.py
+python kinase_domain/scripts/leverage_ad.py
+# GNN training: run Mps1_ChemProp_Training.ipynb on Google Colab
 ```
 
-> **Note:** `interaction_analysis.py` is retained for
-> reference but deprecated. PLIP identified 39/45 hinge
-> binders vs 42/45 by distance-only, correcting 9
-> misclassifications including BAY-1161909.
+### Campaign 2 — Kinase Domain Phase 2B
 
-
-#### 7. ADME filtering
-```bash
-python scripts/adme_filter.py
-```
-
-#### 8. ML Model 1 — Vina score prediction (n=45)
-```bash
-python scripts/ml_model.py
-```
-
-#### 9. Retrieve ChEMBL IC50 data
-```bash
-python scripts/get_ic50.py
-```
-
-#### 10. ML Model 2 — Experimental pIC50 prediction (n=2,352)
-```bash
-python scripts/ml_chembl.py
-```
-
-### Phase 2 — Novel Candidate Discovery
-
-#### 11. Similarity search
-```bash
-python scripts/phase2_similarity_search.py
-```
-
-#### 12. Prepare Phase 2 ligands
-```bash
-python scripts/prepare_ligands.py \
-  --raw   data/phase2/raw \
-  --pdbqt data/phase2/pdbqt \
-  --log   data/phase2/preparation_log.txt
-```
-
-#### 13. Dock Phase 2 candidates
-```bash
-python scripts/run_docking.py \
-  --ligands        data/phase2/pdbqt \
-  --results        docking/phase2_results \
-  --exhaustiveness 8
-```
-
-#### 14. PLIP interaction analysis (Phase 2)
-
-```bash
-python scripts/plip_analysis.py \
-  --scores    docking/phase2_results/docking_scores.csv \
-  --results   docking/phase2_results \
-  --output    analysis/interactions_plip/phase2 \
-  --old_interactions analysis/phase2/interactions/interaction_analysis.csv
-```
-
-#### 15. ADME filtering
-```bash
-python scripts/adme_filter.py \
-  --ligands      data/phase2/raw \
-  --interactions analysis/phase2/interactions/interaction_analysis.csv \
-  --scores       docking/phase2_results/docking_scores.csv \
-  --output       analysis/phase2/adme
-```
-
-#### 16. Predict pIC50 and rank candidates
-```bash
-python scripts/phase2_predict.py
-```
-
-### Phase 2B — ChEMBL-Seeded Novel Candidates
-
-#### 17. Select ChEMBL seeds
 ```bash
 python kinase_domain/scripts/phase2b_seed_selection.py
-```
-
-#### 18. Phase 2B similarity search
-```bash
-python kinase_domain/scripts/phase2b_similarity_search.py
-```
-
-#### 19. Prepare Phase 2B ligands
-```bash
+python kinase_domain/scripts/phase2_similarity_search.py
 python kinase_domain/scripts/prepare_ligands.py \
-  --raw   kinase_domain/data/phase2b/raw \
-  --pdbqt kinase_domain/data/phase2b/pdbqt
+    --raw kinase_domain/data/phase2b/raw \
+    --pdbqt kinase_domain/data/phase2b/pdbqt
+# GNINA docking: run GNINA_top50.ipynb on Colab GPU
+bash kinase_domain/scripts/run_phase2b_pipeline.sh
+# Multi-task GNN: run Multi_task_GNN.ipynb on Colab
+python kinase_domain/scripts/selectivity_screen.py
 ```
 
-#### 20. GNINA ensemble docking (Colab GPU)
-Run `Mps1_GNINA_Ensemble_Docking.ipynb` on Google Colab Pro
-with T4 GPU. Requires uploading phase2b ligands and ensemble
-receptors. Estimated time: 1-2 hours.
+### Campaign 3 — NTD Domain
 
-#### 21. PLIP + ADMET + GNN + Pareto
-```bash
-python kinase_domain/scripts/plip_analysis.py \
-  --scores  kinase_domain/docking/phase2b_results/docking_scores.csv \
-  --results kinase_domain/docking/phase2b_results \
-  --output  kinase_domain/analysis/phase2b
-
-python kinase_domain/scripts/admet_filter.py \
-  --candidates kinase_domain/analysis/phase2b/plip_candidates.csv
-
-python kinase_domain/scripts/gnn_predict.py
-
-python kinase_domain/scripts/pareto_optimisation.py
-```
-
-### Campaign 3 — NTD Allosteric Targeting
-
-#### 22. NTD receptor preparation
 ```bash
 python ntd_domain/scripts/ntd_receptor_prep.py
+python ntd_domain/scripts/prepare_zinc_library.py
+# NTD docking: run on Colab GPU (see ntd_domain/scripts/ntd_docking.py)
+python ntd_domain/scripts/ntd_plip_analysis.py
 ```
 
-#### 23. NTD docking (ZINC fragments)
-```bash
-python ntd_domain/scripts/ntd_docking.py \
-  --ligands  ntd_domain/data/libraries/pdbqt \
-  --receptor ntd_domain/data/receptor/4H7Y_receptor.pdbqt \
-  --results  ntd_domain/docking/results
-```
+---
 
-> Phase 2 docking uses exhaustiveness=8 for screening efficiency.
-> Top candidates were validated at exhaustiveness=16 (score
-> differences < 0.08 kcal/mol confirming convergence).
+## Top Candidates
 
-> Note: Steps 12–16 reuse the same scripts as Phase 1 via
-> command-line arguments, ensuring methodological consistency
-> across both phases. Phase 2 docking uses exhaustiveness=8
-> (vs 16 in Phase 1) for computational efficiency during
-> screening; top candidates can be re-docked at
-> exhaustiveness=16 for validation.
+### Kinase Domain (Phase 2B)
+
+| Candidate | pIC50 | IC50 (nM) | SI vs Aurora B | hERG risk |
+|-----------|-------|-----------|----------------|-----------|
+| phase2b_seed_4_44199470 ★ | 9.228 | 0.59 | 1353 | moderate |
+| phase2b_seed_4_66555847 | 8.870 | 1.35 | 270 | high |
+| phase2b_seed_4_90072314 | 8.808 | 1.56 | 1117 | moderate |
+| phase2b_seed_4_86713879 | 8.587 | 2.59 | 290 | moderate |
+| phase2b_seed_4_44217530 | 8.431 | 3.71 | 150 | moderate |
+
+★ Best overall — sub-nM potency, SI=1353, moderate safety profile.
+
+### NTD Domain
+
+| Fragment | Score (kcal/mol) | Contact | MW (Da) | LogP |
+|----------|-----------------|---------|---------|------|
+| zinc_div_0277 ★ | -8.943 | Arg108 | 318.3 | -1.24 |
+| zinc_div_0276 | -8.862 | Lys107 | 318.3 | -1.39 |
+| zinc_div_0300 | -8.422 | Lys107 | 318.4 | -1.06 |
+
+★ Unique Arg108 contact — distinct binding mode within TPR groove.
+
+---
+
+## Software
+
+| Tool | Version | Purpose |
+|------|---------|---------|
+| AutoDock Vina | 1.2.5 | Phase 1 docking |
+| Smina | latest | Phase 2B ensemble docking |
+| GNINA | 1.0.3 | CNN rescoring + NTD docking |
+| Meeko | latest | Receptor/ligand preparation |
+| PLIP | 2.x | Protein-ligand interaction analysis |
+| Chemprop | 2.x | D-MPNN GNN (Models 3 + multi-task) |
+| RDKit | 2024.x | Cheminformatics + ADMET filtering |
+| scikit-learn | 1.x | Ridge + SVR models |
+| GROMACS | 2026.0 | MD simulations (future work) |
+| PyTorch | 2.x | GNN training |
+| AlphaFold2-Multimer | v3 | NTD-Hec1 complex prediction |
+| SwissADME | web | Extended ADMET panel |
+| PyMOL | 2.x | Docking pose visualisation |
 
 ---
 
 ## References
 
-### Biological Context
-- Bolanos-Garcia, V.M. (2025). Mps1 kinase functions in mitotic 
-  spindle assembly and error correction. *Trends in Biochemical 
-  Sciences*, 50(5), 438–453.
-- Pugh, L. et al. (2022). Computational Biology Dynamics of Mps1 
-  Kinase Molecular Interactions with Isoflavones Reveals a Chemical 
-  Scaffold with Potential to Develop New Therapeutics for the 
-  Treatment of Cancer. *Int. J. Mol. Sci.*, 23, 14228.
-- Hiruma, Y. et al. (2016). Structural basis of reversine selectivity 
-  in inhibiting Mps1 more potently than Aurora B kinase. *Proteins*, 
-  84, 1761–1766. *(PDB: 5LJJ)*
+Biology & Target
 
-### Molecular Docking
-- Eberhardt, J. et al. (2021). AutoDock Vina 1.2.0: New Docking 
-  Methods, Expanded Force Field, and Python Bindings. *J. Chem. Inf. 
-  Model.*, 61, 3891–3898.
-- Trott, O. & Olson, A.J. (2010). AutoDock Vina: improving the speed 
-  and accuracy of docking. *J. Comput. Chem.*, 31, 455–461.
-- Salentin S. et al. (2015) PLIP: fully automated protein-ligand 
-  interaction profiler. *Nucleic Acids Res.* 43:W443-W447.
-  https://doi.org/10.1093/nar/gkv315
-- McNutt, A.T. et al. (2021). GNINA 1.0: molecular docking 
-  with deep learning. *J Cheminform* 13:43.
-  https://doi.org/10.1186/s13321-021-00522-2
+1. Musacchio A, Salmon ED. The spindle-assembly checkpoint in space and time. Nat Rev Mol Cell Biol. 2007. DOI: 10.1038/nrm2163
+2. Pugh KM et al. In silico identification of potential Mps1 inhibitors from natural isoflavones. Int J Mol Sci. 2022. DOI: 10.3390/ijms232214228
+3. Nijenhuis W et al. A TPR domain–containing N-terminal module of MPS1 is required for its kinetochore localization by Aurora B. J Cell Biol. 2013. DOI: 10.1083/jcb.201210117
+4. Bolanos-Garcia VM. Trends Biochem Sci. 2025. (in press — ask supervisor for DOI)
 
-### Ligand & Receptor Preparation
-- Forli, S. et al. (2016). Computational protein-ligand docking and 
-  virtual drug screening with the AutoDock suite. *Nature Protocols*, 
-  11, 905–919. *(Meeko/AutoDockTools)*
+Docking & Scoring
 
-### Cheminformatics & ADME
-- RDKit: Open-source cheminformatics software. 
-  https://www.rdkit.org
-- Daina, A. et al. (2017). SwissADME: A free web tool to evaluate 
-  pharmacokinetics, drug-likeness and medicinal chemistry friendliness 
-  of small molecules. *Sci. Rep.*, 7, 42717.
-- Baell, J.B. & Holloway, G.A. (2010). New substructure filters for 
-  removal of pan assay interference compounds (PAINS) from screening 
-  libraries. *J. Med. Chem.*, 53, 2719–2740.
-- Lipinski, C.A. et al. (2001). Experimental and computational 
-  approaches to estimate solubility and permeability in drug discovery 
-  and development settings. *Adv. Drug Deliv. Rev.*, 46, 3–26.
-- Ertl P. & Schuffenhauer A. (2009) Estimation of synthetic 
-  accessibility score of drug-like molecules based on molecular 
-  complexity and fragment contributions. *J Cheminform* 1:8.
-  https://doi.org/10.1186/1758-2946-1-8
+5. Trott O, Olson AJ. AutoDock Vina: improving the speed and accuracy of docking. J Comput Chem. 2010. DOI: 10.1002/jcc.21334
+6. McNutt AT et al. GNINA 1.0: molecular docking with deep learning. J Cheminform. 2021. DOI: 10.1186/s13321-021-00522-2
+7. Quiroga R, Villarreal MA. Vinardo: A Scoring Function Based on Autodock Vina Improves Scoring, Docking, and Virtual Screening. PLoS ONE. 2016. DOI: 10.1371/journal.pone.0155183
 
-### Machine Learning
-- Pedregosa, F. et al. (2011). Scikit-learn: Machine Learning in 
-  Python. *JMLR*, 12, 2825–2830.
-- Morgan, H.L. (1965). The generation of a unique machine description 
-  for chemical structures. *J. Chem. Doc.*, 5, 107–113. 
-  *(Morgan fingerprints)*
-- Heid E. et al. (2024) Chemprop: A machine learning package for 
-  chemical property prediction. *J Chem Inf Model* 64:9-17.
-  https://doi.org/10.1021/acs.jcim.3c01250
-- Tropsha A. et al. (2003) The importance of being earnest: 
-  validation is the absolute essential for successful application 
-  and interpretation of QSPR models. *QSAR Comb Sci* 22:69-77.
+Structure Databases
 
-### Databases
-- Berman, H.M. et al. (2000). The Protein Data Bank. 
-  *Nucleic Acids Res.*, 28, 235–242.
-- Mendez, D. et al. (2019). ChEMBL: towards direct deposition of 
-  bioassay data. *Nucleic Acids Res.*, 47, D930–D940.
-- Kim, S. et al. (2016). PubChem substance and compound databases. 
-  *Nucleic Acids Res.*, 44, D1202–D1213.
-- Kanev G.K. et al. (2021) KLIFS: an overhaul after the first 
-  5 years of supporting kinase research. *Nucleic Acids Res.* 
-  49:D562-D569. https://doi.org/10.1093/nar/gkaa895
-- Screpanti E. et al. (2011) Direct binding of Cenp-C to the 
-  Mis12 complex joins the inner and outer kinetochore. 
-  *Curr Biol.* 21:391-398.
-  https://doi.org/10.1016/j.cub.2011.01.051
-- Irwin, J.J. et al. (2020). ZINC20 — A Free Ultralarge-Scale 
-  Chemical Database for Ligand Discovery. *J Chem Inf Model* 
-  60:6065-6073. https://doi.org/10.1021/acs.jcim.0c00675
+8. Berman HM et al. The Protein Data Bank. Nucleic Acids Res. 2000. DOI: 10.1093/nar/28.1.235
+9. Kanev GK et al. KLIFS: an overhaul of the kinase-ligand interaction fingerprints and structures database. Nucleic Acids Res. 2021. DOI: 10.1093/nar/gkaa895
+
+Interaction Analysis
+
+10. Salentin S et al. PLIP: fully automated protein-ligand interaction profiler. Nucleic Acids Res. 2015. DOI: 10.1093/nar/gkv315
+
+Machine Learning & QSAR
+
+11. Heid E et al. Chemprop: A machine learning package for chemical property prediction. J Chem Inf Model. 2024. DOI: 10.1021/acs.jcim.3c01250
+12. Yang K et al. Analyzing learned molecular representations for property prediction. J Chem Inf Model. 2019. DOI: 10.1021/acs.jcim.9b00237
+13. Liaw A, Wiener M. Classification and Regression by randomForest. R News. 2002. (scikit-learn implementation)
+14. Cortes C, Vapnik V. Support-vector networks. Mach Learn. 1995. DOI: 10.1007/BF00994018
+
+Cheminformatics & ADMET
+
+15. RDKit: Open-source cheminformatics. rdkit.org
+16.Ertl P, Schuffenhauer A. Estimation of synthetic accessibility score. J Cheminform. 2009. DOI: 10.1186/1758-2946-1-8
+17. Daina A et al. SwissADME: a free web tool to evaluate pharmacokinetics and drug-likeness. Sci Rep. 2017. DOI: 10.1038/srep42717
+18. Baell JB, Holloway GA. New substructure filters for removal of pan assay interference compounds (PAINS). J Med Chem. 2010. DOI: 10.1021/jm901137j
+
+Activity Data
+
+19. Gaulton A et al. ChEMBL: a large-scale bioactivity database for drug discovery. Nucleic Acids Res. 2012. DOI: 10.1093/nar/gkr777
+20.Gilson MK et al. BindingDB in 2015: A public database for medicinal chemistry. Nucleic Acids Res. 2016. DOI: 10.1093/nar/gkv1072
+21. Irwin JJ et al. ZINC20 — A free ultralarge-scale chemical database for ligand discovery. J Chem Inf Model. 2020. DOI: 10.1021/acs.jcim.0c00675
+
+Binding Site & Structure Prediction
+
+22. Le Guilloux V et al. Fpocket: An open source platform for ligand pocket detection. BMC Bioinformatics. 2009. DOI: 10.1186/1471-2105-10-168
+23. Mirdita M et al. ColabFold: making protein folding accessible to all. Nat Methods. 2022. DOI: 10.1038/s41592-022-01488-1
+24. Evans R et al. Protein complex prediction with AlphaFold-Multimer. bioRxiv. 2022. DOI: 10.1101/2021.10.04.463034
+
+Ligand Preparation
+
+25. Eberhardt J et al. AutoDock Vina 1.2.0: New docking methods, expanded force field, and Python bindings. J Chem Inf Model. 2021. DOI: 10.1021/acs.jcim.1c00203
+
+MD Simulations
+
+26. Abraham MJ et al. GROMACS: High performance molecular simulations through multi-level parallelism from laptops to supercomputers. SoftwareX. 2015. DOI: 10.1016/j.softx.2015.06.001
+27. Wang J et al. Development and testing of a general amber force field. J Comput Chem. 2004. DOI: 10.1002/jcc.20035
+28. Lindorff-Larsen K et al. Improved side-chain torsion potentials for the Amber ff99SB protein force field. Proteins. 2010. DOI: 10.1002/prot.22711
+
+Visualisation
+
+29. The PyMOL Molecular Graphics System, Version 2.0, Schrödinger LLC.
+
+Multi-objective Optimisation
+
+30. Deb K et al. A fast and elitist multiobjective genetic algorithm: NSGA-II. IEEE Trans Evol Comput. 2002. DOI: 10.1109/4235.996017
+
+
 ---
 
-## Author
+## AI Disclosure
 
-**Enya Gavilan Esquitino** — Master's in Bioinformatics Internship, 2026
+This project used Claude (Anthropic) as an assistance tool for code development and results analysis. The author has reviewed, edited, and assumes full responsibility for all content.
